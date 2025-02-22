@@ -18,42 +18,44 @@ async function fetchWithTimeout(url: string, options: RequestInit = {}, timeout 
   }
 }
 
-export async function checkService(url: string): Promise<string[] | null> {
+// 定义模型信息的接口
+interface ModelInfo {
+  name: string;
+  model: string;
+  modified_at: string;
+  size: number;
+  digest: string;
+  details: {
+    parent_model: string;
+    format: string;
+    family: string;
+    families: string[];
+    parameter_size: string;
+    quantization_level: string;
+  };
+}
+
+// 检查服务可用性并获取模型列表
+export async function checkService(url: string): Promise<ModelInfo[] | null> {
   try {
     const response = await fetchWithTimeout(`${url}/api/tags`, {
-      headers: {
-        'Accept': 'application/json',
-      },
+      method: 'GET',
     });
 
     if (!response.ok) {
-      console.error(`服务响应错误 ${url}, 状态码:`, response.status);
       return null;
     }
 
     const data = await response.json();
-    
-    // 添加调试日志
-    console.log(`服务 ${url} 返回数据:`, data);
-
-    // 检查 models 是否存在且不为空
-    if (!data.models || !Array.isArray(data.models) || data.models.length === 0) {
-      console.log(`服务 ${url} 没有可用模型`);
-      return [];
-    }
-
-    return data.models?.map((model: any) => model.name) || [];
-  } catch (error: any) {
-    if (error.name === 'AbortError') {
-      console.error(`检查服务超时 ${url}`);
-    } else {
-      console.error(`检查服务出错 ${url}:`, error);
-    }
+    return data.models || [];
+  } catch (error) {
+    console.error('检查服务失败:', error);
     return null;
   }
 }
 
-export async function measureTPS(url: string, model: string): Promise<number> {
+// 测量服务性能
+export async function measureTPS(url: string, model: ModelInfo): Promise<number> {
   try {
     const startTime = Date.now();
     const response = await fetchWithTimeout(`${url}/api/generate`, {
@@ -62,26 +64,28 @@ export async function measureTPS(url: string, model: string): Promise<number> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: model,
-        prompt: "Tell me a short joke",
+        model: model.name, // 使用模型的 name 属性
+        prompt: 'Hello',
         stream: false,
+        options: {
+          temperature: 0.7,
+          top_p: 0.9,
+          top_k: 40,
+        }
       }),
     });
 
     if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      console.error('Generate API 错误:', errorData);
       return 0;
     }
 
-    await response.json();
     const endTime = Date.now();
     const timeInSeconds = (endTime - startTime) / 1000;
     return timeInSeconds > 0 ? 1 / timeInSeconds : 0;
-  } catch (error: any) {
-    if (error.name === 'AbortError') {
-      console.error(`性能测试超时 ${url}`);
-    } else {
-      console.error(`性能测试出错 ${url}:`, error);
-    }
+  } catch (error) {
+    console.error('测量 TPS 失败:', error);
     return 0;
   }
 } 

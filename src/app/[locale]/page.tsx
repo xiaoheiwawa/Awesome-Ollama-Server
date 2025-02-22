@@ -9,12 +9,12 @@ import { Footer } from '@/components/Footer';
 import { LanguageSwitch } from '@/components/LanguageSwitch';
 import { OllamaService, SortField, SortOrder } from '@/types';
 import { useParams } from 'next/navigation';
+import { checkService, measureTPS } from '@/lib/detect';
 
 
 export default function Home() {
   const t = useTranslations();
   const [services, setServices] = useState<OllamaService[]>([]);
-  const [loading, setLoading] = useState(false);
   const [countdown, setCountdown] = useState(0);
   const [detectingServices, setDetectingServices] = useState<Set<string>>(new Set());
   const [detectedResults, setDetectedResults] = useState<OllamaService[]>([]);
@@ -70,16 +70,35 @@ export default function Home() {
       
       for (const url of urls) {
         try {
-          const response = await fetch('/api/detect', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ url }),
-          });
-
-          const result = await response.json();
+          // 直接在前端检测服务
+          const modelInfos = await checkService(url);
           
-          // 更新检测结果
-          setDetectedResults(prev => [...prev, result]);
+          if (modelInfos === null) {
+            // 服务不可用
+            const result: OllamaService = {
+              server: url,
+              models: [],
+              tps: 0,
+              lastUpdate: new Date().toISOString(),
+              loading: false,
+              status: 'error'
+            };
+            setDetectedResults(prev => [...prev, result]);
+          } else {
+            // 服务可用，测量 TPS
+            const tps = modelInfos.length > 0 ? await measureTPS(url, modelInfos[0]) : 0;
+            
+            const result: OllamaService = {
+              server: url,
+              // 只保存模型名称列表
+              models: modelInfos.map(info => info.name),
+              tps,
+              lastUpdate: new Date().toISOString(),
+              loading: false,
+              status: 'success'
+            };
+            setDetectedResults(prev => [...prev, result]);
+          }
           
           setDetectingServices(prev => {
             const next = new Set(prev);
@@ -87,14 +106,17 @@ export default function Home() {
             return next;
           });
         } catch (error) {
-          console.error('Error detecting service:', url, error);
-          setServices(prev => prev.map(service => 
-            service.server === url
-              ? { ...service, loading: false, status: 'error' as const }
-              : service
-          ));
+          console.error('检测服务失败:', url, error);
+          const result: OllamaService = {
+            server: url,
+            models: [],
+            tps: 0,
+            lastUpdate: new Date().toISOString(),
+            loading: false,
+            status: 'error'
+          };
+          setDetectedResults(prev => [...prev, result]);
           
-          // 从 detectingServices 中移除失败的服务
           setDetectingServices(prev => {
             const next = new Set(prev);
             next.delete(url);
@@ -103,8 +125,7 @@ export default function Home() {
         }
       }
     } catch (error) {
-      console.error('Detection error:', error);
-      // 清空 detectingServices
+      console.error('检测过程出错:', error);
       setDetectingServices(new Set());
     }
   };
@@ -207,7 +228,6 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center mb-8">
           <Header
-            loading={loading}
             countdown={countdown}
             detectingServices={detectingServices}
             detectedResults={detectedResults}
