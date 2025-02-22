@@ -186,4 +186,4 @@ export async function getData(): Promise<OllamaService[]> {
   } catch (error) {
     return [];
   }
-} 
+}
