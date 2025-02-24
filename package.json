@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "upload": "ts-node scripts/upload-data.ts",
-    "monitor": "tsx src/lib/monitor.ts"
+    "monitor": "tsx src/lib/monitor.ts",
+    "monitor-and-upload": "npm run monitor && npm run upload"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",

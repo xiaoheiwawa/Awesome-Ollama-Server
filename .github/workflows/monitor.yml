@@ -27,7 +27,7 @@ jobs:
         run: npm install
         
       - name: Run update Services
-        run: npm run monitor
+        run: npm run monitor-and-upload
         
       - name: Commit and push if changed
         run: |
