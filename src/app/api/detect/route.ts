@@ -52,6 +52,3 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
-
-// 移除 edge runtime 配置，因为我们不再需要它
-// export const runtime = 'edge'; 

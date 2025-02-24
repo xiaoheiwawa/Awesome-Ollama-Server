@@ -70,7 +70,6 @@ export default function Home() {
       
       for (const url of urls) {
         try {
-          // 直接在前端检测服务
           const modelInfos = await checkService(url);
           
           if (modelInfos === null) {
@@ -90,7 +89,6 @@ export default function Home() {
             
             const result: OllamaService = {
               server: url,
-              // 只保存模型名称列表
               models: modelInfos.map(info => info.name),
               tps,
               lastUpdate: new Date().toISOString(),
@@ -98,6 +96,13 @@ export default function Home() {
               status: 'success'
             };
             setDetectedResults(prev => [...prev, result]);
+            
+            // 更新 Redis 中的服务器列表
+            await fetch('/api/update-servers', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ server: url })
+            });
           }
           
           setDetectingServices(prev => {

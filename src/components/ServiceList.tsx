@@ -3,14 +3,7 @@ import { formatDistanceToNow } from 'date-fns';
 import { zhCN, enUS } from 'date-fns/locale';
 import { PAGE_SIZE_OPTIONS } from '@/constants';
 import { useParams } from 'next/navigation';
-
-interface OllamaService {
-  server: string;
-  models: string[];
-  tps: number;
-  lastUpdate: string;
-  loading: boolean;
-}
+import { OllamaService } from '@/types';
 
 interface ServiceListProps {
   services: OllamaService[];

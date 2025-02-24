@@ -5,6 +5,7 @@ import { locales } from '@/config';
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import type { Metadata } from "next";
+import * as React from 'react'
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,9 +23,9 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: ReactNode;
-  params: Promise<{
+  params: {
     locale: string;
-  }>;
+  };
 }
 
 export function generateStaticParams() {
@@ -43,16 +44,15 @@ export default async function RootLayout({
   children,
   params
 }: RootLayoutProps) {
-  const resolvedParams = await params;
-  const messages = await getMessages(resolvedParams.locale);
+  const messages = await getMessages(params.locale); // 异步获取 messages
   const now = new Date();
 
   return (
-    <html lang={resolvedParams.locale}>
+    <html lang={params.locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <NextIntlClientProvider 
-          locale={resolvedParams.locale} 
-          messages={messages} 
+        <NextIntlClientProvider
+          locale={params.locale}
+          messages={messages}
           timeZone="UTC"
           now={now}
         >

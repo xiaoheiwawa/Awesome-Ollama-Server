@@ -3,7 +3,7 @@ export interface OllamaService {
   models: string[];
   tps: number;
   lastUpdate: string;
-  loading: boolean;
+  loading?: boolean;
   status?: 'success' | 'error' | 'loading';
 }
 
