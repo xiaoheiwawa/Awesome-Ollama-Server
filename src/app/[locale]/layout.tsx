@@ -37,6 +37,7 @@ async function getMessages(locale: string) {
     return (await import(`@/i18n/locales/${locale}.json`)).default;
   } catch (error) {
     notFound();
+    console.error(error);
   }
 }
 

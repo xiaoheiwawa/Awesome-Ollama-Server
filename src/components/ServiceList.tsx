@@ -28,15 +28,15 @@ export function ServiceList({
   const params = useParams();
   const locale = params.locale as string;
 
-  const formatDate = (date: string) => {
-    if (!isClient) {
-      return new Date(date).toISOString();
-    }
-    return formatDistanceToNow(new Date(date), {
-      addSuffix: true,
-      locale: locale === 'zh' ? zhCN : enUS,
-    });
-  };
+  // const formatDate = (date: string) => {
+  //   if (!isClient) {
+  //     return new Date(date).toISOString();
+  //   }
+  //   return formatDistanceToNow(new Date(date), {
+  //     addSuffix: true,
+  //     locale: locale === 'zh' ? zhCN : enUS,
+  //   });
+  // };
 
   // 生成页码数组
   const getPageNumbers = () => {

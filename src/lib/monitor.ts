@@ -7,10 +7,14 @@ const TEST_PROMPT = "Tell me a short joke"
 const TIMEOUT_MS = 30000 // 30秒超时
 const CONCURRENT_LIMIT = 50 // 并发数限制
 const RESULT_FILE = join(process.cwd(), 'public', 'data.json')
-const redis = new Redis({
-  url: process.env.UPSTASH_REDIS_URL!,
-  token: process.env.UPSTASH_REDIS_TOKEN!,
-})
+
+// Redis 客户端配置
+const redis = process.env.UPSTASH_REDIS_URL && process.env.UPSTASH_REDIS_TOKEN
+  ? new Redis({
+      url: process.env.UPSTASH_REDIS_URL,
+      token: process.env.UPSTASH_REDIS_TOKEN,
+    })
+  : null;
 
 // 创建带超时的 fetch 函数
 async function fetchWithTimeout(url: string, options: RequestInit = {}, timeout = TIMEOUT_MS) {
@@ -30,19 +34,29 @@ async function fetchWithTimeout(url: string, options: RequestInit = {}, timeout 
   }
 }
 
-// 从 url.txt 文件中读取 URL 列表
-async function readUrls(): Promise<string[]> {
-  try {
-    const content = await fs.readFile('url.txt', 'utf-8')
-    return content.split('\n').filter(url => url.trim())
-  } catch (error) {
-    console.error('Error reading url.txt:', error)
-    return []
-  }
+// 定义模型信息的接口
+interface ModelInfo {
+  name: string;
+  model: string;
+  modified_at: string;
+  size: number;
+  digest: string;
+  details: {
+    parent_model: string;
+    format: string;
+    family: string;
+    families: string[];
+    parameter_size: string;
+    quantization_level: string;
+  };
+}
+
+interface ModelsResponse {
+  models: ModelInfo[];
 }
 
 // 检查服务是否可用
-async function checkService(url: string): Promise<string[] | null> {
+async function checkService(url: string): Promise<ModelInfo[] | null> {
   try {
     const response = await fetchWithTimeout(`${url}/api/tags`, {
       headers: {
@@ -54,20 +68,16 @@ async function checkService(url: string): Promise<string[] | null> {
       return null
     }
 
-    const data = await response.json()
-    return data.models?.map((model: any) => model.name) || []
-  } catch (error: any) {
-    if (error.name === 'AbortError') {
-      console.error(`检查服务超时 ${url}`)
-    } else {
-      console.error(`检查服务出错 ${url}:`, error)
-    }
+    const data = await response.json() as ModelsResponse
+    return data.models || []
+  } catch (error) {
+    console.error(`检查服务出错 ${url}:`, error)
     return null
   }
 }
 
 // 测量TPS
-async function measureTPS(url: string, model: string): Promise<number> {
+async function measureTPS(url: string, model: ModelInfo): Promise<number> {
   try {
     const startTime = Date.now()
     const response = await fetchWithTimeout(`${url}/api/generate`, {
@@ -76,7 +86,7 @@ async function measureTPS(url: string, model: string): Promise<number> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: model,
+        model: model.name,
         prompt: TEST_PROMPT,
         stream: false,
       }),
@@ -90,17 +100,13 @@ async function measureTPS(url: string, model: string): Promise<number> {
     const endTime = Date.now()
     const timeInSeconds = (endTime - startTime) / 1000
     return timeInSeconds > 0 ? 1 / timeInSeconds : 0
-  } catch (error: any) {
-    if (error.name === 'AbortError') {
-      console.error(`性能测试超时 ${url}`)
-    } else {
-      console.error(`性能测试出错 ${url}:`, error)
-    }
+  } catch (error) {
+    console.error(`性能测试出错 ${url}:`, error)
     return 0
   }
 }
 
-// 保存单个结果到文件
+// 保存单个结果到文件, 已废弃
 async function saveResult(service: OllamaService): Promise<void> {
   try {
     let results: OllamaService[] = []
@@ -110,6 +116,7 @@ async function saveResult(service: OllamaService): Promise<void> {
     } catch (error) {
       // 文件不存在或解析错误，使用空数组
       results = []
+      console.error(`读取结果文件失败:`, error)
     }
 
     // 更新或添加结果
@@ -139,7 +146,7 @@ async function checkSingleService(url: string): Promise<OllamaService | null> {
       
       return {
         server: url,
-        models,
+        models: models.map(model => model.name),
         tps,
         lastUpdate: new Date().toISOString(),
       }
@@ -165,7 +172,12 @@ async function runBatch(urls: string[]): Promise<OllamaService[]> {
 }
 
 // 主函数
-async function main() {
+export async function main() {
+  if (!redis) {
+    console.error('Redis 配置未设置，无法执行监控任务');
+    return;
+  }
+
   try {
     console.log('开始更新服务...')
 
@@ -191,7 +203,7 @@ async function main() {
       // 记录有效的服务器
       results.forEach(result => {
         if (result.models && result.models.length > 0) {
-          validServers.add(encodeURIComponent(result.server)) // 注意这里需要编码
+          validServers.add(encodeURIComponent(result.server))
         }
       })
     }
@@ -206,9 +218,11 @@ async function main() {
 
   } catch (error) {
     console.error('更新服务失败:', error)
-    process.exit(1)
   }
 }
+
+// 导出需要的函数
+export { checkService, measureTPS, saveResult }
 
 // 如果直接运行此文件则执行主函数
 if (require.main === module) {

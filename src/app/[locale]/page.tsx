@@ -46,7 +46,7 @@ export default function Home() {
       });
       const data = await response.json();
       // 确保所有服务都有 loading 属性
-      const servicesWithLoading = data.map((service: any) => ({
+      const servicesWithLoading = data.map((service: OllamaService) => ({
         ...service,
         loading: false,
         status: service.models.length > 0 ? 'success' : 'error'
