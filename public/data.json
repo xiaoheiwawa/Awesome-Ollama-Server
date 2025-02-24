@@ -3,18 +3,8 @@
     "server": "http://116.198.233.210:11434",
     "models": [],
     "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:22.686Z",
+    "lastUpdate": "2025-02-24T22:12:23.872Z",
     "status": "error"
-  },
-  {
-    "server": "http://85.239.233.35:11434",
-    "models": [
-      "nomic-embed-text:latest",
-      "llama3.2:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:22.592Z",
-    "status": "success"
   },
   {
     "server": "http://122.227.163.174:51434",
@@ -27,17 +17,7 @@
       "nomic-embed-text:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:22.925Z",
-    "status": "success"
-  },
-  {
-    "server": "https://ollama.203.145.215.194.sslip.io",
-    "models": [
-      "chatfire/bge-m3:q8_0",
-      "llama3.1:8b-instruct-fp16"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:23.092Z",
+    "lastUpdate": "2025-02-24T22:12:24.110Z",
     "status": "success"
   },
   {
@@ -49,7 +29,7 @@
       "TAIDE-LX-7B-Chat-4bit:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:23.104Z",
+    "lastUpdate": "2025-02-24T22:12:24.385Z",
     "status": "success"
   },
   {
@@ -58,8 +38,28 @@
       "qwen2.5:3b",
       "qwen2.5:14b"
     ],
-    "tps": 1.2062726176115803,
-    "lastUpdate": "2025-02-24T21:35:22.984Z",
+    "tps": 1.2150668286755772,
+    "lastUpdate": "2025-02-24T22:12:24.137Z",
+    "status": "success"
+  },
+  {
+    "server": "http://62.234.60.152:11434",
+    "models": [
+      "qwen2:7b",
+      "deepseek-r1:7b"
+    ],
+    "tps": 1.0683760683760684,
+    "lastUpdate": "2025-02-24T22:12:24.115Z",
+    "status": "success"
+  },
+  {
+    "server": "https://ollama.203.145.215.194.sslip.io",
+    "models": [
+      "llama3.1:8b-instruct-fp16",
+      "chatfire/bge-m3:q8_0"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:24.431Z",
     "status": "success"
   },
   {
@@ -71,27 +71,8 @@
       "qwen:14b",
       "qwen:1.8b"
     ],
-    "tps": 0.9233610341643583,
-    "lastUpdate": "2025-02-24T21:35:22.942Z",
-    "status": "success"
-  },
-  {
-    "server": "http://62.234.60.152:11434",
-    "models": [
-      "qwen2:7b",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.9107468123861566,
-    "lastUpdate": "2025-02-24T21:35:22.975Z",
-    "status": "success"
-  },
-  {
-    "server": "http://62.234.57.148:11434",
-    "models": [
-      "gte_qwen2:latest"
-    ],
-    "tps": 0.7507507507507507,
-    "lastUpdate": "2025-02-24T21:35:22.973Z",
+    "tps": 0.9066183136899365,
+    "lastUpdate": "2025-02-24T22:12:24.085Z",
     "status": "success"
   },
   {
@@ -102,8 +83,8 @@
       "qwen2:7b",
       "llama3:8b"
     ],
-    "tps": 0.6648936170212766,
-    "lastUpdate": "2025-02-24T21:35:23.137Z",
+    "tps": 0.7112375533428166,
+    "lastUpdate": "2025-02-24T22:12:24.164Z",
     "status": "success"
   },
   {
@@ -112,7 +93,17 @@
       "llama3:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:22.971Z",
+    "lastUpdate": "2025-02-24T22:12:24.121Z",
+    "status": "success"
+  },
+  {
+    "server": "http://85.239.233.35:11434",
+    "models": [
+      "llama3.2:latest",
+      "nomic-embed-text:latest"
+    ],
+    "tps": 0.4597701149425288,
+    "lastUpdate": "2025-02-24T22:12:23.735Z",
     "status": "success"
   },
   {
@@ -120,8 +111,8 @@
     "models": [
       "deepseek-r1:latest"
     ],
-    "tps": 0.36509675063891933,
-    "lastUpdate": "2025-02-24T21:35:22.994Z",
+    "tps": 0.382262996941896,
+    "lastUpdate": "2025-02-24T22:12:24.111Z",
     "status": "success"
   },
   {
@@ -129,8 +120,8 @@
     "models": [
       "deepseek-r1:1.5b"
     ],
-    "tps": 0.31857279388340237,
-    "lastUpdate": "2025-02-24T21:35:23.026Z",
+    "tps": 0.31928480204342274,
+    "lastUpdate": "2025-02-24T22:12:24.197Z",
     "status": "success"
   },
   {
@@ -142,7 +133,18 @@
       "deepseek-r1:14b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:22.962Z",
+    "lastUpdate": "2025-02-24T22:12:24.114Z",
+    "status": "success"
+  },
+  {
+    "server": "http://106.54.245.6:11434",
+    "models": [
+      "qwen2.5:0.5b",
+      "quentinz/bge-large-zh-v1.5:q8_0",
+      "smartcreation/bge-large-zh-v1.5:latest"
+    ],
+    "tps": 0.2458210422812193,
+    "lastUpdate": "2025-02-24T22:12:24.086Z",
     "status": "success"
   },
   {
@@ -160,38 +162,29 @@
       "deepseek-r1:1.5b",
       "deepseek-r1:32b"
     ],
-    "tps": 0.23299161230195714,
-    "lastUpdate": "2025-02-24T21:35:22.949Z",
+    "tps": 0.23843586075345732,
+    "lastUpdate": "2025-02-24T22:12:24.099Z",
     "status": "success"
   },
   {
-    "server": "http://112.80.127.71:60001",
+    "server": "http://47.107.34.218:11434",
     "models": [
-      "deepseek-r1:7b"
+      "deepseek-r1:14b",
+      "quentinz/bge-large-zh-v1.5:latest"
     ],
-    "tps": 0.21978021978021978,
-    "lastUpdate": "2025-02-24T21:35:22.911Z",
+    "tps": 0.17979144192736424,
+    "lastUpdate": "2025-02-24T22:12:24.162Z",
     "status": "success"
   },
   {
-    "server": "http://106.54.245.6:11434",
+    "server": "http://139.9.46.182:11434",
     "models": [
-      "qwen2.5:0.5b",
-      "quentinz/bge-large-zh-v1.5:q8_0",
-      "smartcreation/bge-large-zh-v1.5:latest"
-    ],
-    "tps": 0.20933640360058614,
-    "lastUpdate": "2025-02-24T21:35:22.916Z",
-    "status": "success"
-  },
-  {
-    "server": "http://124.71.212.175:8111",
-    "models": [
-      "qwen2.5-coder-7b-instruct-fp16:v1.0",
+      "deepseek-r1:1.5b",
+      "qwen:0.5b",
       "bge-m3:latest"
     ],
-    "tps": 0.20333468889792597,
-    "lastUpdate": "2025-02-24T21:35:22.976Z",
+    "tps": 0.177210703526493,
+    "lastUpdate": "2025-02-24T22:12:24.082Z",
     "status": "success"
   },
   {
@@ -201,110 +194,9 @@
       "qweb2.5-7b:latest",
       "deepseek-r1:14b"
     ],
-    "tps": 0.1448016217781639,
-    "lastUpdate": "2025-02-24T21:35:22.928Z",
+    "tps": 0.12955045990413266,
+    "lastUpdate": "2025-02-24T22:12:24.087Z",
     "status": "success"
-  },
-  {
-    "server": "http://182.148.55.21:11434",
-    "models": [
-      "llama3:latest",
-      "qwen:7b",
-      "qwen1.5-4b-yc2:latest",
-      "qwen4b-yc:latest"
-    ],
-    "tps": 0.1368738023542294,
-    "lastUpdate": "2025-02-24T21:35:22.983Z",
-    "status": "success"
-  },
-  {
-    "server": "http://101.37.83.61:9994",
-    "models": [
-      "qwen2.5:32b",
-      "llama3.3:latest",
-      "phi4:latest",
-      "deepseek-r1:70b"
-    ],
-    "tps": 0.11820330969267138,
-    "lastUpdate": "2025-02-24T21:35:22.946Z",
-    "status": "success"
-  },
-  {
-    "server": "http://114.251.135.95:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.576Z",
-    "status": "error"
-  },
-  {
-    "server": "http://61.49.194.114:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.577Z",
-    "status": "error"
-  },
-  {
-    "server": "http://114.251.135.80:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.578Z",
-    "status": "error"
-  },
-  {
-    "server": "http://114.251.135.89:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.578Z",
-    "status": "error"
-  },
-  {
-    "server": "http://114.251.135.81:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.579Z",
-    "status": "error"
-  },
-  {
-    "server": "http://114.251.135.94:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.580Z",
-    "status": "error"
-  },
-  {
-    "server": "http://114.251.135.86:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.581Z",
-    "status": "error"
-  },
-  {
-    "server": "http://120.211.156.170:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.581Z",
-    "status": "error"
-  },
-  {
-    "server": "http://111.124.76.61:8091",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.582Z",
-    "status": "error"
-  },
-  {
-    "server": "http://114.251.135.90:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.583Z",
-    "status": "error"
-  },
-  {
-    "server": "http://114.251.135.92:11434",
-    "models": [],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:32.584Z",
-    "status": "error"
   },
   {
     "server": "http://140.119.164.70:11435",
@@ -316,8 +208,127 @@
       "llama3.2:latest",
       "llama3.1:8b"
     ],
-    "tps": 0.09919650828290845,
-    "lastUpdate": "2025-02-24T21:35:22.811Z",
+    "tps": 0.11680878402055835,
+    "lastUpdate": "2025-02-24T22:12:23.991Z",
+    "status": "success"
+  },
+  {
+    "server": "http://114.251.135.81:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.780Z",
+    "status": "error"
+  },
+  {
+    "server": "http://61.49.194.114:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.781Z",
+    "status": "error"
+  },
+  {
+    "server": "http://114.251.135.86:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.782Z",
+    "status": "error"
+  },
+  {
+    "server": "http://114.251.135.90:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.782Z",
+    "status": "error"
+  },
+  {
+    "server": "http://114.251.135.92:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.783Z",
+    "status": "error"
+  },
+  {
+    "server": "http://111.124.76.61:8091",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.784Z",
+    "status": "error"
+  },
+  {
+    "server": "http://114.251.135.94:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.784Z",
+    "status": "error"
+  },
+  {
+    "server": "http://114.251.135.95:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.785Z",
+    "status": "error"
+  },
+  {
+    "server": "http://114.251.135.80:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.785Z",
+    "status": "error"
+  },
+  {
+    "server": "http://120.211.156.170:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.786Z",
+    "status": "error"
+  },
+  {
+    "server": "http://114.251.135.89:11434",
+    "models": [],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:33.787Z",
+    "status": "error"
+  },
+  {
+    "server": "http://120.31.70.13:11434",
+    "models": [
+      "deepseek-r1:70b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-24T22:12:24.083Z",
+    "status": "success"
+  },
+  {
+    "server": "http://101.37.83.61:9994",
+    "models": [
+      "qwen2.5:32b",
+      "llama3.3:latest",
+      "phi4:latest",
+      "deepseek-r1:70b"
+    ],
+    "tps": 0.0979431929480901,
+    "lastUpdate": "2025-02-24T22:12:24.112Z",
+    "status": "success"
+  },
+  {
+    "server": "http://112.80.127.71:60001",
+    "models": [
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.08939746111210442,
+    "lastUpdate": "2025-02-24T22:12:24.147Z",
+    "status": "success"
+  },
+  {
+    "server": "http://182.148.55.21:11434",
+    "models": [
+      "llama3:latest",
+      "qwen:7b",
+      "qwen1.5-4b-yc2:latest",
+      "qwen4b-yc:latest"
+    ],
+    "tps": 0.08923790826343031,
+    "lastUpdate": "2025-02-24T22:12:24.196Z",
     "status": "success"
   },
   {
@@ -331,8 +342,8 @@
       "rjmalagon/gte-qwen2-7b-instruct:bf16",
       "jeffh/intfloat-multilingual-e5-large-instruct:f16"
     ],
-    "tps": 0.08435259384226064,
-    "lastUpdate": "2025-02-24T21:35:23.179Z",
+    "tps": 0.08261049153242461,
+    "lastUpdate": "2025-02-24T22:12:24.221Z",
     "status": "success"
   },
   {
@@ -341,17 +352,8 @@
       "deepseek-r1:70b",
       "llama3:latest"
     ],
-    "tps": 0.07973845785822502,
-    "lastUpdate": "2025-02-24T21:35:22.923Z",
-    "status": "success"
-  },
-  {
-    "server": "http://140.122.185.188:11434",
-    "models": [
-      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
-    ],
-    "tps": 0.07558007709167863,
-    "lastUpdate": "2025-02-24T21:35:22.813Z",
+    "tps": 0.07136230642974381,
+    "lastUpdate": "2025-02-24T22:12:24.108Z",
     "status": "success"
   },
   {
@@ -362,17 +364,27 @@
       "smollm2:135m",
       "deepseek-r1:32b"
     ],
-    "tps": 0.05936479667557139,
-    "lastUpdate": "2025-02-24T21:35:22.938Z",
+    "tps": 0.06030999336590073,
+    "lastUpdate": "2025-02-24T22:12:24.093Z",
     "status": "success"
   },
   {
-    "server": "http://120.31.70.13:11434",
+    "server": "http://124.71.212.175:8111",
     "models": [
-      "deepseek-r1:70b"
+      "qwen2.5-coder-7b-instruct-fp16:v1.0",
+      "bge-m3:latest"
     ],
-    "tps": 0.057159188339525574,
-    "lastUpdate": "2025-02-24T21:35:22.919Z",
+    "tps": 0.05308700960874874,
+    "lastUpdate": "2025-02-24T22:12:24.145Z",
+    "status": "success"
+  },
+  {
+    "server": "http://140.122.185.188:11434",
+    "models": [
+      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
+    ],
+    "tps": 0.047682624451649815,
+    "lastUpdate": "2025-02-24T22:12:24.007Z",
     "status": "success"
   },
   {
@@ -381,7 +393,7 @@
       "llama3:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:22.845Z",
+    "lastUpdate": "2025-02-24T22:12:24.002Z",
     "status": "success"
   },
   {
@@ -390,18 +402,7 @@
       "deepseek-r1:8b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:22.873Z",
-    "status": "success"
-  },
-  {
-    "server": "http://139.9.46.182:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "qwen:0.5b",
-      "bge-m3:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:22.943Z",
+    "lastUpdate": "2025-02-24T22:12:24.012Z",
     "status": "success"
   },
   {
@@ -417,17 +418,16 @@
       "qwen2.5:14b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:22.945Z",
+    "lastUpdate": "2025-02-24T22:12:24.095Z",
     "status": "success"
   },
   {
-    "server": "http://47.107.34.218:11434",
+    "server": "http://62.234.57.148:11434",
     "models": [
-      "deepseek-r1:14b",
-      "quentinz/bge-large-zh-v1.5:latest"
+      "gte_qwen2:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-24T21:35:23.005Z",
+    "lastUpdate": "2025-02-24T22:12:24.127Z",
     "status": "success"
   }
 ]
