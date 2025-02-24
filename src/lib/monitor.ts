@@ -2,7 +2,6 @@ import { Redis } from '@upstash/redis'
 import { promises as fs } from 'fs'
 import { join } from 'path'
 import { OllamaService } from '../types'
-require('dotenv').config({ path: '.env.local' })
 
 const TEST_PROMPT = "Tell me a short joke"
 const TIMEOUT_MS = 30000 // 30秒超时

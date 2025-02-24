@@ -1,7 +1,7 @@
 const { Redis } = require('@upstash/redis')
 const fs = require('fs')
 const path = require('path')
-require('dotenv').config({ path: '.env.local' })
+require('dotenv').config({ path: '.env' })
 
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_URL!,

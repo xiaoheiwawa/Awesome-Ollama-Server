@@ -23,9 +23,9 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: ReactNode;
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
@@ -40,10 +40,13 @@ async function getMessages(locale: string) {
   }
 }
 
-export default async function RootLayout({
-  children,
-  params
-}: RootLayoutProps) {
+export default async function RootLayout(props: RootLayoutProps) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   const messages = await getMessages(params.locale); // 异步获取 messages
   const now = new Date();
 
