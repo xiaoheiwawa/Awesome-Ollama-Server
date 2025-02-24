@@ -238,7 +238,7 @@ export async function main() {
           const data = await fs.readFile(RESULT_FILE, 'utf-8');
           existingResults = JSON.parse(data);
         } catch (error) {
-          console.error('读取结果文件失败，使用空数组');
+          console.error('读取结果文件失败，使用空数组', error);
         }
 
         const newResults = [...existingResults, ...results];
