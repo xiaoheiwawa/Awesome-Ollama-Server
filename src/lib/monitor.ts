@@ -8,9 +8,6 @@ const TIMEOUT_MS = 30000 // 30秒超时
 const CONCURRENT_LIMIT = 50 // 并发数限制
 const RESULT_FILE = join(process.cwd(), 'public', 'data.json')
 
-// 加载环境变量
-require('dotenv').config()
-
 // Redis 客户端配置
 const redis = process.env.UPSTASH_REDIS_URL && process.env.UPSTASH_REDIS_TOKEN
   ? new Redis({
