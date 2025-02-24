@@ -8,6 +8,9 @@ const TIMEOUT_MS = 30000 // 30秒超时
 const CONCURRENT_LIMIT = 50 // 并发数限制
 const RESULT_FILE = join(process.cwd(), 'public', 'data.json')
 
+// 加载环境变量
+require('dotenv').config()
+
 // Redis 客户端配置
 const redis = process.env.UPSTASH_REDIS_URL && process.env.UPSTASH_REDIS_TOKEN
   ? new Redis({
@@ -65,21 +68,22 @@ async function checkService(url: string): Promise<ModelInfo[] | null> {
     })
 
     if (!response.ok) {
-      return null
+      console.log(`服务返回非 200 状态码: ${url}, 状态码: ${response.status}`);
+      return null;
     }
 
-    const data = await response.json() as ModelsResponse
-    return data.models || []
+    const data = await response.json() as ModelsResponse;
+    return data.models || [];
   } catch (error) {
-    console.error(`检查服务出错 ${url}:`, error)
-    return null
+    console.error(`检查服务出错 ${url}:`, error);
+    return null;
   }
 }
 
 // 测量TPS
 async function measureTPS(url: string, model: ModelInfo): Promise<number> {
   try {
-    const startTime = Date.now()
+    const startTime = Date.now();
     const response = await fetchWithTimeout(`${url}/api/generate`, {
       method: 'POST',
       headers: {
@@ -90,19 +94,20 @@ async function measureTPS(url: string, model: ModelInfo): Promise<number> {
         prompt: TEST_PROMPT,
         stream: false,
       }),
-    })
+    });
 
     if (!response.ok) {
-      return 0
+      console.log(`性能测试返回非 200 状态码: ${url}, 状态码: ${response.status}`);
+      return 0;
     }
 
-    await response.json()
-    const endTime = Date.now()
-    const timeInSeconds = (endTime - startTime) / 1000
-    return timeInSeconds > 0 ? 1 / timeInSeconds : 0
+    await response.json();
+    const endTime = Date.now();
+    const timeInSeconds = (endTime - startTime) / 1000;
+    return timeInSeconds > 0 ? 1 / timeInSeconds : 0;
   } catch (error) {
-    console.error(`性能测试出错 ${url}:`, error)
-    return 0
+    console.error(`性能测试出错 ${url}:`, error);
+    return 0;
   }
 }
 
@@ -136,39 +141,61 @@ async function saveResult(service: OllamaService): Promise<void> {
 
 // 检查单个服务
 async function checkSingleService(url: string): Promise<OllamaService | null> {
-  console.log(`\n正在检查服务: ${url}`)
+  console.log(`\n正在检查服务: ${url}`);
   
   try {
-    const models = await checkService(url)
+    const models = await checkService(url);
+    const result: OllamaService = {
+      server: url,
+      models: [],
+      tps: 0,
+      lastUpdate: new Date().toISOString(),
+    };
     
     if (models && models.length > 0) {
-      const tps = await measureTPS(url, models[0])
-      
-      return {
-        server: url,
-        models: models.map(model => model.name),
-        tps,
-        lastUpdate: new Date().toISOString(),
+      try {
+        const tps = await measureTPS(url, models[0]);
+        result.models = models.map(model => model.name);
+        result.tps = tps;
+      } catch (error) {
+        console.error(`测量 TPS 失败 ${url}:`, error);
       }
     }
+    
+    return result;
   } catch (error) {
-    console.error(`检查服务失败 ${url}:`, error)
+    console.error(`检查服务失败 ${url}:`, error);
+    return {
+      server: url,
+      models: [],
+      tps: 0,
+      lastUpdate: new Date().toISOString(),
+    };
   }
-  
-  return null
 }
 
 // 并发执行检查任务
 async function runBatch(urls: string[]): Promise<OllamaService[]> {
-  const results: OllamaService[] = []
+  const results: OllamaService[] = [];
   const promises = urls.map(async url => {
-    const service = await checkSingleService(url)
-    if (service) {
-      results.push(service)
+    try {
+      const service = await checkSingleService(url);
+      if (service) {
+        results.push(service);
+      }
+    } catch (error) {
+      console.error(`处理服务失败 ${url}:`, error);
+      results.push({
+        server: url,
+        models: [],
+        tps: 0,
+        lastUpdate: new Date().toISOString(),
+      });
     }
-  })
-  await Promise.all(promises)
-  return results
+  });
+  
+  await Promise.allSettled(promises);
+  return results;
 }
 
 // 主函数
@@ -179,45 +206,61 @@ export async function main() {
   }
 
   try {
-    console.log('开始更新服务...')
+    console.log('开始更新服务...');
 
     // 1. 从 Redis 的 Set 中读取服务器列表
-    const encodedUrls = await redis.smembers('ollama:servers')
-    const urls = encodedUrls.map(url => decodeURIComponent(url))
+    const encodedUrls = await redis.smembers('ollama:servers');
+    const urls = encodedUrls.map(url => decodeURIComponent(url));
 
-    console.log(`从 Redis 读取到 ${urls.length} 个服务器`)
+    console.log(`从 Redis 读取到 ${urls.length} 个服务器`);
 
     // 2. 清空结果文件
-    await fs.writeFile(RESULT_FILE, '[]')
+    await fs.writeFile(RESULT_FILE, '[]');
 
     // 有效服务器列表
-    const validServers = new Set<string>()
+    const validServers = new Set<string>();
 
     // 3. 分批处理服务器
     for (let i = 0; i < urls.length; i += CONCURRENT_LIMIT) {
-      const batch = urls.slice(i, i + CONCURRENT_LIMIT)
-      console.log(`\n处理批次 ${Math.floor(i / CONCURRENT_LIMIT) + 1}/${Math.ceil(urls.length / CONCURRENT_LIMIT)} (${batch.length} 个服务)`)
+      const batch = urls.slice(i, i + CONCURRENT_LIMIT);
+      console.log(`\n处理批次 ${Math.floor(i / CONCURRENT_LIMIT) + 1}/${Math.ceil(urls.length / CONCURRENT_LIMIT)} (${batch.length} 个服务)`);
       
-      const results = await runBatch(batch)
+      const results = await runBatch(batch);
       
       // 记录有效的服务器
       results.forEach(result => {
         if (result.models && result.models.length > 0) {
-          validServers.add(encodeURIComponent(result.server))
+          validServers.add(encodeURIComponent(result.server));
         }
-      })
+      });
+
+      // 保存当前批次的结果
+      try {
+        let existingResults: OllamaService[] = [];
+        try {
+          const data = await fs.readFile(RESULT_FILE, 'utf-8');
+          existingResults = JSON.parse(data);
+        } catch (error) {
+          console.error('读取结果文件失败，使用空数组');
+        }
+
+        const newResults = [...existingResults, ...results];
+        await fs.writeFile(RESULT_FILE, JSON.stringify(newResults, null, 2));
+      } catch (error) {
+        console.error('保存结果失败:', error);
+      }
     }
 
     // 4. 更新 Redis 中的有效服务器列表
-    await redis.del('ollama:servers')
+    await redis.del('ollama:servers');
     if (validServers.size > 0) {
-      await redis.sadd('ollama:servers', Array.from(validServers))
+      await redis.sadd('ollama:servers', Array.from(validServers));
     }
 
-    console.log(`\n更新完成，共有 ${validServers.size} 个有效服务器`)
+    console.log(`\n更新完成，共有 ${validServers.size} 个有效服务器`);
 
   } catch (error) {
-    console.error('更新服务失败:', error)
+    console.error('更新服务失败:', error);
   }
 }
 
