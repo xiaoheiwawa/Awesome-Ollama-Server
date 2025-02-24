@@ -26,8 +26,8 @@ jobs:
       - name: Install dependencies
         run: npm install
         
-      - name: Run monitor update
-        run: npm run monitor
+      - name: Run update Services
+        run: npm run upload
         
       - name: Commit and push if changed
         run: |
