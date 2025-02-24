@@ -1,54 +1,61 @@
 import { NextResponse } from 'next/server';
 import { checkService, measureTPS } from '@/lib/detect';
 
-export async function POST(request: Request) {
-  try {
-    const headers = {
-      'Content-Type': 'application/json',
-    };
+export const maxDuration = 300; // 设置最大执行时间为 300 秒
 
-    const { url } = await request.json();
+export async function POST(request: Request) {
+  let url = '';
+  try {
+    const { url: requestUrl } = await request.json();
+    url = requestUrl;
     
     if (!url) {
-      return NextResponse.json({ error: 'URL is required' }, { status: 400, headers });
+      return NextResponse.json({ error: 'URL is required' }, { status: 400 });
     }
 
-    console.log('Checking service:', url);
+    console.log('检测服务:', url);
 
     // 检查服务并获取可用模型
     const models = await checkService(url);
     
-    console.log('Models:', models);
-
-    // 如果 models 是 null，表示服务不可访问
-    if (models === null) {
-      return NextResponse.json({ error: 'Service unavailable' }, { status: 404, headers });
-    }
-
-    // 如果 models 是空数组，返回成功但没有模型的响应
-    if (models.length === 0) {
+    // 如果服务不可用，返回空结果
+    if (!models) {
       return NextResponse.json({
         server: url,
         models: [],
         tps: 0,
         lastUpdate: new Date().toISOString(),
-      }, { headers });
+        status: 'error'
+      });
     }
 
-    // 测试性能
-    const tps = await measureTPS(url, models[0]);
-
-    console.log('TPS:', tps);
+    // 如果有可用模型，测试性能
+    let tps = 0;
+    if (models.length > 0) {
+      try {
+        tps = await measureTPS(url, models[0]);
+      } catch (error) {
+        console.error('性能测试失败:', error);
+      }
+    }
 
     // 返回结果
     return NextResponse.json({
       server: url,
-      models,
+      models: models.map(model => model.name),
       tps,
       lastUpdate: new Date().toISOString(),
-    }, { headers });
+      status: 'success'
+    });
+
   } catch (error) {
-    console.error('Detection error:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    console.error('检测出错:', error);
+    return NextResponse.json({
+      server: url,
+      models: [],
+      tps: 0,
+      lastUpdate: new Date().toISOString(),
+      status: 'error'
+    });
   }
 }

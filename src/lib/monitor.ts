@@ -147,6 +147,7 @@ async function checkSingleService(url: string): Promise<OllamaService | null> {
       models: [],
       tps: 0,
       lastUpdate: new Date().toISOString(),
+      status: 'loading'
     };
     
     if (models && models.length > 0) {
@@ -154,9 +155,13 @@ async function checkSingleService(url: string): Promise<OllamaService | null> {
         const tps = await measureTPS(url, models[0]);
         result.models = models.map(model => model.name);
         result.tps = tps;
+        result.status = 'success';
       } catch (error) {
         console.error(`测量 TPS 失败 ${url}:`, error);
+        result.status = 'error';
       }
+    } else {
+      result.status = 'error';
     }
     
     return result;
@@ -167,6 +172,7 @@ async function checkSingleService(url: string): Promise<OllamaService | null> {
       models: [],
       tps: 0,
       lastUpdate: new Date().toISOString(),
+      status: 'error'
     };
   }
 }
@@ -187,6 +193,7 @@ async function runBatch(urls: string[]): Promise<OllamaService[]> {
         models: [],
         tps: 0,
         lastUpdate: new Date().toISOString(),
+        status: 'error'
       });
     }
   });

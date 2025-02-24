@@ -9,7 +9,6 @@ import { Footer } from '@/components/Footer';
 import { LanguageSwitch } from '@/components/LanguageSwitch';
 import { OllamaService, SortField, SortOrder } from '@/types';
 import { useParams } from 'next/navigation';
-import { checkService, measureTPS } from '@/lib/detect';
 
 
 export default function Home() {
@@ -70,58 +69,39 @@ export default function Home() {
       
       for (const url of urls) {
         try {
-          const modelInfos = await checkService(url);
-          
-          if (modelInfos === null) {
-            // 服务不可用
-            const result: OllamaService = {
+          const response = await fetch('/api/detect', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ url }),
+          });
+
+          if (!response.ok) {
+            console.error(`检测失败: ${url}, 状态码: ${response.status}`);
+            setDetectedResults(prev => [...prev, {
               server: url,
               models: [],
               tps: 0,
               lastUpdate: new Date().toISOString(),
-              loading: false,
               status: 'error'
-            };
-            setDetectedResults(prev => [...prev, result]);
-          } else {
-            // 服务可用，测量 TPS
-            const tps = modelInfos.length > 0 ? await measureTPS(url, modelInfos[0]) : 0;
-            
-            const result: OllamaService = {
-              server: url,
-              models: modelInfos.map(info => info.name),
-              tps,
-              lastUpdate: new Date().toISOString(),
-              loading: false,
-              status: 'success'
-            };
-            setDetectedResults(prev => [...prev, result]);
-            
-            // 更新 Redis 中的服务器列表
-            await fetch('/api/update-servers', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ server: url })
-            });
+            }]);
+            continue;
           }
-          
-          setDetectingServices(prev => {
-            const next = new Set(prev);
-            next.delete(url);
-            return next;
-          });
+
+          const result = await response.json();
+          setDetectedResults(prev => [...prev, result]);
+
         } catch (error) {
-          console.error('检测服务失败:', url, error);
-          const result: OllamaService = {
+          console.error(`检测出错: ${url}`, error);
+          setDetectedResults(prev => [...prev, {
             server: url,
             models: [],
             tps: 0,
             lastUpdate: new Date().toISOString(),
-            loading: false,
             status: 'error'
-          };
-          setDetectedResults(prev => [...prev, result]);
-          
+          }]);
+        } finally {
           setDetectingServices(prev => {
             const next = new Set(prev);
             next.delete(url);
@@ -129,6 +109,8 @@ export default function Home() {
           });
         }
       }
+      
+      setCountdown(5);
     } catch (error) {
       console.error('检测过程出错:', error);
       setDetectingServices(new Set());
