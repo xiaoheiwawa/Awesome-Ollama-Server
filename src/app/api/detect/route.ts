@@ -61,5 +61,5 @@ export async function POST(request: Request) {
 }
 
 export const config = {
-  maxDuration: 59 // 设置为允许的最大值 59
+  maxDuration: 50
 };
