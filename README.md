@@ -147,3 +147,8 @@ VincentKo (@forrany) - [GitHub](https://github.com/forrany)
 2. 不得将本项目用于任何非法用途
 3. 作者不对使用本项目造成的任何损失负责
 4. 数据来源于网络，如有侵权，请联系作者删除
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=forrany/Awesome-Ollama-Server&type=Date)](https://star-history.com/#forrany/Awesome-Ollama-Server&Date)
