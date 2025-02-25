@@ -183,7 +183,7 @@ async function runBatch(urls: string[]): Promise<OllamaService[]> {
   const promises = urls.map(async url => {
     try {
       const service = await checkSingleService(url);
-      if (service) {
+      if (service?.models && service.models.length > 0) {
         results.push(service);
       }
     } catch (error) {
