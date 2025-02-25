@@ -4,6 +4,8 @@
 
 ![](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefined20250224210925629.png?imageSlim)
 
+在线体验：https://awesome-ollama-server.vercel.app
+
 ## 功能特点
 
 - 🔍 服务检测
@@ -47,7 +49,7 @@
 ```bash
 # 克隆项目
 git clone git@github.com:forrany/Awesome-Ollama-Server.git
-cd ollama-monitor-service
+cd Awesome-Ollama-Server
 
 # 安装依赖
 npm install
