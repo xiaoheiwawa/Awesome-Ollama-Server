@@ -30,12 +30,12 @@ async function uploadData() {
     // 将每个服务存储为hash
     for (const service of services) {
       const encodedServer = encodeURIComponent(service.server)
-      const key = `ollama:server:${encodedServer}`
-      pipeline.hset(key, {
-        models: JSON.stringify(service.models),
-        tps: service.tps,
-        lastUpdate: service.lastUpdate
-      })
+      // const key = `ollama:server:${encodedServer}`
+      // pipeline.hset(key, {
+      //   models: JSON.stringify(service.models),
+      //   tps: service.tps,
+      //   lastUpdate: service.lastUpdate
+      // })
       // 将编码后的server URL添加到服务器集合中
       pipeline.sadd('ollama:servers', encodedServer)
     }

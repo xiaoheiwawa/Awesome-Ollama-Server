@@ -2,11 +2,13 @@ import { Redis } from '@upstash/redis'
 import { promises as fs } from 'fs'
 import { join } from 'path'
 import { OllamaService } from '../types'
+import { fofaScan } from '../../scripts/fofa-scan.mjs'
 
 const TEST_PROMPT = "Tell me a short joke"
 const TIMEOUT_MS = 30000 // 30秒超时
 const CONCURRENT_LIMIT = 50 // 并发数限制
 const RESULT_FILE = join(process.cwd(), 'public', 'data.json')
+const COUNTRYS = process.env.COUNTRYS ? process.env.COUNTRYS.split(',') : ['US', 'CN', 'RU']
 
 // Redis 客户端配置
 const redis = process.env.UPSTASH_REDIS_URL && process.env.UPSTASH_REDIS_TOKEN
@@ -211,16 +213,30 @@ export async function main() {
 
     console.log(`从 Redis 读取到 ${urls.length} 个服务器`);
 
-    // 2. 清空结果文件
+    // 2. 从 Fofa 获取服务器列表
+    let fofaUrls: string[] = [];
+    const fofaPromises = COUNTRYS.map(country => fofaScan(country));
+    const fofaResults = await Promise.all(fofaPromises);
+    
+    fofaResults.forEach(result => {
+      fofaUrls.push(...result.hosts);
+    });
+
+    console.log(`从 Fofa 读取到 ${fofaUrls.length} 个服务器`);
+
+    // 3. 合并服务器列表
+    const allUrls = [...urls, ...fofaUrls];
+
+    // 4. 清空结果文件
     await fs.writeFile(RESULT_FILE, '[]');
 
     // 有效服务器列表
     const validServers = new Set<string>();
 
     // 3. 分批处理服务器
-    for (let i = 0; i < urls.length; i += CONCURRENT_LIMIT) {
-      const batch = urls.slice(i, i + CONCURRENT_LIMIT);
-      console.log(`\n处理批次 ${Math.floor(i / CONCURRENT_LIMIT) + 1}/${Math.ceil(urls.length / CONCURRENT_LIMIT)} (${batch.length} 个服务)`);
+    for (let i = 0; i < allUrls.length; i += CONCURRENT_LIMIT) {
+      const batch = allUrls.slice(i, i + CONCURRENT_LIMIT);
+      console.log(`\n处理批次 ${Math.floor(i / CONCURRENT_LIMIT) + 1}/${Math.ceil(allUrls.length / CONCURRENT_LIMIT)} (${batch.length} 个服务)`);
       
       const results = await runBatch(batch);
       
@@ -249,9 +265,14 @@ export async function main() {
     }
 
     // 4. 更新 Redis 中的有效服务器列表
-    await redis.del('ollama:servers');
     if (validServers.size > 0) {
-      await redis.sadd('ollama:servers', Array.from(validServers));
+      console.log(`\n更新 Redis 中的有效服务器列表`);
+      await redis.del('ollama:servers');
+      validServers.forEach(async server => {
+        const enCserver = encodeURIComponent(server);
+        console.log(`\n正在更新 ${enCserver}`);
+        await redis.sadd('ollama:servers', enCserver);
+      });
     }
 
     console.log(`\n更新完成，共有 ${validServers.size} 个有效服务器`);

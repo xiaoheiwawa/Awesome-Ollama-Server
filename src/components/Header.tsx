@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { MagnifyingGlassIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import { Modal } from './Modal';
 import { OllamaService } from '@/types';
@@ -17,6 +17,9 @@ export function Header({ countdown, detectingServices, detectedResults, onDetect
   const [urlInput, setUrlInput] = useState('');
   const [detectResults, setDetectResults] = useState<OllamaService[]>([]);
   const [isDetecting, setIsDetecting] = useState(false);
+
+  // 记录已经更新过的服务器
+  const updatedServersRef = useRef(new Set<string>());
 
   const handleDetect = async () => {
     const urls = urlInput.split('\n').filter(url => url.trim());
@@ -64,26 +67,59 @@ export function Header({ countdown, detectingServices, detectedResults, onDetect
         const latestResult = detectedResults.find(r => r.server === result.server);
         
         if (latestResult && !isDetecting) {
+          // 如果检测成功且有可用模型，且状态发生了变化，且未更新过，异步更新服务器列表
+          if (latestResult.status === 'success' && 
+              latestResult.models.length > 0 && 
+              result.status !== 'success' &&
+              !updatedServersRef.current.has(latestResult.server)) {
+            // 标记该服务器已更新
+            updatedServersRef.current.add(latestResult.server);
+            
+            fetch('/api/update-servers', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ server: latestResult.server }),
+            })
+            .then(res => res.json())
+            .then(data => {
+              if (data.success) {
+                console.log(data.exists 
+                  ? `服务器已在监控列表中: ${latestResult.server}`
+                  : `服务器已添加到监控列表: ${latestResult.server}`
+                );
+              }
+            })
+            .catch(error => {
+              // 如果更新失败，移除标记以便下次重试
+              updatedServersRef.current.delete(latestResult.server);
+              console.error('更新服务器列表失败:', error);
+            });
+          }
+          
           // 如果有最新结果且不在检测中，使用最新结果
           return {
             ...latestResult,
             loading: false,
-            status: latestResult.models.length > 0 ? 'success' : 'error'
+            status: latestResult.models.length > 0 ? 'success' as const : 'error' as const
           };
         }
         
         return {
           ...result,
           loading: isDetecting,
-          status: isDetecting ? 'loading' : result.models.length > 0 ? 'success' : 'error'
+          status: isDetecting ? 'loading' as const : result.models.length > 0 ? 'success' as const : 'error' as const
         };
       })
     );
   }, [detectingServices, detectedResults]);
 
+  // 重置检测时清除已更新服务器的记录
   const handleNewDetection = () => {
     setDetectResults([]);
     setUrlInput('');
+    updatedServersRef.current.clear();
   };
 
   const handleDownload = () => {
