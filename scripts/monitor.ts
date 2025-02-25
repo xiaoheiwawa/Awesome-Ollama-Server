@@ -1,8 +1,8 @@
 import { Redis } from '@upstash/redis'
 import { promises as fs } from 'fs'
 import { join } from 'path'
-import { OllamaService } from '../types'
-import { fofaScan } from '../../scripts/fofa-scan.mjs'
+import { OllamaService } from '../src/types'
+import { fofaScan } from './fofa-scan.mjs'
 
 const TEST_PROMPT = "Tell me a short joke"
 const TIMEOUT_MS = 30000 // 30秒超时
@@ -214,7 +214,7 @@ export async function main() {
     console.log(`从 Redis 读取到 ${urls.length} 个服务器`);
 
     // 2. 从 Fofa 获取服务器列表
-    let fofaUrls: string[] = [];
+    const fofaUrls: string[] = [];
     const fofaPromises = COUNTRYS.map(country => fofaScan(country));
     const fofaResults = await Promise.all(fofaPromises);
     
