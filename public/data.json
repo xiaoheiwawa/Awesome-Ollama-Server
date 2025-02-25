@@ -10,16 +10,27 @@
       "nomic-embed-text:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.285Z",
+    "lastUpdate": "2025-02-25T04:39:33.086Z",
     "status": "success"
   },
   {
-    "server": "http://112.80.127.71:60001",
+    "server": "http://143.64.229.51:11434",
     "models": [
+      "qwen2.5:3b",
+      "qwen2.5:14b"
+    ],
+    "tps": 1.1261261261261262,
+    "lastUpdate": "2025-02-25T04:39:33.110Z",
+    "status": "success"
+  },
+  {
+    "server": "http://62.234.60.152:11434",
+    "models": [
+      "qwen2:7b",
       "deepseek-r1:7b"
     ],
-    "tps": 1.2484394506866416,
-    "lastUpdate": "2025-02-25T04:16:02.257Z",
+    "tps": 1.1210762331838564,
+    "lastUpdate": "2025-02-25T04:39:33.107Z",
     "status": "success"
   },
   {
@@ -29,17 +40,7 @@
       "llama3.1:8b-instruct-fp16"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.506Z",
-    "status": "success"
-  },
-  {
-    "server": "http://143.64.229.51:11434",
-    "models": [
-      "qwen2.5:3b",
-      "qwen2.5:14b"
-    ],
-    "tps": 1.2091898428053205,
-    "lastUpdate": "2025-02-25T04:16:02.314Z",
+    "lastUpdate": "2025-02-25T04:39:33.354Z",
     "status": "success"
   },
   {
@@ -51,7 +52,7 @@
       "TAIDE-LX-7B-Chat-4bit:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.672Z",
+    "lastUpdate": "2025-02-25T04:39:33.382Z",
     "status": "success"
   },
   {
@@ -63,8 +64,19 @@
       "qwen:14b",
       "qwen:1.8b"
     ],
-    "tps": 0.8733624454148472,
-    "lastUpdate": "2025-02-25T04:16:02.255Z",
+    "tps": 0.9756097560975611,
+    "lastUpdate": "2025-02-25T04:39:33.060Z",
+    "status": "success"
+  },
+  {
+    "server": "http://139.9.46.182:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "qwen:0.5b",
+      "bge-m3:latest"
+    ],
+    "tps": 0.8818342151675486,
+    "lastUpdate": "2025-02-25T04:39:33.156Z",
     "status": "success"
   },
   {
@@ -73,17 +85,7 @@
       "llama3:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.301Z",
-    "status": "success"
-  },
-  {
-    "server": "http://62.234.60.152:11434",
-    "models": [
-      "qwen2:7b",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.42105263157894735,
-    "lastUpdate": "2025-02-25T04:16:02.307Z",
+    "lastUpdate": "2025-02-25T04:39:33.102Z",
     "status": "success"
   },
   {
@@ -92,8 +94,26 @@
       "llama3.2:latest",
       "nomic-embed-text:latest"
     ],
-    "tps": 0.36075036075036077,
-    "lastUpdate": "2025-02-25T04:16:01.932Z",
+    "tps": 0.32776138970829233,
+    "lastUpdate": "2025-02-25T04:39:32.818Z",
+    "status": "success"
+  },
+  {
+    "server": "http://112.80.127.71:60001",
+    "models": [
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.34094783498124787,
+    "lastUpdate": "2025-02-25T04:39:33.162Z",
+    "status": "success"
+  },
+  {
+    "server": "http://210.73.53.32:6005",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.35137034434293746,
+    "lastUpdate": "2025-02-25T04:39:33.265Z",
     "status": "success"
   },
   {
@@ -101,19 +121,8 @@
     "models": [
       "deepseek-r1:latest"
     ],
-    "tps": 0.3698224852071006,
-    "lastUpdate": "2025-02-25T04:16:02.287Z",
-    "status": "success"
-  },
-  {
-    "server": "http://106.54.245.6:11434",
-    "models": [
-      "qwen2.5:0.5b",
-      "quentinz/bge-large-zh-v1.5:q8_0",
-      "smartcreation/bge-large-zh-v1.5:latest"
-    ],
-    "tps": 0.2703433360367667,
-    "lastUpdate": "2025-02-25T04:16:02.267Z",
+    "tps": 0.29472443265546716,
+    "lastUpdate": "2025-02-25T04:39:33.123Z",
     "status": "success"
   },
   {
@@ -125,7 +134,7 @@
       "deepseek-r1:14b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.294Z",
+    "lastUpdate": "2025-02-25T04:39:33.087Z",
     "status": "success"
   },
   {
@@ -143,18 +152,19 @@
       "deepseek-r1:1.5b",
       "deepseek-r1:32b"
     ],
-    "tps": 0.2152389151958674,
-    "lastUpdate": "2025-02-25T04:16:02.289Z",
+    "tps": 0.20820320632937747,
+    "lastUpdate": "2025-02-25T04:39:33.130Z",
     "status": "success"
   },
   {
-    "server": "http://47.107.34.218:11434",
+    "server": "http://106.54.245.6:11434",
     "models": [
-      "deepseek-r1:14b",
-      "quentinz/bge-large-zh-v1.5:latest"
+      "qwen2.5:0.5b",
+      "quentinz/bge-large-zh-v1.5:q8_0",
+      "smartcreation/bge-large-zh-v1.5:latest"
     ],
-    "tps": 0.145602795573675,
-    "lastUpdate": "2025-02-25T04:16:02.291Z",
+    "tps": 0.1986491855383393,
+    "lastUpdate": "2025-02-25T04:39:33.092Z",
     "status": "success"
   },
   {
@@ -164,8 +174,8 @@
       "qweb2.5-7b:latest",
       "deepseek-r1:14b"
     ],
-    "tps": 0.13793103448275862,
-    "lastUpdate": "2025-02-25T04:16:02.264Z",
+    "tps": 0.13885031935573452,
+    "lastUpdate": "2025-02-25T04:39:33.117Z",
     "status": "success"
   },
   {
@@ -176,26 +186,8 @@
       "phi4:latest",
       "deepseek-r1:70b"
     ],
-    "tps": 0.11033873993158998,
-    "lastUpdate": "2025-02-25T04:16:02.300Z",
-    "status": "success"
-  },
-  {
-    "server": "http://210.73.53.32:6005",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.10431879824744418,
-    "lastUpdate": "2025-02-25T04:16:02.372Z",
-    "status": "success"
-  },
-  {
-    "server": "http://62.234.57.148:11434",
-    "models": [
-      "gte_qwen2:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.305Z",
+    "tps": 0.1121327651939897,
+    "lastUpdate": "2025-02-25T04:39:33.174Z",
     "status": "success"
   },
   {
@@ -203,8 +195,18 @@
     "models": [
       "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
     ],
-    "tps": 0.0751201923076923,
-    "lastUpdate": "2025-02-25T04:16:02.174Z",
+    "tps": 0.07515406583496168,
+    "lastUpdate": "2025-02-25T04:39:33.069Z",
+    "status": "success"
+  },
+  {
+    "server": "http://124.71.212.175:8111",
+    "models": [
+      "qwen2.5-coder-7b-instruct-fp16:v1.0",
+      "bge-m3:latest"
+    ],
+    "tps": 0.061572563265808754,
+    "lastUpdate": "2025-02-25T04:39:33.106Z",
     "status": "success"
   },
   {
@@ -215,18 +217,21 @@
       "smollm2:135m",
       "deepseek-r1:32b"
     ],
-    "tps": 0.058934464875058934,
-    "lastUpdate": "2025-02-25T04:16:02.288Z",
+    "tps": 0.0590772139185916,
+    "lastUpdate": "2025-02-25T04:39:33.164Z",
     "status": "success"
   },
   {
-    "server": "http://124.71.212.175:8111",
+    "server": "http://118.25.192.13:11434",
     "models": [
-      "qwen2.5-coder-7b-instruct-fp16:v1.0",
-      "bge-m3:latest"
+      "deepseek-r1:14b",
+      "smollm2:135m",
+      "qwen2.5:14b",
+      "qwen2:7b",
+      "llama3:8b"
     ],
-    "tps": 0.05143768324674657,
-    "lastUpdate": "2025-02-25T04:16:02.266Z",
+    "tps": 0.05229578495973224,
+    "lastUpdate": "2025-02-25T04:39:33.151Z",
     "status": "success"
   },
   {
@@ -235,7 +240,7 @@
       "llama3:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.194Z",
+    "lastUpdate": "2025-02-25T04:39:33.079Z",
     "status": "success"
   },
   {
@@ -244,7 +249,26 @@
       "deepseek-r1:8b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.214Z",
+    "lastUpdate": "2025-02-25T04:39:33.100Z",
+    "status": "success"
+  },
+  {
+    "server": "http://62.234.57.148:11434",
+    "models": [
+      "gte_qwen2:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-25T04:39:33.109Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.107.34.218:11434",
+    "models": [
+      "deepseek-r1:14b",
+      "quentinz/bge-large-zh-v1.5:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-25T04:39:33.121Z",
     "status": "success"
   },
   {
@@ -260,31 +284,7 @@
       "qwen2.5:14b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.286Z",
-    "status": "success"
-  },
-  {
-    "server": "http://139.9.46.182:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "qwen:0.5b",
-      "bge-m3:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.317Z",
-    "status": "success"
-  },
-  {
-    "server": "http://118.25.192.13:11434",
-    "models": [
-      "deepseek-r1:14b",
-      "smollm2:135m",
-      "qwen2.5:14b",
-      "qwen2:7b",
-      "llama3:8b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.338Z",
+    "lastUpdate": "2025-02-25T04:39:33.167Z",
     "status": "success"
   },
   {
@@ -299,7 +299,7 @@
       "jeffh/intfloat-multilingual-e5-large-instruct:f16"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-25T04:16:02.354Z",
+    "lastUpdate": "2025-02-25T04:39:33.198Z",
     "status": "success"
   }
 ]
