@@ -188,13 +188,6 @@ async function runBatch(urls: string[]): Promise<OllamaService[]> {
       }
     } catch (error) {
       console.error(`处理服务失败 ${url}:`, error);
-      results.push({
-        server: url,
-        models: [],
-        tps: 0,
-        lastUpdate: new Date().toISOString(),
-        status: 'error'
-      });
     }
   });
   
