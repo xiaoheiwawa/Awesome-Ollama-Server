@@ -269,9 +269,8 @@ export async function main() {
       console.log(`\n更新 Redis 中的有效服务器列表`);
       await redis.del('ollama:servers');
       validServers.forEach(async server => {
-        const enCserver = encodeURIComponent(server);
-        console.log(`\n正在更新 ${enCserver}`);
-        await redis.sadd('ollama:servers', enCserver);
+        console.log(`\n正在更新 ${server}`);
+        await redis.sadd('ollama:servers', server);
       });
     }
 
