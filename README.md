@@ -12,6 +12,7 @@
   - 支持批量检测 Ollama 服务
   - 实时显示检测状态和结果
   - 支持检测结果导出
+  - 支持自动 FOFA 扫描
 
 - 📊 性能监控
   - 测试服务响应时间和 TPS
@@ -117,12 +118,15 @@ src/
 
 ## 环境变量
 
-创建 `.env` 文件并设置以下变量：
+创建 `.env` 文件并设置以下变量，填写后 Github Actions 会自动执行监控和上传
 
 ```env
 # 可选：Redis 配置（如果使用）
 UPSTASH_REDIS_URL=your-redis-url
 UPSTASH_REDIS_TOKEN=your-redis-token
+
+# 可选：FOFA扫描国家列表（如果使用）
+COUNTRYS=US,CN,RU
 ```
 
 ## 贡献指南
