@@ -1,47 +1,133 @@
 [
   {
-    "server": "http://34.45.2.197:11434",
+    "server": "http://205.185.127.203:11434",
     "models": [
-      "nomic-embed-text:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:30.800Z",
-    "status": "success"
-  },
-  {
-    "server": "https://ooolllama.zilu.work",
-    "models": [
-      "bge-m3:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.232Z",
-    "status": "success"
-  },
-  {
-    "server": "http://114.220.135.131:11434",
-    "models": [
-      "nomic-embed-text:latest",
-      "qwen2.5-coder:14b",
-      "deepseek-coder-v2:16b",
-      "qwen2.5:14b",
       "deepseek-r1:14b",
       "deepseek-r1:32b",
-      "deepseek-r1:8b",
-      "qwen2.5:latest",
-      "deepseek-r1:7b",
+      "deepseek-r1:70b",
+      "deepseek-r1:671b"
+    ],
+    "tps": 9.523809523809524,
+    "lastUpdate": "2025-02-26T18:30:29.396Z",
+    "status": "success"
+  },
+  {
+    "server": "http://51.15.15.246:11434",
+    "models": [
+      "deepseek-r1:70b",
+      "llava:latest",
+      "llama3.3:latest",
+      "mistral:latest",
+      "phi4:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:29.492Z",
+    "status": "success"
+  },
+  {
+    "server": "http://133.125.71.63:11434",
+    "models": [
+      "Deepseek-R1:latest",
+      "deepseek-r1:70b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:29.601Z",
+    "status": "success"
+  },
+  {
+    "server": "http://43.252.230.213:11434",
+    "models": [
       "deepseek-r1:1.5b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.255Z",
+    "lastUpdate": "2025-02-26T18:30:29.674Z",
     "status": "success"
   },
   {
-    "server": "http://47.112.112.163:11434",
+    "server": "http://43.136.54.186:11434",
     "models": [
-      "deepseek-r1:32b"
+      "deepseek-r1:latest",
+      "deepseek-r1:1.5b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.276Z",
+    "lastUpdate": "2025-02-26T18:30:29.738Z",
+    "status": "success"
+  },
+  {
+    "server": "http://185.243.240.56:11434",
+    "models": [
+      "deepseek-r1:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:29.689Z",
+    "status": "success"
+  },
+  {
+    "server": "https://sore-caitlin-flyingpot-402fcea7.koyeb.app\t",
+    "models": [
+      "deepseek-r1:14b",
+      "deepseek-r1:32b",
+      "deepseek-r1:70b",
+      "deepseek-r1:671b"
+    ],
+    "tps": 7.692307692307692,
+    "lastUpdate": "2025-02-26T18:30:30.242Z",
+    "status": "success"
+  },
+  {
+    "server": "http://a.thezen.ai",
+    "models": [
+      "phi4:latest",
+      "qwen2.5-coder:3b-base-q8_0",
+      "nezahatkorkmaz/deepseek-v3:latest",
+      "qwen2.5-coder:14b",
+      "deepseek-r1:14b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:30.338Z",
+    "status": "success"
+  },
+  {
+    "server": "http://143.64.229.51:11434",
+    "models": [
+      "qwen2.5:3b",
+      "qwen2.5:14b"
+    ],
+    "tps": 1.2706480304955527,
+    "lastUpdate": "2025-02-26T18:30:29.786Z",
+    "status": "success"
+  },
+  {
+    "server": "http://202.130.120.118:11434",
+    "models": [
+      "smollm2:135m",
+      "qwen2.5:14b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:29.685Z",
+    "status": "success"
+  },
+  {
+    "server": "https://ollama.203.145.215.194.sslip.io",
+    "models": [
+      "chatfire/bge-m3:q8_0",
+      "llama3.1:8b-instruct-fp16"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:30.074Z",
+    "status": "success"
+  },
+  {
+    "server": "https://b.thezen.ai",
+    "models": [
+      "phi4:latest",
+      "qwen2.5-coder:3b-base-q8_0",
+      "nezahatkorkmaz/deepseek-v3:latest",
+      "qwen2.5-coder:14b",
+      "deepseek-r1:14b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:30.048Z",
     "status": "success"
   },
   {
@@ -74,11 +160,111 @@
       "llava:34b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.278Z",
+    "lastUpdate": "2025-02-26T18:30:30.275Z",
     "status": "success"
   },
   {
-    "server": "http://121.227.174.166:11434/",
+    "server": "https://model.teadews.com",
+    "models": [
+      "hf.co/bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF:Q4_K_M",
+      "hf.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF:Q6_K_L"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:30.396Z",
+    "status": "success"
+  },
+  {
+    "server": "https://ollama.140.110.139.33.sslip.io",
+    "models": [
+      "chatfire/bge-m3:q8_0",
+      "llama3.1:8b-instruct-fp16",
+      "Llama3-TAIDE-LX-8B-Chat-Alpha1-4bit:latest",
+      "TAIDE-LX-7B-Chat-4bit:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:30.311Z",
+    "status": "success"
+  },
+  {
+    "server": "http://llm.ds-dev.neuro.net",
+    "models": [
+      "llama3.1:latest",
+      "paraphrase-multilingual:latest",
+      "llama3.2:latest",
+      "infidelis/GigaChat-20B-A3B-instruct:q8_0",
+      "jeffh/intfloat-multilingual-e5-large-instruct:f16",
+      "all-minilm:l6-v2",
+      "deepseek-coder-v2:16b",
+      "neuro-net-1.0:20b",
+      "neuro-net-1.0:7b",
+      "hf.co/t-tech/T-lite-it-1.0-Q8_0-GGUF:latest",
+      "neuro-net-1.0:8b",
+      "deepseek-r1:70b",
+      "ollama.com/fomenks/T-Pro-1.0-it-q4_k_m:latest",
+      "ollama.com/owl/t-lite:q4_0-instruct",
+      "ollama.com/library/qwen2.5:7b-instruct",
+      "infidelis/GigaChat-20B-A3B-instruct:q4_K_M",
+      "rscr/ruadapt_qwen2.5_32b:Q4_K_M",
+      "deepseek-r1:32b",
+      "llama3.3:70b-instruct-q8_0",
+      "llama3.3:70b",
+      "qwq:32b",
+      "codellama:34b",
+      "qwen2.5-coder:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:30.840Z",
+    "status": "success"
+  },
+  {
+    "server": "http://64.98.192.13:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:1.5b",
+      "deepseek-r1:8b",
+      "deepseek-r1:14b",
+      "llama3.2-vision:latest",
+      "minicpm-v:latest",
+      "llava:13b",
+      "qwen2.5-coder:latest",
+      "gemma2:latest",
+      "qwen2-math:latest",
+      "qwen2.5:0.5b"
+    ],
+    "tps": 0.4697040864255519,
+    "lastUpdate": "2025-02-26T18:30:29.606Z",
+    "status": "success"
+  },
+  {
+    "server": "http://112.80.127.71:60001",
+    "models": [
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.333889816360601,
+    "lastUpdate": "2025-02-26T18:30:29.733Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.194.130.126:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.3201024327784891,
+    "lastUpdate": "2025-02-26T18:30:29.972Z",
+    "status": "success"
+  },
+  {
+    "server": "http://15.207.67.36:11434",
+    "models": [
+      "llama3.1:latest"
+    ],
+    "tps": 0.2351834430856068,
+    "lastUpdate": "2025-02-26T18:30:29.719Z",
+    "status": "success"
+  },
+  {
+    "server": "http://121.227.174.166:11434\t",
     "models": [
       "erwan2/DeepSeek-Janus-Pro-7B:latest",
       "huihui_ai/deepseek-r1-abliterated:7b",
@@ -105,307 +291,41 @@
       "codellama:latest",
       "codegemma:latest"
     ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.727Z",
+    "tps": 0.23282887077997672,
+    "lastUpdate": "2025-02-26T18:30:29.762Z",
     "status": "success"
   },
   {
-    "server": "http://140.122.121.221:11434",
+    "server": "http://54.64.255.193\t",
     "models": [
-      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.119Z",
-    "status": "success"
-  },
-  {
-    "server": "http://64.98.192.13:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:1.5b",
-      "deepseek-r1:8b",
-      "deepseek-r1:14b",
-      "llama3.2-vision:latest",
-      "minicpm-v:latest",
-      "llava:13b",
-      "qwen2.5-coder:latest",
-      "gemma2:latest",
-      "qwen2-math:latest",
-      "qwen2.5:0.5b"
-    ],
-    "tps": 0.6591957811470007,
-    "lastUpdate": "2025-02-26T17:19:31.150Z",
-    "status": "success"
-  },
-  {
-    "server": "http://20.243.131.115:11434\t",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:32b",
-      "deepseek-r1:1.5b",
       "phi4:latest",
-      "dolphin3:latest",
-      "smallthinker:latest",
-      "smollm:1.7b",
-      "llama3.2-vision:11b",
-      "starcoder2:latest",
-      "deepseek-r1:7b",
-      "deepseek-r1:14b",
-      "gemma:latest",
-      "minicpm-v:latest"
-    ],
-    "tps": 0.5564830272676684,
-    "lastUpdate": "2025-02-26T17:19:31.061Z",
-    "status": "success"
-  },
-  {
-    "server": "http://60.190.249.69:11434\t",
-    "models": [
-      "deepseek-r1:70b",
-      "llama3:latest"
-    ],
-    "tps": 0.5402485143165856,
-    "lastUpdate": "2025-02-26T17:19:31.249Z",
-    "status": "success"
-  },
-  {
-    "server": "https://ollama.elwazir.org",
-    "models": [
-      "llama2:latest",
-      "Deepseek-r1:32b",
-      "adens/quran-guide:latest",
-      "gemma2:latest",
-      "llama3.3:latest",
-      "qwen2.5:latest",
       "llama3.2:latest",
-      "qwq:latest"
+      "deepseek-r1:latest",
+      "llama3.1:latest"
     ],
-    "tps": 0.4093327875562833,
-    "lastUpdate": "2025-02-26T17:19:30.943Z",
+    "tps": 0.17905102954341987,
+    "lastUpdate": "2025-02-26T18:30:29.565Z",
     "status": "success"
   },
   {
-    "server": "http://170.106.81.7:11434",
+    "server": "http://111.113.18.110:11434",
     "models": [
-      "smollm2:135m",
-      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
-    ],
-    "tps": 0.3435245620061834,
-    "lastUpdate": "2025-02-26T17:19:30.900Z",
-    "status": "success"
-  },
-  {
-    "server": "http://125.70.163.62:8899",
-    "models": [
-      "qwen2.5:0.5b",
-      "qwen2.5-coder:latest",
-      "llama3.2-vision:latest",
-      "llava-llama3:latest",
-      "ALIENTELLIGENCE/doctorai:latest",
-      "nomic-embed-text:latest",
-      "gemma2:27b",
-      "minicpm-v:latest",
-      "shaw/dmeta-embedding-zh:latest",
-      "glm4:latest",
-      "qwen2.5:latest"
-    ],
-    "tps": 0.34118048447628796,
-    "lastUpdate": "2025-02-26T17:19:31.273Z",
-    "status": "success"
-  },
-  {
-    "server": "http://60.190.249.69:11434",
-    "models": [
-      "deepseek-r1:70b",
-      "llama3:latest"
-    ],
-    "tps": 0.30721966205837176,
-    "lastUpdate": "2025-02-26T17:19:31.229Z",
-    "status": "success"
-  },
-  {
-    "server": "http://114.34.38.151:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:7b",
-      "deepseek-r1:latest"
-    ],
-    "tps": 0.28801843317972353,
-    "lastUpdate": "2025-02-26T17:19:31.124Z",
-    "status": "success"
-  },
-  {
-    "server": "http://211.218.144.230:11434",
-    "models": [
-      "qwen2.5:latest",
-      "gemma-2-2b-it:latest",
-      "gemma2:9b",
-      "llama3.2:latest",
-      "bge-m3:latest"
-    ],
-    "tps": 0.27548209366391185,
-    "lastUpdate": "2025-02-26T17:19:31.101Z",
-    "status": "success"
-  },
-  {
-    "server": "http://221.234.231.226:11434",
-    "models": [
-      "zyw0605688/bge-reranker-v2-m3:latest",
-      "qwen2.5:14b",
-      "bge-m3:latest",
       "deepseek-r1:14b"
     ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.258Z",
+    "tps": 0.1795009872554299,
+    "lastUpdate": "2025-02-26T18:30:29.767Z",
     "status": "success"
   },
   {
-    "server": "http://106.54.245.6:11434",
+    "server": "http://183.220.129.95:11434",
     "models": [
-      "qwen2.5:0.5b",
-      "quentinz/bge-large-zh-v1.5:q8_0",
-      "smartcreation/bge-large-zh-v1.5:latest"
+      "category:latest",
+      "table:latest",
+      "deepseek-r1:32b",
+      "db:latest"
     ],
-    "tps": 0.23854961832061067,
-    "lastUpdate": "2025-02-26T17:19:31.224Z",
-    "status": "success"
-  },
-  {
-    "server": "http://108.181.202.137:11434",
-    "models": [
-      "deepseek-r1:7b",
-      "llama3.2:latest",
-      "llama3.2-vision:latest"
-    ],
-    "tps": 0.155448468832582,
-    "lastUpdate": "2025-02-26T17:19:30.822Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.160:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.1479727730097662,
-    "lastUpdate": "2025-02-26T17:19:30.881Z",
-    "status": "success"
-  },
-  {
-    "server": "http://45.92.9.123:11434",
-    "models": [
-      "smollm2:135m",
-      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
-    ],
-    "tps": 0.14074595355383532,
-    "lastUpdate": "2025-02-26T17:19:30.999Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.194.130.108:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.1488316713796696,
-    "lastUpdate": "2025-02-26T17:19:31.502Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.182:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.1195457262402869,
-    "lastUpdate": "2025-02-26T17:19:30.874Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.194.130.103:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.12637432073802604,
-    "lastUpdate": "2025-02-26T17:19:31.501Z",
-    "status": "success"
-  },
-  {
-    "server": "http://36.133.148.70:11434\t",
-    "models": [
-      "deepseek-r1:14b",
-      "huihui_ai/deepseek-r1-abliterated:14b",
-      "deepseek-r1:70b"
-    ],
-    "tps": 0.1174812030075188,
-    "lastUpdate": "2025-02-26T17:19:31.231Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.169:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.10998680158380994,
-    "lastUpdate": "2025-02-26T17:19:30.875Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.131:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.10736525660296328,
-    "lastUpdate": "2025-02-26T17:19:30.872Z",
-    "status": "success"
-  },
-  {
-    "server": "http://49.4.62.154:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:8b"
-    ],
-    "tps": 0.10231225700838961,
-    "lastUpdate": "2025-02-26T17:19:31.161Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.194.130.114:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.10059350165979276,
-    "lastUpdate": "2025-02-26T17:19:31.504Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.194.130.124:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.09858044164037855,
-    "lastUpdate": "2025-02-26T17:19:31.508Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.147:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.09147457006952067,
-    "lastUpdate": "2025-02-26T17:19:30.879Z",
+    "tps": 0.1699524133242692,
+    "lastUpdate": "2025-02-26T18:30:29.748Z",
     "status": "success"
   },
   {
@@ -415,28 +335,115 @@
       "llama2:latest",
       "deepseek-r1:1.5b"
     ],
-    "tps": 0.09085127646043427,
-    "lastUpdate": "2025-02-26T17:19:30.882Z",
+    "tps": 0.10017028949213663,
+    "lastUpdate": "2025-02-26T18:30:29.380Z",
     "status": "success"
   },
   {
-    "server": "http://140.122.185.188:11434",
-    "models": [
-      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
-    ],
-    "tps": 0.07899518129394106,
-    "lastUpdate": "2025-02-26T17:19:31.115Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.73.172:11434",
+    "server": "http://154.19.73.158:11434",
     "models": [
       "smollm2:135m",
       "llama2:latest",
       "deepseek-r1:1.5b"
     ],
-    "tps": 0.07742934572202866,
-    "lastUpdate": "2025-02-26T17:19:30.877Z",
+    "tps": 0.09769441187964048,
+    "lastUpdate": "2025-02-26T18:30:29.386Z",
+    "status": "success"
+  },
+  {
+    "server": "http://36.133.148.70:11434\t",
+    "models": [
+      "deepseek-r1:14b",
+      "huihui_ai/deepseek-r1-abliterated:14b",
+      "deepseek-r1:70b"
+    ],
+    "tps": 0.07767593599502874,
+    "lastUpdate": "2025-02-26T18:30:29.737Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.73.164:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.0702000702000702,
+    "lastUpdate": "2025-02-26T18:30:29.382Z",
+    "status": "success"
+  },
+  {
+    "server": "http://38.105.209.211:11434",
+    "models": [
+      "llama3.2:1b"
+    ],
+    "tps": 0.06915629322268325,
+    "lastUpdate": "2025-02-26T18:30:29.341Z",
+    "status": "success"
+  },
+  {
+    "server": "http://175.178.46.131:11434",
+    "models": [
+      "chevalblanc/gpt-4o-mini:latest",
+      "qwen2.5-coder:3b",
+      "qwen2.5:3b"
+    ],
+    "tps": 0.06954102920723226,
+    "lastUpdate": "2025-02-26T18:30:29.743Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.166:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.067736909842173,
+    "lastUpdate": "2025-02-26T18:30:29.383Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.74.137:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.06568144499178982,
+    "lastUpdate": "2025-02-26T18:30:29.384Z",
+    "status": "success"
+  },
+  {
+    "server": "http://180.107.204.186:11434",
+    "models": [
+      "deepseek-r1:14b",
+      "modelscope2ollama-registry.azurewebsites.net/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B:latest",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0.06709158000670916,
+    "lastUpdate": "2025-02-26T18:30:29.747Z",
+    "status": "success"
+  },
+  {
+    "server": "http://69.30.199.10:11434\t",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.06551791915088777,
+    "lastUpdate": "2025-02-26T18:30:30.392Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.172:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.05582849486377848,
+    "lastUpdate": "2025-02-26T18:30:29.387Z",
     "status": "success"
   },
   {
@@ -469,143 +476,133 @@
       "phi3.5:latest",
       "deepseek-r1:7b"
     ],
-    "tps": 0.0693625580911424,
-    "lastUpdate": "2025-02-26T17:19:31.397Z",
+    "tps": 0.05635072692437733,
+    "lastUpdate": "2025-02-26T18:30:29.740Z",
     "status": "success"
   },
   {
-    "server": "http://39.100.111.0:11434",
+    "server": "http://118.25.192.13:11434",
     "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.050823338076844894,
-    "lastUpdate": "2025-02-26T17:19:31.173Z",
-    "status": "success"
-  },
-  {
-    "server": "http://69.30.199.10:11434\t",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0.045522829699094096,
-    "lastUpdate": "2025-02-26T17:19:30.885Z",
-    "status": "success"
-  },
-  {
-    "server": "http://81.177.221.132:8085",
-    "models": [
-      "qwen2.5:14b",
-      "qwen2.5:32b"
-    ],
-    "tps": 0.04400246413799173,
-    "lastUpdate": "2025-02-26T17:19:31.044Z",
-    "status": "success"
-  },
-  {
-    "server": "http://58.87.73.177:11434",
-    "models": [
-      "deepseek-r1:8b"
-    ],
-    "tps": 0.03946018467366427,
-    "lastUpdate": "2025-02-26T17:19:31.262Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.76.208.56:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.03745318352059925,
-    "lastUpdate": "2025-02-26T17:19:31.153Z",
-    "status": "success"
-  },
-  {
-    "server": "http://35.192.12.57",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:30.802Z",
-    "status": "success"
-  },
-  {
-    "server": "http://69.30.199.11:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:30.884Z",
-    "status": "success"
-  },
-  {
-    "server": "http://123.58.212.82:11434",
-    "models": [
-      "deepseek-r1:7b",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.158Z",
-    "status": "success"
-  },
-  {
-    "server": "http://116.90.87.83:11434",
-    "models": [
-      "qwen2.5:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.160Z",
-    "status": "success"
-  },
-  {
-    "server": "http://121.43.148.53:11434\t",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:7b",
       "deepseek-r1:14b",
+      "smollm2:135m",
+      "qwen2.5:14b",
+      "qwen2:7b",
+      "llama3:8b"
+    ],
+    "tps": 0.05144562197756971,
+    "lastUpdate": "2025-02-26T18:30:29.911Z",
+    "status": "success"
+  },
+  {
+    "server": "http://4.156.67.94",
+    "models": [
+      "llama3.3:latest"
+    ],
+    "tps": 0.04795013186286262,
+    "lastUpdate": "2025-02-26T18:30:29.318Z",
+    "status": "success"
+  },
+  {
+    "server": "http://125.80.200.69:11434",
+    "models": [
+      "deepseek-r1:70b",
+      "deepseek-r1:32b",
+      "deepseek-r1:14b",
+      "qwen2.5:7b",
+      "bge-m3:latest",
+      "llama3.2:3b",
+      "glm4:9b",
+      "deepseek-r1:7b",
+      "mannix/defog-llama3-sqlcoder-8b:latest",
+      "smollm2:135m",
+      "ueone:latest"
+    ],
+    "tps": 0.04693293283897311,
+    "lastUpdate": "2025-02-26T18:30:29.787Z",
+    "status": "success"
+  },
+  {
+    "server": "http://45.92.9.123:11434",
+    "models": [
+      "smollm2:135m",
+      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
+    ],
+    "tps": 0.041569670768207514,
+    "lastUpdate": "2025-02-26T18:30:29.505Z",
+    "status": "success"
+  },
+  {
+    "server": "http://ds-api.dlzdkt.com",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.03706037134492088,
+    "lastUpdate": "2025-02-26T18:30:30.339Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.74.138:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.035080333964779345,
+    "lastUpdate": "2025-02-26T18:30:29.385Z",
+    "status": "success"
+  },
+  {
+    "server": "http://117.134.14.142:11434",
+    "models": [
+      "deepseek-r1:70b",
+      "deepseek-r1:32b",
+      "deepseek-r1:14b",
+      "llama3:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:29.715Z",
+    "status": "success"
+  },
+  {
+    "server": "http://122.242.243.166:11434",
+    "models": [
+      "huihui_ai/deepseek-r1-abliterated:8b",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:29.740Z",
+    "status": "success"
+  },
+  {
+    "server": "http://103.59.148.103:11434",
+    "models": [
+      "deepseek-r1:latest",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:29.784Z",
+    "status": "success"
+  },
+  {
+    "server": "http://112.86.129.67:11434",
+    "models": [
       "deepseek-r1:32b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.179Z",
+    "lastUpdate": "2025-02-26T18:30:29.788Z",
     "status": "success"
   },
   {
-    "server": "http://3.28.233.140",
+    "server": "http://117.50.173.120:11434",
     "models": [
-      "deepseek-r1:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.189Z",
-    "status": "success"
-  },
-  {
-    "server": "http://27.185.57.227:11434",
-    "models": [
-      "deepseek-r1:8b",
-      "qwen2.5:3b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.263Z",
-    "status": "success"
-  },
-  {
-    "server": "http://8.138.86.235:11434",
-    "models": [
-      "deepseek-r1:7b",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.272Z",
-    "status": "success"
-  },
-  {
-    "server": "http://111.113.18.110:11434",
-    "models": [
+      "hengwen/DeepSeek-R1-Distill-Qwen-14B:f16",
+      "qwen2.5:14b",
+      "bge-m3:latest",
+      "quentinz/bge-large-zh-v1.5:latest",
       "deepseek-r1:14b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.290Z",
+    "lastUpdate": "2025-02-26T18:30:29.795Z",
     "status": "success"
   },
   {
@@ -633,19 +630,1227 @@
       "huihui_ai/deepseek-r1-abliterated:8b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:19:31.521Z",
+    "lastUpdate": "2025-02-26T18:30:30.014Z",
     "status": "success"
   },
   {
-    "server": "http://205.185.127.203:11434",
+    "server": "http://69.30.199.10:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:30.395Z",
+    "status": "success"
+  },
+  {
+    "server": "https://chat.blch.ru",
+    "models": [
+      "mistral-large:123b-instruct-2411-q6_K",
+      "deepseek-r1:671b",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:30:31.071Z",
+    "status": "success"
+  },
+  {
+    "server": "http://75.43.156.105:11434",
+    "models": [
+      "smollm2:135m",
+      "dolphin-mixtral:8x7b",
+      "deepseek-r1:8b",
+      "minicpm-v:latest",
+      "qwen2.5:latest"
+    ],
+    "tps": 1.2391573729863692,
+    "lastUpdate": "2025-02-26T18:31:01.160Z",
+    "status": "success"
+  },
+  {
+    "server": "http://140.83.80.248:10101",
+    "models": [
+      "bge-m3:latest",
+      "gemma2:27b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.590Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.121.211.134:11434",
+    "models": [
+      "modelscope.cn/unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.561Z",
+    "status": "success"
+  },
+  {
+    "server": "http://36.35.236.75:9002",
+    "models": [
+      "mxbai-embed-large:latest",
+      "llama3.2:latest",
+      "nomic-embed-text:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.609Z",
+    "status": "success"
+  },
+  {
+    "server": "https://a.thezen.ai",
+    "models": [
+      "phi4:latest",
+      "qwen2.5-coder:3b-base-q8_0",
+      "nezahatkorkmaz/deepseek-v3:latest",
+      "qwen2.5-coder:14b",
+      "deepseek-r1:14b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.653Z",
+    "status": "success"
+  },
+  {
+    "server": "http://ooolllama.zilu.work",
+    "models": [
+      "bge-m3:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:02.140Z",
+    "status": "success"
+  },
+  {
+    "server": "http://36.133.148.70:11434",
+    "models": [
+      "deepseek-r1:14b",
+      "huihui_ai/deepseek-r1-abliterated:14b",
+      "deepseek-r1:70b"
+    ],
+    "tps": 1.0471204188481675,
+    "lastUpdate": "2025-02-26T18:31:01.555Z",
+    "status": "success"
+  },
+  {
+    "server": "http://116.227.18.59:11434",
+    "models": [
+      "deepseek-r1:671b",
+      "nomic-embed-text:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.558Z",
+    "status": "success"
+  },
+  {
+    "server": "http://180.200.10.114:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:latest",
+      "llama3.2:latest"
+    ],
+    "tps": 0.6373486297004461,
+    "lastUpdate": "2025-02-26T18:31:01.405Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.76.190.5:11434",
+    "models": [
+      "smollm2:135m",
+      "qwen:4b",
+      "deepseek-r1:latest",
+      "nomic-embed-text:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.6618133686300464,
+    "lastUpdate": "2025-02-26T18:31:01.491Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.194.131.66:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.764525993883792,
+    "lastUpdate": "2025-02-26T18:31:01.790Z",
+    "status": "success"
+  },
+  {
+    "server": "http://170.106.81.7:11434",
+    "models": [
+      "smollm2:135m",
+      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
+    ],
+    "tps": 0.5151983513652756,
+    "lastUpdate": "2025-02-26T18:31:01.199Z",
+    "status": "success"
+  },
+  {
+    "server": "http://81.70.201.242:11434",
+    "models": [
+      "llama3:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.594Z",
+    "status": "success"
+  },
+  {
+    "server": "http://60.247.78.91:11434\t",
+    "models": [
+      "aiden_lu/minicpm-v2.6:Q4_K_M",
+      "chroma/all-minilm-l6-v2-f32:latest",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.4657661853749418,
+    "lastUpdate": "2025-02-26T18:31:01.595Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.74.131:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.3863987635239567,
+    "lastUpdate": "2025-02-26T18:31:01.205Z",
+    "status": "success"
+  },
+  {
+    "server": "https://ollama.elwazir.org",
+    "models": [
+      "llama2:latest",
+      "Deepseek-r1:32b",
+      "adens/quran-guide:latest",
+      "gemma2:latest",
+      "llama3.3:latest",
+      "qwen2.5:latest",
+      "llama3.2:latest",
+      "qwq:latest"
+    ],
+    "tps": 0.3897116134060795,
+    "lastUpdate": "2025-02-26T18:31:01.258Z",
+    "status": "success"
+  },
+  {
+    "server": "http://206.72.207.77:11434",
+    "models": [
+      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.156Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.38.179.23",
+    "models": [
+      "tinyllama:latest",
+      "gemma:latest",
+      "mistral:latest"
+    ],
+    "tps": 0.2996703626011387,
+    "lastUpdate": "2025-02-26T18:31:01.161Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.74.155:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.23986567522187577,
+    "lastUpdate": "2025-02-26T18:31:01.208Z",
+    "status": "success"
+  },
+  {
+    "server": "http://210.73.53.32:6005",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.21542438604049977,
+    "lastUpdate": "2025-02-26T18:31:01.677Z",
+    "status": "success"
+  },
+  {
+    "server": "http://184.105.6.66:11434",
+    "models": [
+      "smollm2:135m",
+      "llava:34b",
+      "deepseek-v2.5:latest",
+      "llama2:latest",
+      "deepseek-r1:70b"
+    ],
+    "tps": 0.17301038062283736,
+    "lastUpdate": "2025-02-26T18:31:01.155Z",
+    "status": "success"
+  },
+  {
+    "server": "http://20.254.105.163:11434",
+    "models": [
+      "llama2:latest",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.16764459346186086,
+    "lastUpdate": "2025-02-26T18:31:01.288Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.189:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.15487068297971193,
+    "lastUpdate": "2025-02-26T18:31:01.201Z",
+    "status": "success"
+  },
+  {
+    "server": "http://152.136.173.137:11434",
+    "models": [
+      "qwen2:0.5b"
+    ],
+    "tps": 0.15015015015015015,
+    "lastUpdate": "2025-02-26T18:31:01.597Z",
+    "status": "success"
+  },
+  {
+    "server": "http://121.43.148.53:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:7b",
+      "deepseek-r1:14b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.1335291761249833,
+    "lastUpdate": "2025-02-26T18:31:01.570Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.73.172:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.10757314974182444,
+    "lastUpdate": "2025-02-26T18:31:01.202Z",
+    "status": "success"
+  },
+  {
+    "server": "http://101.37.83.61:9994",
+    "models": [
+      "qwen2.5:32b",
+      "llama3.3:latest",
+      "phi4:latest",
+      "deepseek-r1:70b"
+    ],
+    "tps": 0.10278548668927948,
+    "lastUpdate": "2025-02-26T18:31:01.579Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.238.239.113:11434",
+    "models": [
+      "minicpm-v:latest"
+    ],
+    "tps": 0.09838646202282567,
+    "lastUpdate": "2025-02-26T18:31:01.492Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.74.162:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.09536524890329963,
+    "lastUpdate": "2025-02-26T18:31:01.200Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.179:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.09536524890329963,
+    "lastUpdate": "2025-02-26T18:31:01.201Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.160:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.09120758847136082,
+    "lastUpdate": "2025-02-26T18:31:01.203Z",
+    "status": "success"
+  },
+  {
+    "server": "http://211.139.164.250:11434\t",
+    "models": [
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.08043111075363951,
+    "lastUpdate": "2025-02-26T18:31:01.572Z",
+    "status": "success"
+  },
+  {
+    "server": "http://211.139.164.250:11434",
+    "models": [
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.07973210014351778,
+    "lastUpdate": "2025-02-26T18:31:01.585Z",
+    "status": "success"
+  },
+  {
+    "server": "http://101.237.129.74:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.07848061528802386,
+    "lastUpdate": "2025-02-26T18:31:01.604Z",
+    "status": "success"
+  },
+  {
+    "server": "http://60.190.249.69:11434",
+    "models": [
+      "deepseek-r1:70b",
+      "llama3:latest"
+    ],
+    "tps": 0.06858710562414266,
+    "lastUpdate": "2025-02-26T18:31:01.556Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.74.150:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.06111348774674571,
+    "lastUpdate": "2025-02-26T18:31:01.209Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.74.142:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.05486968449931413,
+    "lastUpdate": "2025-02-26T18:31:01.205Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.107.34.218:11434",
+    "models": [
+      "deepseek-r1:14b",
+      "quentinz/bge-large-zh-v1.5:latest"
+    ],
+    "tps": 0.043084877208099955,
+    "lastUpdate": "2025-02-26T18:31:01.581Z",
+    "status": "success"
+  },
+  {
+    "server": "http://182.37.50.190:11434",
+    "models": [
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.04012519059465532,
+    "lastUpdate": "2025-02-26T18:31:01.605Z",
+    "status": "success"
+  },
+  {
+    "server": "http://185.58.221.49:11434",
+    "models": [
+      "llama3.1:8b-instruct-fp16",
+      "nomic-embed-text:latest",
+      "llama3.1:8b-instruct-q8_0"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.380Z",
+    "status": "success"
+  },
+  {
+    "server": "http://27.82.194.51:11434",
+    "models": [
+      "llama3.3:latest",
+      "deepseek-r1:14b",
+      "deepseek-r1:32b",
+      "deepseek-r1:latest",
+      "gemma2:27b",
+      "phi4:latest",
+      "gemma2:latest",
+      "llama3.2:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.409Z",
+    "status": "success"
+  },
+  {
+    "server": "http://103.251.89.234:11434",
+    "models": [
+      "deepseek-r1:7b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.521Z",
+    "status": "success"
+  },
+  {
+    "server": "http://8.138.86.235:11434",
+    "models": [
+      "deepseek-r1:7b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.545Z",
+    "status": "success"
+  },
+  {
+    "server": "http://36.140.15.241:11434",
+    "models": [
+      "deepseek-v2:latest",
+      "deepseek-r1:latest",
+      "deepseek-v2-nsfw:latest",
+      "qwen2.5-nsfw:14b",
+      "llama3.1-nsfw:8b",
+      "deepseek-nsfw:70b",
+      "mxbai-embed-large:latest",
+      "qwen2.5:14b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.562Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.101.67.217:11434\t",
+    "models": [
+      "deepseek-r1:32b",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.563Z",
+    "status": "success"
+  },
+  {
+    "server": "http://61.149.185.106:11434",
+    "models": [
+      "deepseek-r1:70b",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.578Z",
+    "status": "success"
+  },
+  {
+    "server": "http://36.111.150.123:11434",
+    "models": [
+      "deepseek-r1:32b",
+      "deepseek-r1:14b",
+      "deepseek-r1:8b",
+      "deepseek-r1:7b",
+      "deepseek-r1:70b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.598Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.238.251.43:7779",
+    "models": [
+      "deepseek-r1:32b",
+      "llama2:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.606Z",
+    "status": "success"
+  },
+  {
+    "server": "https://ai.frickalou.com",
+    "models": [
+      "qwen2.5-coder:14b",
+      "qwen2.5:14b",
+      "huihui_ai/deepseek-r1-abliterated:14b",
+      "llava:13b",
+      "hf.co/BeaverLegacy/Smegmma-9B-v1-GGUF:Q5_K_M",
+      "llava-llama3:latest",
+      "codeqwen:latest",
+      "llama3.1:latest",
+      "trollek/qwen2-diffusion-prompter:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:01.957Z",
+    "status": "success"
+  },
+  {
+    "server": "http://newsletter-126.preview.ztsco.cn:11434",
+    "models": [
+      "deepseek-r1:70b",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:02.096Z",
+    "status": "success"
+  },
+  {
+    "server": "http://ollama.elwazir.org",
+    "models": [
+      "llama2:latest",
+      "Deepseek-r1:32b",
+      "adens/quran-guide:latest",
+      "gemma2:latest",
+      "llama3.3:latest",
+      "qwen2.5:latest",
+      "llama3.2:latest",
+      "qwq:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.566Z",
+    "status": "success"
+  },
+  {
+    "server": "https://ooolllama.zilu.work",
+    "models": [
+      "bge-m3:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.508Z",
+    "status": "success"
+  },
+  {
+    "server": "https://sore-caitlin-flyingpot-402fcea7.koyeb.app",
     "models": [
       "deepseek-r1:14b",
       "deepseek-r1:32b",
       "deepseek-r1:70b",
       "deepseek-r1:671b"
     ],
-    "tps": 9.615384615384615,
-    "lastUpdate": "2025-02-26T17:20:01.663Z",
+    "tps": 7.518796992481203,
+    "lastUpdate": "2025-02-26T18:31:32.620Z",
+    "status": "success"
+  },
+  {
+    "server": "http://113.68.253.78:11434",
+    "models": [
+      "nomic-embed-text:latest",
+      "deepseek-r1:32b-qwen-distill-q4_K_M"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.584Z",
+    "status": "success"
+  },
+  {
+    "server": "http://121.37.208.255:11434",
+    "models": [
+      "nomic-embed-text:latest",
+      "deepseek-r1:8b",
+      "deepseek-r1:14b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.586Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.76.231.44:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.563Z",
+    "status": "success"
+  },
+  {
+    "server": "http://60.247.78.91:11434",
+    "models": [
+      "aiden_lu/minicpm-v2.6:Q4_K_M",
+      "chroma/all-minilm-l6-v2-f32:latest",
+      "deepseek-r1:32b"
+    ],
+    "tps": 1.5267175572519083,
+    "lastUpdate": "2025-02-26T18:31:32.614Z",
+    "status": "success"
+  },
+  {
+    "server": "https://chat.blch.ru/\t",
+    "models": [
+      "mistral-large:123b-instruct-2411-q6_K",
+      "deepseek-r1:671b",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:33.052Z",
+    "status": "success"
+  },
+  {
+    "server": "http://180.200.10.114:11434\t",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:latest",
+      "llama3.2:latest"
+    ],
+    "tps": 0.8968609865470852,
+    "lastUpdate": "2025-02-26T18:31:32.429Z",
+    "status": "success"
+  },
+  {
+    "server": "http://161.35.13.82:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:latest"
+    ],
+    "tps": 0.6844626967830253,
+    "lastUpdate": "2025-02-26T18:31:32.185Z",
+    "status": "success"
+  },
+  {
+    "server": "http://140.122.121.221:11434",
+    "models": [
+      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.473Z",
+    "status": "success"
+  },
+  {
+    "server": "http://183.94.184.91:11434/",
+    "models": [
+      "bge-m3:latest",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:33.164Z",
+    "status": "success"
+  },
+  {
+    "server": "http://118.89.77.47:20001",
+    "models": [
+      "qwen2.5:14b-instruct",
+      "qwen:32b",
+      "winGPT2-Llama-3-8b:latest",
+      "qwen:14b",
+      "qwen:1.8b"
+    ],
+    "tps": 0.9025270758122743,
+    "lastUpdate": "2025-02-26T18:31:32.586Z",
+    "status": "success"
+  },
+  {
+    "server": "http://62.234.60.152:11434",
+    "models": [
+      "qwen2:7b",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.8583690987124464,
+    "lastUpdate": "2025-02-26T18:31:32.619Z",
+    "status": "success"
+  },
+  {
+    "server": "http://121.227.174.166:11434",
+    "models": [
+      "erwan2/DeepSeek-Janus-Pro-7B:latest",
+      "huihui_ai/deepseek-r1-abliterated:7b",
+      "bge-large:latest",
+      "bge-m3:latest",
+      "deepseek-r1:latest",
+      "qwq:latest",
+      "llama3.2-vision:latest",
+      "internlm/internlm2.5:latest",
+      "qwen2.5-coder:latest",
+      "qwen2.5:latest",
+      "qwen2-math:latest",
+      "phi3.5:latest",
+      "ollam/unichat-llama3-chinese-8b:latest",
+      "nomic-embed-text:latest",
+      "minicpm-v:latest",
+      "llava:latest",
+      "llava-llama3:latest",
+      "llama3.1:latest",
+      "llama3-chatqa:latest",
+      "gemma2:latest",
+      "gemma2:27b",
+      "codestral:latest",
+      "codellama:latest",
+      "codegemma:latest"
+    ],
+    "tps": 0.7704160246533127,
+    "lastUpdate": "2025-02-26T18:31:32.601Z",
+    "status": "success"
+  },
+  {
+    "server": "https://chat.blch.ru/",
+    "models": [
+      "mistral-large:123b-instruct-2411-q6_K",
+      "deepseek-r1:671b",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:33.732Z",
+    "status": "success"
+  },
+  {
+    "server": "https://llm.ds-dev.neuro.net/",
+    "models": [
+      "llama3.1:latest",
+      "paraphrase-multilingual:latest",
+      "llama3.2:latest",
+      "infidelis/GigaChat-20B-A3B-instruct:q8_0",
+      "jeffh/intfloat-multilingual-e5-large-instruct:f16",
+      "all-minilm:l6-v2",
+      "deepseek-coder-v2:16b",
+      "neuro-net-1.0:20b",
+      "neuro-net-1.0:7b",
+      "neuro-net-1.0:8b",
+      "hf.co/t-tech/T-lite-it-1.0-Q8_0-GGUF:latest",
+      "deepseek-r1:70b",
+      "ollama.com/fomenks/T-Pro-1.0-it-q4_k_m:latest",
+      "ollama.com/owl/t-lite:q4_0-instruct",
+      "ollama.com/library/qwen2.5:7b-instruct",
+      "infidelis/GigaChat-20B-A3B-instruct:q4_K_M",
+      "rscr/ruadapt_qwen2.5_32b:Q4_K_M",
+      "deepseek-r1:32b",
+      "llama3.3:70b-instruct-q8_0",
+      "llama3.3:70b",
+      "qwq:32b",
+      "codellama:34b",
+      "qwen2.5-coder:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:33.162Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.76.208.56:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.38095238095238093,
+    "lastUpdate": "2025-02-26T18:31:32.517Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.73.189:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.333000333000333,
+    "lastUpdate": "2025-02-26T18:31:32.224Z",
+    "status": "success"
+  },
+  {
+    "server": "http://183.173.95.28:11434",
+    "models": [
+      "qwen2.5:1.5b",
+      "qwen2.5:0.5b",
+      "glm4:latest",
+      "qwen2.5:latest",
+      "qwen2.5-coder:latest",
+      "llama3.1:latest"
+    ],
+    "tps": 0.3486750348675035,
+    "lastUpdate": "2025-02-26T18:31:32.704Z",
+    "status": "success"
+  },
+  {
+    "server": "http://125.70.163.62:8899",
+    "models": [
+      "qwen2.5:0.5b",
+      "qwen2.5-coder:latest",
+      "llama3.2-vision:latest",
+      "llava-llama3:latest",
+      "ALIENTELLIGENCE/doctorai:latest",
+      "nomic-embed-text:latest",
+      "gemma2:27b",
+      "minicpm-v:latest",
+      "shaw/dmeta-embedding-zh:latest",
+      "glm4:latest",
+      "qwen2.5:latest"
+    ],
+    "tps": 0.3374957813027337,
+    "lastUpdate": "2025-02-26T18:31:32.631Z",
+    "status": "success"
+  },
+  {
+    "server": "http://136.143.157.5:11434\t",
+    "models": [
+      "deepseek-r1:14b",
+      "deepseek-r1:32b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.28768699654775604,
+    "lastUpdate": "2025-02-26T18:31:32.266Z",
+    "status": "success"
+  },
+  {
+    "server": "https://uliza-agent.paysokoerp.com",
+    "models": [
+      "unitythemaker/llama3.2-vision-tools:latest"
+    ],
+    "tps": 0.2378686964795433,
+    "lastUpdate": "2025-02-26T18:31:32.235Z",
+    "status": "success"
+  },
+  {
+    "server": "http://183.195.216.54:11434",
+    "models": [
+      "qwen2.5:14b",
+      "nomic-embed-text:latest"
+    ],
+    "tps": 0.2390057361376673,
+    "lastUpdate": "2025-02-26T18:31:32.494Z",
+    "status": "success"
+  },
+  {
+    "server": "http://79.137.10.31:11434",
+    "models": [
+      "phi4:latest",
+      "qwen2.5:14b"
+    ],
+    "tps": 0.21272069772388855,
+    "lastUpdate": "2025-02-26T18:31:32.335Z",
+    "status": "success"
+  },
+  {
+    "server": "http://123.117.39.66:11434",
+    "models": [
+      "hf.co/mradermacher/Qwen2-7B-Multilingual-RP-GGUF:Q8_0",
+      "hf.co/anthracite-org/magnum-v4-12b-gguf:q4_k_m",
+      "huihui_ai/deepseek-r1-abliterated:32b",
+      "deepseek-r1:14b",
+      "qwen2.5:7b",
+      "nomic-embed-text:latest",
+      "deepseek-r1:70b",
+      "deepseek-r1:32b",
+      "deepseek-v3:latest",
+      "mxbai-embed-large:latest"
+    ],
+    "tps": 0.20316944331572534,
+    "lastUpdate": "2025-02-26T18:31:32.617Z",
+    "status": "success"
+  },
+  {
+    "server": "http://210.117.210.9:11434",
+    "models": [
+      "qwen2.5-coder:7b",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.17088174982911825,
+    "lastUpdate": "2025-02-26T18:31:32.555Z",
+    "status": "success"
+  },
+  {
+    "server": "http://139.226.106.201:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.132013201320132,
+    "lastUpdate": "2025-02-26T18:31:32.618Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.73.166:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.11872254541137361,
+    "lastUpdate": "2025-02-26T18:31:32.230Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.158:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.10908694229300753,
+    "lastUpdate": "2025-02-26T18:31:32.226Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.167:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.10624734381640458,
+    "lastUpdate": "2025-02-26T18:31:32.225Z",
+    "status": "success"
+  },
+  {
+    "server": "http://52.247.231.32",
+    "models": [
+      "gemma2:27b",
+      "llama3.1:70b"
+    ],
+    "tps": 0.08819119851838786,
+    "lastUpdate": "2025-02-26T18:31:32.218Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.165:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.08807468733485997,
+    "lastUpdate": "2025-02-26T18:31:32.227Z",
+    "status": "success"
+  },
+  {
+    "server": "http://61.219.81.194:11434",
+    "models": [
+      "kenneth85/llama-3-taiwan:latest",
+      "cwchang/llama-3-taiwan-8b-instruct:latest",
+      "qwen2.5:7b",
+      "nomic-embed-text:latest",
+      "mistral:latest",
+      "llama3.1:8b",
+      "deepseek-r1:8b",
+      "bge-m3:latest"
+    ],
+    "tps": 0.08210180623973727,
+    "lastUpdate": "2025-02-26T18:31:32.476Z",
+    "status": "success"
+  },
+  {
+    "server": "http://1.94.48.24:11434",
+    "models": [
+      "qwen2.5:0.5b",
+      "qwen2.5:1.5b",
+      "llama3.2:3b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.0731475385853266,
+    "lastUpdate": "2025-02-26T18:31:32.570Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.109.77.232:11434",
+    "models": [
+      "deepseek-r1:latest",
+      "deepseek-r1:1.5b",
+      "bge-m3:latest",
+      "all-minilm:latest",
+      "mxbai-embed-large:latest"
+    ],
+    "tps": 0.06859181013786954,
+    "lastUpdate": "2025-02-26T18:31:32.654Z",
+    "status": "success"
+  },
+  {
+    "server": "http://1.82.251.55:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:latest"
+    ],
+    "tps": 0.0597692905385213,
+    "lastUpdate": "2025-02-26T18:31:32.611Z",
+    "status": "success"
+  },
+  {
+    "server": "http://115.190.97.137:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.055269993920300665,
+    "lastUpdate": "2025-02-26T18:31:32.610Z",
+    "status": "success"
+  },
+  {
+    "server": "http://103.38.82.102:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.05347879565752179,
+    "lastUpdate": "2025-02-26T18:31:32.522Z",
+    "status": "success"
+  },
+  {
+    "server": "http://123.1.189.232:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.052058930709563224,
+    "lastUpdate": "2025-02-26T18:31:32.509Z",
+    "status": "success"
+  },
+  {
+    "server": "http://112.86.129.66:11434",
+    "models": [
+      "deepseek-r1:70b"
+    ],
+    "tps": 0.05071508266558474,
+    "lastUpdate": "2025-02-26T18:31:32.574Z",
+    "status": "success"
+  },
+  {
+    "server": "http://183.48.126.14:11434",
+    "models": [
+      "smollm2:135m",
+      "qwen2.5:7b-instruct",
+      "phi3:latest",
+      "llama3.2:1b"
+    ],
+    "tps": 0.04815795810257645,
+    "lastUpdate": "2025-02-26T18:31:32.570Z",
+    "status": "success"
+  },
+  {
+    "server": "http://108.181.202.137:11434",
+    "models": [
+      "deepseek-r1:7b",
+      "llama3.2:latest",
+      "llama3.2-vision:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.179Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.101.67.217:11434",
+    "models": [
+      "deepseek-r1:32b",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.580Z",
+    "status": "success"
+  },
+  {
+    "server": "https://llm.ds-dev.neuro.net\t",
+    "models": [
+      "llama3.1:latest",
+      "paraphrase-multilingual:latest",
+      "llama3.2:latest",
+      "infidelis/GigaChat-20B-A3B-instruct:q8_0",
+      "jeffh/intfloat-multilingual-e5-large-instruct:f16",
+      "all-minilm:l6-v2",
+      "deepseek-coder-v2:16b",
+      "neuro-net-1.0:20b",
+      "neuro-net-1.0:7b",
+      "hf.co/t-tech/T-lite-it-1.0-Q8_0-GGUF:latest",
+      "neuro-net-1.0:8b",
+      "deepseek-r1:70b",
+      "ollama.com/fomenks/T-Pro-1.0-it-q4_k_m:latest",
+      "ollama.com/owl/t-lite:q4_0-instruct",
+      "ollama.com/library/qwen2.5:7b-instruct",
+      "infidelis/GigaChat-20B-A3B-instruct:q4_K_M",
+      "rscr/ruadapt_qwen2.5_32b:Q4_K_M",
+      "deepseek-r1:32b",
+      "llama3.3:70b-instruct-q8_0",
+      "llama3.3:70b",
+      "qwq:32b",
+      "codellama:34b",
+      "qwen2.5-coder:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.581Z",
+    "status": "success"
+  },
+  {
+    "server": "http://121.201.125.79:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.583Z",
+    "status": "success"
+  },
+  {
+    "server": "http://175.43.240.134:11434",
+    "models": [
+      "deepseek-r1:7b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.585Z",
+    "status": "success"
+  },
+  {
+    "server": "http://27.185.57.227:11434",
+    "models": [
+      "deepseek-r1:8b",
+      "qwen2.5:3b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.617Z",
+    "status": "success"
+  },
+  {
+    "server": "http://116.204.132.230:11434",
+    "models": [
+      "deepseek-r1:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:32.648Z",
+    "status": "success"
+  },
+  {
+    "server": "http://69.30.199.13:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:31:34.267Z",
+    "status": "success"
+  },
+  {
+    "server": "http://34.45.2.197:11434",
+    "models": [
+      "nomic-embed-text:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.318Z",
+    "status": "success"
+  },
+  {
+    "server": "http://172.86.120.109",
+    "models": [
+      "deepseek-r1:32b",
+      "deepseek-r1:8b",
+      "deepseek-r1:14b",
+      "deepseek-r1:70b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.373Z",
+    "status": "success"
+  },
+  {
+    "server": "http://85.239.233.35:11434",
+    "models": [
+      "nomic-embed-text:latest",
+      "llama3.2:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.395Z",
+    "status": "success"
+  },
+  {
+    "server": "http://uliza-agent.paysokoerp.com",
+    "models": [
+      "unitythemaker/llama3.2-vision-tools:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.545Z",
     "status": "success"
   },
   {
@@ -660,8 +1865,604 @@
       "llama3.2:latest",
       "qwq:latest"
     ],
-    "tps": 2.1739130434782608,
-    "lastUpdate": "2025-02-26T17:20:01.704Z",
+    "tps": 3.53356890459364,
+    "lastUpdate": "2025-02-26T18:32:04.608Z",
+    "status": "success"
+  },
+  {
+    "server": "http://ollama.tanmaykarande.com",
+    "models": [
+      "llama3.2:latest",
+      "deepseek-r1:1.5b",
+      "hf.co/Lucy-in-the-Sky/DeepScaleR-1.5B-Preview-Q8_0-GGUF:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:05.165Z",
+    "status": "success"
+  },
+  {
+    "server": "http://116.62.47.88:11434",
+    "models": [
+      "nomic-embed-text:latest",
+      "smollm2:135m",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.796Z",
+    "status": "success"
+  },
+  {
+    "server": "http://123.207.221.226:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.748Z",
+    "status": "success"
+  },
+  {
+    "server": "http://136.143.157.5:11434",
+    "models": [
+      "deepseek-r1:14b",
+      "deepseek-r1:32b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 1.0683760683760684,
+    "lastUpdate": "2025-02-26T18:32:04.423Z",
+    "status": "success"
+  },
+  {
+    "server": "http://121.227.174.166:11434/",
+    "models": [
+      "erwan2/DeepSeek-Janus-Pro-7B:latest",
+      "huihui_ai/deepseek-r1-abliterated:7b",
+      "bge-large:latest",
+      "bge-m3:latest",
+      "deepseek-r1:latest",
+      "qwq:latest",
+      "llama3.2-vision:latest",
+      "internlm/internlm2.5:latest",
+      "qwen2.5-coder:latest",
+      "qwen2.5:latest",
+      "qwen2-math:latest",
+      "phi3.5:latest",
+      "ollam/unichat-llama3-chinese-8b:latest",
+      "nomic-embed-text:latest",
+      "minicpm-v:latest",
+      "llava:latest",
+      "llava-llama3:latest",
+      "llama3.1:latest",
+      "llama3-chatqa:latest",
+      "gemma2:latest",
+      "gemma2:27b",
+      "codestral:latest",
+      "codellama:latest",
+      "codegemma:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:05.229Z",
+    "status": "success"
+  },
+  {
+    "server": "http://143.64.229.51:11434/",
+    "models": [
+      "qwen2.5:3b",
+      "qwen2.5:14b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:05.306Z",
+    "status": "success"
+  },
+  {
+    "server": "http://101.37.83.61:9994\t",
+    "models": [
+      "qwen2.5:32b",
+      "llama3.3:latest",
+      "phi4:latest",
+      "deepseek-r1:70b"
+    ],
+    "tps": 0.929368029739777,
+    "lastUpdate": "2025-02-26T18:32:04.767Z",
+    "status": "success"
+  },
+  {
+    "server": "http://14.19.138.215:11434/",
+    "models": [
+      "hf.co/Poro7/Tifa-Deepsex-14b-CoT-Chat-Q4_K_M-gguf:latest",
+      "hf.co/TriadParty/deepsex-34b-gguf:latest",
+      "hf.co/danqingximeng/Tifa-Deepsex-14b-CoT-Crazy-GGUF:Q4_K_M",
+      "hf.co/cgxjdzz/Qwen-2.5-7B-Instruct-novel-lora:F16",
+      "hf.co/cgxjdzz/Qwen-2.5-7B-Instruct-novel-lora:Q4_K_M",
+      "hf.co/mradermacher/Qwen2.5-Sex-i1-GGUF:Q4_K_M",
+      "hf.co/ben-wycliff/sexed-7b-v5_q4_0_gguf:latest",
+      "hf.co/ben-wycliff/sexed-7b-v1_q4_0_gguf:latest",
+      "hf.co/Novaciano/Qwen2.5_Uncensored_V2_Sexting-GGUF:latest",
+      "hf.co/ValueFX9507/Tifa-Deepsex-14b-CoT-GGUF-Q4:Q4_K_M",
+      "hf.co/ValueFX9507/Tifa-Deepsex-14b-CoT:F16",
+      "mistral-nemo:12B",
+      "gemma2:27B",
+      "gemma2:9B",
+      "deepseek-coder-v2:latest",
+      "qwen2.5-coder:14b",
+      "huihui_ai/deepseek-r1-abliterated:70b",
+      "huihui_ai/deepseek-r1-abliterated:32b",
+      "huihui_ai/deepseek-r1-abliterated:14b",
+      "huihui_ai/deepseek-r1-abliterated:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:05.488Z",
+    "status": "success"
+  },
+  {
+    "server": "http://54.64.255.193",
+    "models": [
+      "phi4:latest",
+      "llama3.2:latest",
+      "deepseek-r1:latest",
+      "llama3.1:latest"
+    ],
+    "tps": 0.5497526113249038,
+    "lastUpdate": "2025-02-26T18:32:04.574Z",
+    "status": "success"
+  },
+  {
+    "server": "http://www.jssot.cn:11434/",
+    "models": [
+      "deepseek-r1:7b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:05.986Z",
+    "status": "success"
+  },
+  {
+    "server": "http://20.243.131.115:11434\t",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:32b",
+      "deepseek-r1:1.5b",
+      "phi4:latest",
+      "dolphin3:latest",
+      "smallthinker:latest",
+      "smollm:1.7b",
+      "llama3.2-vision:11b",
+      "starcoder2:latest",
+      "deepseek-r1:7b",
+      "deepseek-r1:14b",
+      "gemma:latest",
+      "minicpm-v:latest"
+    ],
+    "tps": 0.47214353163361666,
+    "lastUpdate": "2025-02-26T18:32:04.572Z",
+    "status": "success"
+  },
+  {
+    "server": "http://118.141.140.216:11434",
+    "models": [
+      "smollm2:135m",
+      "qwen2.5:14b-instruct",
+      "llama3.2:3b-instruct-fp16"
+    ],
+    "tps": 0.47709923664122134,
+    "lastUpdate": "2025-02-26T18:32:04.671Z",
+    "status": "success"
+  },
+  {
+    "server": "http://121.43.148.53:11434\t",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:7b",
+      "deepseek-r1:14b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.4662004662004662,
+    "lastUpdate": "2025-02-26T18:32:04.749Z",
+    "status": "success"
+  },
+  {
+    "server": "http://1.94.146.81:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:1.5b",
+      "nomic-embed-text:latest"
+    ],
+    "tps": 0.38095238095238093,
+    "lastUpdate": "2025-02-26T18:32:04.731Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.194.130.114:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.3827018752391887,
+    "lastUpdate": "2025-02-26T18:32:05.015Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.181:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.30835646006783846,
+    "lastUpdate": "2025-02-26T18:32:04.398Z",
+    "status": "success"
+  },
+  {
+    "server": "http://120.78.192.18:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:1.5b",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.33233632436025257,
+    "lastUpdate": "2025-02-26T18:32:04.808Z",
+    "status": "success"
+  },
+  {
+    "server": "http://211.218.144.230:11434",
+    "models": [
+      "qwen2.5:latest",
+      "gemma-2-2b-it:latest",
+      "gemma2:9b",
+      "llama3.2:latest",
+      "bge-m3:latest"
+    ],
+    "tps": 0.2949852507374631,
+    "lastUpdate": "2025-02-26T18:32:04.629Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.164:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.2550369803621525,
+    "lastUpdate": "2025-02-26T18:32:04.397Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.74.144:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.23523876734885907,
+    "lastUpdate": "2025-02-26T18:32:04.391Z",
+    "status": "success"
+  },
+  {
+    "server": "http://185.232.70.35:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.20202020202020202,
+    "lastUpdate": "2025-02-26T18:32:04.519Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.73.169:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.16675004168751043,
+    "lastUpdate": "2025-02-26T18:32:04.392Z",
+    "status": "success"
+  },
+  {
+    "server": "http://12.221.142.228:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.1636661211129296,
+    "lastUpdate": "2025-02-26T18:32:04.342Z",
+    "status": "success"
+  },
+  {
+    "server": "http://81.177.221.132:8085",
+    "models": [
+      "qwen2.5:14b",
+      "qwen2.5:32b"
+    ],
+    "tps": 0.15446400988569664,
+    "lastUpdate": "2025-02-26T18:32:04.568Z",
+    "status": "success"
+  },
+  {
+    "server": "http://139.9.137.192:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.1561036528254761,
+    "lastUpdate": "2025-02-26T18:32:04.772Z",
+    "status": "success"
+  },
+  {
+    "server": "http://52.23.201.169:11434",
+    "models": [
+      "llama3.2:1b"
+    ],
+    "tps": 0.14218683349921796,
+    "lastUpdate": "2025-02-26T18:32:04.326Z",
+    "status": "success"
+  },
+  {
+    "server": "http://39.100.111.0:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.14084507042253522,
+    "lastUpdate": "2025-02-26T18:32:04.788Z",
+    "status": "success"
+  },
+  {
+    "server": "http://8.134.116.222:11434",
+    "models": [
+      "deepseek-r1:14b",
+      "linux6200/bge-reranker-v2-m3:latest",
+      "nomic-embed-text:latest",
+      "deepseek-r1:8b",
+      "bge-m3:latest",
+      "rjmalagon/gte-qwen2-7b-instruct:bf16",
+      "jeffh/intfloat-multilingual-e5-large-instruct:f16"
+    ],
+    "tps": 0.1119444755401321,
+    "lastUpdate": "2025-02-26T18:32:04.884Z",
+    "status": "success"
+  },
+  {
+    "server": "http://58.87.73.177:11434",
+    "models": [
+      "deepseek-r1:8b"
+    ],
+    "tps": 0.11018069634200088,
+    "lastUpdate": "2025-02-26T18:32:04.794Z",
+    "status": "success"
+  },
+  {
+    "server": "http://69.30.199.14:11434\t",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.1419647927314026,
+    "lastUpdate": "2025-02-26T18:32:06.932Z",
+    "status": "success"
+  },
+  {
+    "server": "http://api2.audacer.com",
+    "models": [
+      "mannix/llama3-groq-tool-8b:latest",
+      "deepseek-r1:latest",
+      "llama3.2:latest"
+    ],
+    "tps": 0.10683760683760685,
+    "lastUpdate": "2025-02-26T18:32:05.029Z",
+    "status": "success"
+  },
+  {
+    "server": "https://api2.audacer.com",
+    "models": [
+      "mannix/llama3-groq-tool-8b:latest",
+      "deepseek-r1:latest",
+      "llama3.2:latest"
+    ],
+    "tps": 0.10511931041732367,
+    "lastUpdate": "2025-02-26T18:32:04.876Z",
+    "status": "success"
+  },
+  {
+    "server": "http://64.62.202.195:8084",
+    "models": [
+      "deepseek-r1:14b",
+      "deepseek-r1:8b",
+      "llama3:latest"
+    ],
+    "tps": 0.08340979230961715,
+    "lastUpdate": "2025-02-26T18:32:04.386Z",
+    "status": "success"
+  },
+  {
+    "server": "http://dev.deextra.com:81",
+    "models": [
+      "testmodel5:latest",
+      "nomic-embed-text:latest",
+      "testmodel3:latest",
+      "testmodel2:latest",
+      "testmodel1:latest",
+      "deepseek-r1:8b",
+      "deepseek-r1:32b",
+      "deepseek-r1:14b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.07035317292809906,
+    "lastUpdate": "2025-02-26T18:32:04.988Z",
+    "status": "success"
+  },
+  {
+    "server": "http://1.12.52.174:12345",
+    "models": [
+      "deepseek-r1:14b",
+      "mistral:latest",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.06396724876863047,
+    "lastUpdate": "2025-02-26T18:32:04.765Z",
+    "status": "success"
+  },
+  {
+    "server": "http://69.30.199.11:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.06205013651030032,
+    "lastUpdate": "2025-02-26T18:32:06.933Z",
+    "status": "success"
+  },
+  {
+    "server": "http://14.21.45.85:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "DeepSeek-R1-Distill-Qwen-7B-Q8:latest"
+    ],
+    "tps": 0.044553352639786145,
+    "lastUpdate": "2025-02-26T18:32:04.743Z",
+    "status": "success"
+  },
+  {
+    "server": "http://35.192.12.57",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.320Z",
+    "status": "success"
+  },
+  {
+    "server": "http://43.231.196.23:11434",
+    "models": [
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.676Z",
+    "status": "success"
+  },
+  {
+    "server": "http://123.58.212.82:11434",
+    "models": [
+      "deepseek-r1:7b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.679Z",
+    "status": "success"
+  },
+  {
+    "server": "http://3.28.233.140",
+    "models": [
+      "deepseek-r1:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.713Z",
+    "status": "success"
+  },
+  {
+    "server": "http://125.114.112.230:11434",
+    "models": [
+      "deepseek-r1:32b",
+      "deepseek-r1:7b",
+      "qwen2:7b-instruct-q8_0",
+      "glm4:latest",
+      "llama3.1:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.810Z",
+    "status": "success"
+  },
+  {
+    "server": "https://llm.ds-dev.neuro.net",
+    "models": [
+      "llama3.1:latest",
+      "paraphrase-multilingual:latest",
+      "llama3.2:latest",
+      "infidelis/GigaChat-20B-A3B-instruct:q8_0",
+      "jeffh/intfloat-multilingual-e5-large-instruct:f16",
+      "all-minilm:l6-v2",
+      "deepseek-coder-v2:16b",
+      "neuro-net-1.0:20b",
+      "neuro-net-1.0:7b",
+      "neuro-net-1.0:8b",
+      "hf.co/t-tech/T-lite-it-1.0-Q8_0-GGUF:latest",
+      "deepseek-r1:70b",
+      "ollama.com/fomenks/T-Pro-1.0-it-q4_k_m:latest",
+      "ollama.com/owl/t-lite:q4_0-instruct",
+      "ollama.com/library/qwen2.5:7b-instruct",
+      "infidelis/GigaChat-20B-A3B-instruct:q4_K_M",
+      "rscr/ruadapt_qwen2.5_32b:Q4_K_M",
+      "deepseek-r1:32b",
+      "llama3.3:70b-instruct-q8_0",
+      "llama3.3:70b",
+      "qwq:32b",
+      "codellama:34b",
+      "qwen2.5-coder:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:04.812Z",
+    "status": "success"
+  },
+  {
+    "server": "http://69.30.199.14:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:06.434Z",
+    "status": "success"
+  },
+  {
+    "server": "http://69.30.199.12:11434",
+    "models": [
+      "deepseek-r1:1.5b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:06.940Z",
+    "status": "success"
+  },
+  {
+    "server": "http://b.thezen.ai",
+    "models": [
+      "phi4:latest",
+      "qwen2.5-coder:3b-base-q8_0",
+      "nezahatkorkmaz/deepseek-v3:latest",
+      "qwen2.5-coder:14b",
+      "deepseek-r1:14b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.130Z",
+    "status": "success"
+  },
+  {
+    "server": "http://91.244.166.123:11434",
+    "models": [
+      "bge-m3:latest",
+      "nomic-embed-text:latest",
+      "ishumilin/deepseek-r1-coder-tools:14b",
+      "ishumilin/deepseek-r1-coder-tools:32b",
+      "deepseek-r1:32b",
+      "deepseek-r1:14b",
+      "llama3.1:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.239Z",
+    "status": "success"
+  },
+  {
+    "server": "http://91.244.166.123:11434\t",
+    "models": [
+      "bge-m3:latest",
+      "nomic-embed-text:latest",
+      "ishumilin/deepseek-r1-coder-tools:14b",
+      "ishumilin/deepseek-r1-coder-tools:32b",
+      "deepseek-r1:32b",
+      "deepseek-r1:14b",
+      "llama3.1:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.238Z",
     "status": "success"
   },
   {
@@ -674,43 +2475,57 @@
       "phi4:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:01.964Z",
+    "lastUpdate": "2025-02-26T18:32:37.376Z",
     "status": "success"
   },
   {
-    "server": "https://sore-caitlin-flyingpot-402fcea7.koyeb.app\t",
-    "models": [
-      "deepseek-r1:14b",
-      "deepseek-r1:32b",
-      "deepseek-r1:70b",
-      "deepseek-r1:671b"
-    ],
-    "tps": 7.874015748031496,
-    "lastUpdate": "2025-02-26T17:20:02.170Z",
-    "status": "success"
-  },
-  {
-    "server": "http://75.43.156.105:11434",
+    "server": "http://20.243.131.115:11434",
     "models": [
       "smollm2:135m",
-      "dolphin-mixtral:8x7b",
-      "deepseek-r1:8b",
-      "minicpm-v:latest",
-      "qwen2.5:latest"
+      "deepseek-r1:32b",
+      "deepseek-r1:1.5b",
+      "phi4:latest",
+      "dolphin3:latest",
+      "smallthinker:latest",
+      "smollm:1.7b",
+      "llama3.2-vision:11b",
+      "starcoder2:latest",
+      "deepseek-r1:7b",
+      "deepseek-r1:14b",
+      "gemma:latest",
+      "minicpm-v:latest"
     ],
-    "tps": 1.2953367875647668,
-    "lastUpdate": "2025-02-26T17:20:01.614Z",
+    "tps": 1.9455252918287937,
+    "lastUpdate": "2025-02-26T18:32:37.244Z",
     "status": "success"
   },
   {
-    "server": "http://121.37.208.255:11434",
+    "server": "http://120.192.73.45:11434",
     "models": [
-      "nomic-embed-text:latest",
-      "deepseek-r1:8b",
-      "deepseek-r1:14b"
+      "shaw/dmeta-embedding-zh:latest",
+      "qwen2.5-coder:32b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.001Z",
+    "lastUpdate": "2025-02-26T18:32:37.367Z",
+    "status": "success"
+  },
+  {
+    "server": "http://model.teadews.com",
+    "models": [
+      "hf.co/bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF:Q4_K_M",
+      "hf.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF:Q6_K_L"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.339Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.112.112.163:11434",
+    "models": [
+      "deepseek-r1:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.477Z",
     "status": "success"
   },
   {
@@ -743,17 +2558,7 @@
       "llava:34b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.556Z",
-    "status": "success"
-  },
-  {
-    "server": "http://183.94.184.91:11434/",
-    "models": [
-      "bge-m3:latest",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.433Z",
+    "lastUpdate": "2025-02-26T18:32:37.846Z",
     "status": "success"
   },
   {
@@ -763,30 +2568,25 @@
       "nomic-embed-text:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.460Z",
+    "lastUpdate": "2025-02-26T18:32:37.881Z",
     "status": "success"
   },
   {
-    "server": "http://143.64.229.51:11434/",
+    "server": "http://123.117.39.66:11434/",
     "models": [
-      "qwen2.5:3b",
-      "qwen2.5:14b"
+      "hf.co/mradermacher/Qwen2-7B-Multilingual-RP-GGUF:Q8_0",
+      "hf.co/anthracite-org/magnum-v4-12b-gguf:q4_k_m",
+      "huihui_ai/deepseek-r1-abliterated:32b",
+      "deepseek-r1:14b",
+      "qwen2.5:7b",
+      "nomic-embed-text:latest",
+      "deepseek-r1:70b",
+      "deepseek-r1:32b",
+      "deepseek-v3:latest",
+      "mxbai-embed-large:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.557Z",
-    "status": "success"
-  },
-  {
-    "server": "http://118.89.77.47:20001",
-    "models": [
-      "qwen2.5:14b-instruct",
-      "qwen:32b",
-      "winGPT2-Llama-3-8b:latest",
-      "qwen:14b",
-      "qwen:1.8b"
-    ],
-    "tps": 0.9310986964618249,
-    "lastUpdate": "2025-02-26T17:20:02.012Z",
+    "lastUpdate": "2025-02-26T18:32:37.934Z",
     "status": "success"
   },
   {
@@ -795,27 +2595,8 @@
       "smollm2:135m",
       "llama3.3:latest"
     ],
-    "tps": 0.5344735435595938,
-    "lastUpdate": "2025-02-26T17:20:01.646Z",
-    "status": "success"
-  },
-  {
-    "server": "http://202.130.120.118:11434",
-    "models": [
-      "smollm2:135m",
-      "qwen2.5:14b"
-    ],
-    "tps": 0.6108735491753207,
-    "lastUpdate": "2025-02-26T17:20:01.954Z",
-    "status": "success"
-  },
-  {
-    "server": "http://81.70.201.242:11434",
-    "models": [
-      "llama3:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.055Z",
+    "tps": 0.6385696040868455,
+    "lastUpdate": "2025-02-26T18:32:37.046Z",
     "status": "success"
   },
   {
@@ -825,78 +2606,145 @@
       "qwen:0.5b",
       "bge-m3:latest"
     ],
-    "tps": 0.48638132295719844,
-    "lastUpdate": "2025-02-26T17:20:02.059Z",
+    "tps": 0.7987220447284346,
+    "lastUpdate": "2025-02-26T18:32:37.471Z",
     "status": "success"
   },
   {
-    "server": "http://154.19.75.167:11434",
+    "server": "http://114.34.38.151:11434",
+    "models": [
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:7b",
+      "deepseek-r1:latest"
+    ],
+    "tps": 0.5186721991701245,
+    "lastUpdate": "2025-02-26T18:32:37.332Z",
+    "status": "success"
+  },
+  {
+    "server": "http://api2.audacer.com\t",
+    "models": [
+      "mannix/llama3-groq-tool-8b:latest",
+      "deepseek-r1:latest",
+      "llama3.2:latest"
+    ],
+    "tps": 0.481000481000481,
+    "lastUpdate": "2025-02-26T18:32:37.681Z",
+    "status": "success"
+  },
+  {
+    "server": "http://8.134.33.222:51434",
+    "models": [
+      "deepseek-r1:latest"
+    ],
+    "tps": 0.3871467286101432,
+    "lastUpdate": "2025-02-26T18:32:37.422Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.75.169:11434",
     "models": [
       "smollm2:135m",
       "llama2:latest",
       "deepseek-r1:1.5b"
     ],
-    "tps": 0.37835792659856227,
-    "lastUpdate": "2025-02-26T17:20:01.657Z",
+    "tps": 0.32123353678123995,
+    "lastUpdate": "2025-02-26T18:32:37.063Z",
     "status": "success"
   },
   {
-    "server": "http://206.72.207.77:11434",
+    "server": "http://150.230.59.83:11434",
     "models": [
-      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
+      "smollm2:135m",
+      "qwen2.5-coder:7b",
+      "deepseek-r1:7b"
     ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:01.616Z",
+    "tps": 0.34258307639602603,
+    "lastUpdate": "2025-02-26T18:32:37.360Z",
     "status": "success"
   },
   {
-    "server": "http://69.30.199.14:11434\t",
+    "server": "http://223.26.59.163:11434",
+    "models": [
+      "smollm2:135m",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0.31357792411414237,
+    "lastUpdate": "2025-02-26T18:32:37.357Z",
+    "status": "success"
+  },
+  {
+    "server": "http://106.54.245.6:11434",
+    "models": [
+      "qwen2.5:0.5b",
+      "quentinz/bge-large-zh-v1.5:q8_0",
+      "smartcreation/bge-large-zh-v1.5:latest"
+    ],
+    "tps": 0.27085590465872156,
+    "lastUpdate": "2025-02-26T18:32:37.407Z",
+    "status": "success"
+  },
+  {
+    "server": "http://106.14.219.51:11434",
+    "models": [
+      "qwen2.5:7b"
+    ],
+    "tps": 0.2655337227827934,
+    "lastUpdate": "2025-02-26T18:32:37.414Z",
+    "status": "success"
+  },
+  {
+    "server": "http://74.133.211.244",
+    "models": [
+      "phi3.5:latest",
+      "qwen2.5-coder:latest",
+      "llama3.1:latest",
+      "phi3:latest",
+      "phi3:medium",
+      "zephyr:latest",
+      "sushruth/solar-uncensored:latest",
+      "dolphin-llama3:latest",
+      "dolphin-mixtral:latest",
+      "deepseek-coder-v2:latest",
+      "openhermes:latest",
+      "llama3:latest"
+    ],
+    "tps": 0.23557126030624262,
+    "lastUpdate": "2025-02-26T18:32:37.044Z",
+    "status": "success"
+  },
+  {
+    "server": "http://34.16.120.113",
+    "models": [
+      "llama3.1:8b",
+      "nomic-embed-text:latest",
+      "qwen2.5:14b",
+      "deepseek-r1:32b"
+    ],
+    "tps": 0.2194426157559798,
+    "lastUpdate": "2025-02-26T18:32:36.988Z",
+    "status": "success"
+  },
+  {
+    "server": "http://69.30.199.13:11434\t",
     "models": [
       "deepseek-r1:1.5b",
       "deepseek-r1:32b"
     ],
-    "tps": 0.3179650238473768,
-    "lastUpdate": "2025-02-26T17:20:01.662Z",
+    "tps": 0.2725538293813028,
+    "lastUpdate": "2025-02-26T18:32:38.075Z",
     "status": "success"
   },
   {
-    "server": "http://15.207.67.36:11434",
+    "server": "http://101.126.144.8:11434",
     "models": [
-      "llama3.1:latest"
+      "qwen2.5:1.5b",
+      "nomic-embed-text:latest",
+      "deepseek-r1:1.5b"
     ],
-    "tps": 0.23557126030624262,
-    "lastUpdate": "2025-02-26T17:20:01.992Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.238.239.113:11434",
-    "models": [
-      "minicpm-v:latest"
-    ],
-    "tps": 0.19940179461615157,
-    "lastUpdate": "2025-02-26T17:20:01.933Z",
-    "status": "success"
-  },
-  {
-    "server": "http://54.64.255.193\t",
-    "models": [
-      "phi4:latest",
-      "llama3.2:latest",
-      "deepseek-r1:latest",
-      "llama3.1:latest"
-    ],
-    "tps": 0.19550342130987292,
-    "lastUpdate": "2025-02-26T17:20:01.842Z",
-    "status": "success"
-  },
-  {
-    "server": "http://79.137.10.31:11434",
-    "models": [
-      "phi4:latest",
-      "qwen2.5:14b"
-    ],
-    "tps": 0.19015021867275145,
-    "lastUpdate": "2025-02-26T17:20:01.764Z",
+    "tps": 0.22197558268590456,
+    "lastUpdate": "2025-02-26T18:32:37.459Z",
     "status": "success"
   },
   {
@@ -906,39 +2754,40 @@
       "deepseek-r1:1.5b",
       "hf.co/Lucy-in-the-Sky/DeepScaleR-1.5B-Preview-Q8_0-GGUF:latest"
     ],
-    "tps": 0.20068231988761792,
-    "lastUpdate": "2025-02-26T17:20:02.366Z",
+    "tps": 0.19175455417066156,
+    "lastUpdate": "2025-02-26T18:32:37.113Z",
     "status": "success"
   },
   {
-    "server": "http://210.117.210.9:11434",
+    "server": "http://106.75.68.44:11434",
     "models": [
-      "qwen2.5-coder:7b",
-      "deepseek-r1:7b"
+      "deepseek-coder-v2:latest",
+      "qwen2.5:7b",
+      "krith/qwen2.5-14b-instruct:IQ1_M",
+      "deepseek-r1:14b"
     ],
-    "tps": 0.17473353136466888,
-    "lastUpdate": "2025-02-26T17:20:01.978Z",
+    "tps": 0.19646365422396858,
+    "lastUpdate": "2025-02-26T18:32:37.521Z",
     "status": "success"
   },
   {
-    "server": "http://154.19.74.134:11434",
+    "server": "http://154.194.130.108:11434",
     "models": [
       "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
+      "deepseek-r1:7b"
     ],
-    "tps": 0.16463615409944024,
-    "lastUpdate": "2025-02-26T17:20:01.656Z",
+    "tps": 0.19611688566385566,
+    "lastUpdate": "2025-02-26T18:32:37.667Z",
     "status": "success"
   },
   {
-    "server": "http://101.237.129.74:11434",
+    "server": "http://154.194.130.124:11434",
     "models": [
-      "deepseek-r1:1.5b",
+      "smollm2:135m",
       "deepseek-r1:7b"
     ],
-    "tps": 0.17415534656913967,
-    "lastUpdate": "2025-02-26T17:20:02.060Z",
+    "tps": 0.1963864886095837,
+    "lastUpdate": "2025-02-26T18:32:37.677Z",
     "status": "success"
   },
   {
@@ -947,650 +2796,18 @@
       "smollm2:135m",
       "deepseek-r1:7b"
     ],
-    "tps": 0.17232465965879717,
-    "lastUpdate": "2025-02-26T17:20:02.277Z",
+    "tps": 0.18162005085361424,
+    "lastUpdate": "2025-02-26T18:32:37.675Z",
     "status": "success"
   },
   {
-    "server": "http://64.62.202.195:8084",
-    "models": [
-      "deepseek-r1:14b",
-      "deepseek-r1:8b",
-      "llama3:latest"
-    ],
-    "tps": 0.12840267077555212,
-    "lastUpdate": "2025-02-26T17:20:01.649Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.73.158:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.11882129277566539,
-    "lastUpdate": "2025-02-26T17:20:01.660Z",
-    "status": "success"
-  },
-  {
-    "server": "http://101.37.83.61:9994",
-    "models": [
-      "qwen2.5:32b",
-      "llama3.3:latest",
-      "phi4:latest",
-      "deepseek-r1:70b"
-    ],
-    "tps": 0.10607828577490189,
-    "lastUpdate": "2025-02-26T17:20:01.977Z",
-    "status": "success"
-  },
-  {
-    "server": "http://101.37.83.61:9994\t",
-    "models": [
-      "qwen2.5:32b",
-      "llama3.3:latest",
-      "phi4:latest",
-      "deepseek-r1:70b"
-    ],
-    "tps": 0.1056970721911003,
-    "lastUpdate": "2025-02-26T17:20:01.960Z",
-    "status": "success"
-  },
-  {
-    "server": "http://180.107.204.186:11434",
-    "models": [
-      "deepseek-r1:14b",
-      "modelscope2ollama-registry.azurewebsites.net/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B:latest",
-      "deepseek-r1:8b"
-    ],
-    "tps": 0.10474494605635278,
-    "lastUpdate": "2025-02-26T17:20:02.030Z",
-    "status": "success"
-  },
-  {
-    "server": "http://182.37.50.190:11434",
-    "models": [
-      "deepseek-r1:7b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.061Z",
-    "status": "success"
-  },
-  {
-    "server": "http://1.12.52.174:12345",
-    "models": [
-      "deepseek-r1:14b",
-      "mistral:latest",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0.08535336292249915,
-    "lastUpdate": "2025-02-26T17:20:02.018Z",
-    "status": "success"
-  },
-  {
-    "server": "http://61.219.81.194:11434",
-    "models": [
-      "kenneth85/llama-3-taiwan:latest",
-      "cwchang/llama-3-taiwan-8b-instruct:latest",
-      "qwen2.5:7b",
-      "nomic-embed-text:latest",
-      "mistral:latest",
-      "llama3.1:8b",
-      "deepseek-r1:8b",
-      "bge-m3:latest"
-    ],
-    "tps": 0.08198065256599442,
-    "lastUpdate": "2025-02-26T17:20:01.913Z",
-    "status": "success"
-  },
-  {
-    "server": "http://115.190.97.137:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.0690846286701209,
-    "lastUpdate": "2025-02-26T17:20:02.053Z",
-    "status": "success"
-  },
-  {
-    "server": "http://175.178.46.131:11434",
-    "models": [
-      "chevalblanc/gpt-4o-mini:latest",
-      "qwen2.5-coder:3b",
-      "qwen2.5:3b"
-    ],
-    "tps": 0.061192020560518916,
-    "lastUpdate": "2025-02-26T17:20:02.025Z",
-    "status": "success"
-  },
-  {
-    "server": "http://183.48.126.14:11434",
-    "models": [
-      "smollm2:135m",
-      "qwen2.5:7b-instruct",
-      "phi3:latest",
-      "llama3.2:1b"
-    ],
-    "tps": 0.035237323372916594,
-    "lastUpdate": "2025-02-26T17:20:02.016Z",
-    "status": "success"
-  },
-  {
-    "server": "http://185.58.221.49:11434",
-    "models": [
-      "llama3.1:8b-instruct-fp16",
-      "nomic-embed-text:latest",
-      "llama3.1:8b-instruct-q8_0"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:01.833Z",
-    "status": "success"
-  },
-  {
-    "server": "http://124.156.99.148:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:01.986Z",
-    "status": "success"
-  },
-  {
-    "server": "http://61.149.185.106:11434",
-    "models": [
-      "deepseek-r1:70b",
-      "deepseek-r1:8b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:01.994Z",
-    "status": "success"
-  },
-  {
-    "server": "http://183.157.83.145:11434",
-    "models": [
-      "deepseek-r1:8b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.011Z",
-    "status": "success"
-  },
-  {
-    "server": "http://211.139.164.250:11434\t",
-    "models": [
-      "deepseek-r1:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.017Z",
-    "status": "success"
-  },
-  {
-    "server": "http://36.140.15.241:11434",
-    "models": [
-      "deepseek-v2:latest",
-      "deepseek-r1:latest",
-      "deepseek-v2-nsfw:latest",
-      "qwen2.5-nsfw:14b",
-      "llama3.1-nsfw:8b",
-      "deepseek-nsfw:70b",
-      "mxbai-embed-large:latest",
-      "qwen2.5:14b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.022Z",
-    "status": "success"
-  },
-  {
-    "server": "http://120.133.37.231:8009",
-    "models": [
-      "deepseek-r1:70b",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.052Z",
-    "status": "success"
-  },
-  {
-    "server": "http://8.134.116.222:11434",
-    "models": [
-      "deepseek-r1:14b",
-      "linux6200/bge-reranker-v2-m3:latest",
-      "nomic-embed-text:latest",
-      "deepseek-r1:8b",
-      "bge-m3:latest",
-      "rjmalagon/gte-qwen2-7b-instruct:bf16",
-      "jeffh/intfloat-multilingual-e5-large-instruct:f16"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.093Z",
-    "status": "success"
-  },
-  {
-    "server": "https://ollama.bongchatchat.icu",
-    "models": [
-      "ishumilin/deepseek-r1-coder-tools:14b",
-      "MFDoom/deepseek-r1-tool-calling:32b",
-      "deepseek-r1:70b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.422Z",
-    "status": "success"
-  },
-  {
-    "server": "http://newsletter-126.preview.ztsco.cn:11434",
-    "models": [
-      "deepseek-r1:70b",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:02.442Z",
-    "status": "success"
-  },
-  {
-    "server": "http://85.239.233.35:11434",
-    "models": [
-      "nomic-embed-text:latest",
-      "llama3.2:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:32.570Z",
-    "status": "success"
-  },
-  {
-    "server": "http://91.244.166.123:11434\t",
-    "models": [
-      "bge-m3:latest",
-      "nomic-embed-text:latest",
-      "ishumilin/deepseek-r1-coder-tools:14b",
-      "ishumilin/deepseek-r1-coder-tools:32b",
-      "deepseek-r1:32b",
-      "deepseek-r1:14b",
-      "llama3.1:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:32.741Z",
-    "status": "success"
-  },
-  {
-    "server": "http://133.125.71.63:11434",
-    "models": [
-      "Deepseek-R1:latest",
-      "deepseek-r1:70b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:32.788Z",
-    "status": "success"
-  },
-  {
-    "server": "http://120.192.73.45:11434",
-    "models": [
-      "shaw/dmeta-embedding-zh:latest",
-      "qwen2.5-coder:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:32.863Z",
-    "status": "success"
-  },
-  {
-    "server": "http://116.62.47.88:11434",
-    "models": [
-      "nomic-embed-text:latest",
-      "smollm2:135m",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:32.877Z",
-    "status": "success"
-  },
-  {
-    "server": "http://b.thezen.ai",
-    "models": [
-      "phi4:latest",
-      "qwen2.5-coder:3b-base-q8_0",
-      "nezahatkorkmaz/deepseek-v3:latest",
-      "qwen2.5-coder:14b",
-      "deepseek-r1:14b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:33.301Z",
-    "status": "success"
-  },
-  {
-    "server": "http://123.207.221.226:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:32.926Z",
-    "status": "success"
-  },
-  {
-    "server": "http://116.227.18.59:11434",
-    "models": [
-      "deepseek-r1:671b",
-      "nomic-embed-text:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:32.920Z",
-    "status": "success"
-  },
-  {
-    "server": "http://36.133.148.70:11434",
-    "models": [
-      "deepseek-r1:14b",
-      "huihui_ai/deepseek-r1-abliterated:14b",
-      "deepseek-r1:70b"
-    ],
-    "tps": 0.8748906386701663,
-    "lastUpdate": "2025-02-26T17:20:32.920Z",
-    "status": "success"
-  },
-  {
-    "server": "http://ollama.bongchatchat.icu",
-    "models": [
-      "ishumilin/deepseek-r1-coder-tools:14b",
-      "MFDoom/deepseek-r1-tool-calling:32b",
-      "deepseek-r1:70b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:33.764Z",
-    "status": "success"
-  },
-  {
-    "server": "https://chat.blch.ru/\t",
-    "models": [
-      "mistral-large:123b-instruct-2411-q6_K",
-      "deepseek-r1:671b",
-      "deepseek-r1:8b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:34.489Z",
-    "status": "success"
-  },
-  {
-    "server": "http://62.234.60.152:11434",
-    "models": [
-      "qwen2:7b",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.5387931034482758,
-    "lastUpdate": "2025-02-26T17:20:32.958Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.179:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.4065040650406504,
-    "lastUpdate": "2025-02-26T17:20:32.567Z",
-    "status": "success"
-  },
-  {
-    "server": "https://llm.ds-dev.neuro.net/",
-    "models": [
-      "llama3.1:latest",
-      "paraphrase-multilingual:latest",
-      "llama3.2:latest",
-      "infidelis/GigaChat-20B-A3B-instruct:q8_0",
-      "jeffh/intfloat-multilingual-e5-large-instruct:f16",
-      "all-minilm:l6-v2",
-      "deepseek-coder-v2:16b",
-      "neuro-net-1.0:20b",
-      "neuro-net-1.0:7b",
-      "hf.co/t-tech/T-lite-it-1.0-Q8_0-GGUF:latest",
-      "neuro-net-1.0:8b",
-      "deepseek-r1:70b",
-      "ollama.com/fomenks/T-Pro-1.0-it-q4_k_m:latest",
-      "ollama.com/owl/t-lite:q4_0-instruct",
-      "ollama.com/library/qwen2.5:7b-instruct",
-      "infidelis/GigaChat-20B-A3B-instruct:q4_K_M",
-      "rscr/ruadapt_qwen2.5_32b:Q4_K_M",
-      "deepseek-r1:32b",
-      "llama3.3:70b-instruct-q8_0",
-      "llama3.3:70b",
-      "qwq:32b",
-      "codellama:34b",
-      "qwen2.5-coder:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:34.117Z",
-    "status": "success"
-  },
-  {
-    "server": "http://118.141.140.216:11434",
-    "models": [
-      "smollm2:135m",
-      "qwen2.5:14b-instruct",
-      "llama3.2:3b-instruct-fp16"
-    ],
-    "tps": 0.43084877208099953,
-    "lastUpdate": "2025-02-26T17:20:32.875Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.76.190.5:11434",
-    "models": [
-      "smollm2:135m",
-      "qwen:4b",
-      "deepseek-r1:latest",
-      "nomic-embed-text:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.3763643206624012,
-    "lastUpdate": "2025-02-26T17:20:32.850Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.38.179.23",
-    "models": [
-      "tinyllama:latest",
-      "gemma:latest",
-      "mistral:latest"
-    ],
-    "tps": 0.31918289179699966,
-    "lastUpdate": "2025-02-26T17:20:32.523Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.194.131.66:11434",
+    "server": "http://154.194.130.103:11434",
     "models": [
       "smollm2:135m",
       "deepseek-r1:7b"
     ],
-    "tps": 0.3081664098613251,
-    "lastUpdate": "2025-02-26T17:20:33.201Z",
-    "status": "success"
-  },
-  {
-    "server": "http://139.226.106.201:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.2737476047084588,
-    "lastUpdate": "2025-02-26T17:20:32.807Z",
-    "status": "success"
-  },
-  {
-    "server": "http://8.134.33.222:51434",
-    "models": [
-      "deepseek-r1:latest"
-    ],
-    "tps": 0.25967281225655675,
-    "lastUpdate": "2025-02-26T17:20:32.935Z",
-    "status": "success"
-  },
-  {
-    "server": "http://69.30.199.12:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0.29394473838918284,
-    "lastUpdate": "2025-02-26T17:20:33.634Z",
-    "status": "success"
-  },
-  {
-    "server": "http://121.227.174.166:11434",
-    "models": [
-      "erwan2/DeepSeek-Janus-Pro-7B:latest",
-      "huihui_ai/deepseek-r1-abliterated:7b",
-      "bge-large:latest",
-      "bge-m3:latest",
-      "deepseek-r1:latest",
-      "qwq:latest",
-      "llama3.2-vision:latest",
-      "internlm/internlm2.5:latest",
-      "qwen2.5-coder:latest",
-      "qwen2.5:latest",
-      "qwen2-math:latest",
-      "phi3.5:latest",
-      "ollam/unichat-llama3-chinese-8b:latest",
-      "nomic-embed-text:latest",
-      "minicpm-v:latest",
-      "llava:latest",
-      "llava-llama3:latest",
-      "llama3.1:latest",
-      "llama3-chatqa:latest",
-      "gemma2:latest",
-      "gemma2:27b",
-      "codestral:latest",
-      "codellama:latest",
-      "codegemma:latest"
-    ],
-    "tps": 0.24527839097375523,
-    "lastUpdate": "2025-02-26T17:20:32.963Z",
-    "status": "success"
-  },
-  {
-    "server": "http://20.254.105.163:11434",
-    "models": [
-      "llama2:latest",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.21973192704900021,
-    "lastUpdate": "2025-02-26T17:20:32.657Z",
-    "status": "success"
-  },
-  {
-    "server": "http://211.139.164.250:11434",
-    "models": [
-      "deepseek-r1:32b"
-    ],
-    "tps": 0.21105951878429716,
-    "lastUpdate": "2025-02-26T17:20:32.932Z",
-    "status": "success"
-  },
-  {
-    "server": "http://112.80.127.71:60001",
-    "models": [
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.19241870309794112,
-    "lastUpdate": "2025-02-26T17:20:32.825Z",
-    "status": "success"
-  },
-  {
-    "server": "http://14.21.45.85:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "DeepSeek-R1-Distill-Qwen-7B-Q8:latest"
-    ],
-    "tps": 0.18474043968224643,
-    "lastUpdate": "2025-02-26T17:20:32.919Z",
-    "status": "success"
-  },
-  {
-    "server": "http://121.43.148.53:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:7b",
-      "deepseek-r1:14b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0.17229496898690558,
-    "lastUpdate": "2025-02-26T17:20:32.869Z",
-    "status": "success"
-  },
-  {
-    "server": "http://185.232.70.35:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.15688735487919675,
-    "lastUpdate": "2025-02-26T17:20:32.697Z",
-    "status": "success"
-  },
-  {
-    "server": "http://api2.audacer.com",
-    "models": [
-      "mannix/llama3-groq-tool-8b:latest",
-      "deepseek-r1:latest",
-      "llama3.2:latest"
-    ],
-    "tps": 0.13829345871940257,
-    "lastUpdate": "2025-02-26T17:20:33.919Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.172:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.10488777008600797,
-    "lastUpdate": "2025-02-26T17:20:32.566Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.158:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.09914733293674399,
-    "lastUpdate": "2025-02-26T17:20:32.568Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.184:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.07982120051085569,
-    "lastUpdate": "2025-02-26T17:20:32.578Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.144:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.07799095304944627,
-    "lastUpdate": "2025-02-26T17:20:32.567Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.162:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.078003120124805,
-    "lastUpdate": "2025-02-26T17:20:32.571Z",
+    "tps": 0.14598540145985403,
+    "lastUpdate": "2025-02-26T18:32:37.678Z",
     "status": "success"
   },
   {
@@ -1607,431 +2824,73 @@
       "nomic-embed-text:latest",
       "qwen2.5:latest"
     ],
-    "tps": 0.060346388268662114,
-    "lastUpdate": "2025-02-26T17:20:33.232Z",
+    "tps": 0.12128562765312312,
+    "lastUpdate": "2025-02-26T18:32:38.134Z",
     "status": "success"
   },
   {
-    "server": "http://125.80.200.69:11434",
+    "server": "http://154.19.74.147:11434",
     "models": [
-      "deepseek-r1:70b",
-      "deepseek-r1:32b",
+      "smollm2:135m",
+      "llama2:latest",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.10698619878035734,
+    "lastUpdate": "2025-02-26T18:32:37.062Z",
+    "status": "success"
+  },
+  {
+    "server": "http://123.118.113.135:11434",
+    "models": [
       "deepseek-r1:14b",
       "qwen2.5:7b",
-      "bge-m3:latest",
-      "llama3.2:3b",
-      "glm4:9b",
-      "deepseek-r1:7b",
-      "mannix/defog-llama3-sqlcoder-8b:latest",
-      "smollm2:135m",
-      "ueone:latest"
-    ],
-    "tps": 0.05732958780026371,
-    "lastUpdate": "2025-02-26T17:20:32.964Z",
-    "status": "success"
-  },
-  {
-    "server": "http://217.114.11.119:11434",
-    "models": [
-      "mistral:latest"
-    ],
-    "tps": 0.05026893882270145,
-    "lastUpdate": "2025-02-26T17:20:32.778Z",
-    "status": "success"
-  },
-  {
-    "server": "http://4.156.67.94",
-    "models": [
-      "llama3.3:latest"
-    ],
-    "tps": 0.04657444925713754,
-    "lastUpdate": "2025-02-26T17:20:32.499Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.189:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.044064510443288976,
-    "lastUpdate": "2025-02-26T17:20:32.572Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.181:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.042990413137870255,
-    "lastUpdate": "2025-02-26T17:20:32.575Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.73.164:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.03719822936428226,
-    "lastUpdate": "2025-02-26T17:20:32.577Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.101.67.217:11434",
-    "models": [
-      "deepseek-r1:32b",
-      "deepseek-r1:8b"
-    ],
-    "tps": 0.03666630000366663,
-    "lastUpdate": "2025-02-26T17:20:32.881Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.73.169:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.03410059676044331,
-    "lastUpdate": "2025-02-26T17:20:32.574Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.150:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.033907500339075004,
-    "lastUpdate": "2025-02-26T17:20:32.576Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.73.179:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:32.573Z",
-    "status": "success"
-  },
-  {
-    "server": "http://27.82.194.51:11434",
-    "models": [
-      "llama3.3:latest",
-      "deepseek-r1:14b",
-      "deepseek-r1:32b",
-      "deepseek-r1:latest",
-      "gemma2:27b",
-      "phi4:latest",
-      "gemma2:latest",
-      "llama3.2:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:32.753Z",
-    "status": "success"
-  },
-  {
-    "server": "http://118.25.192.13:11434",
-    "models": [
-      "deepseek-r1:14b",
-      "smollm2:135m",
-      "qwen2.5:14b",
-      "qwen2:7b",
-      "llama3:8b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:33.032Z",
-    "status": "success"
-  },
-  {
-    "server": "http://69.30.199.10:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:33.633Z",
-    "status": "success"
-  },
-  {
-    "server": "http://69.30.199.14:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:20:33.634Z",
-    "status": "success"
-  },
-  {
-    "server": "http://172.86.120.109",
-    "models": [
-      "deepseek-r1:32b",
       "deepseek-r1:8b",
-      "deepseek-r1:14b",
-      "deepseek-r1:70b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:03.743Z",
-    "status": "success"
-  },
-  {
-    "server": "http://91.244.166.123:11434",
-    "models": [
-      "bge-m3:latest",
-      "nomic-embed-text:latest",
-      "ishumilin/deepseek-r1-coder-tools:14b",
-      "ishumilin/deepseek-r1-coder-tools:32b",
-      "deepseek-r1:32b",
-      "deepseek-r1:14b",
-      "llama3.1:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:03.936Z",
-    "status": "success"
-  },
-  {
-    "server": "http://ollama.tanmaykarande.com",
-    "models": [
-      "llama3.2:latest",
-      "deepseek-r1:1.5b",
-      "hf.co/Lucy-in-the-Sky/DeepScaleR-1.5B-Preview-Q8_0-GGUF:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.272Z",
-    "status": "success"
-  },
-  {
-    "server": "http://a.thezen.ai",
-    "models": [
-      "phi4:latest",
-      "qwen2.5-coder:3b-base-q8_0",
-      "nezahatkorkmaz/deepseek-v3:latest",
-      "qwen2.5-coder:14b",
-      "deepseek-r1:14b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.292Z",
-    "status": "success"
-  },
-  {
-    "server": "https://model.teadews.com",
-    "models": [
-      "hf.co/bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF:Q4_K_M",
-      "hf.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF:Q6_K_L"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:03.958Z",
-    "status": "success"
-  },
-  {
-    "server": "http://43.252.230.213:11434",
-    "models": [
+      "deepseek-r1:7b",
       "deepseek-r1:1.5b"
     ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.062Z",
+    "tps": 0.10566356720202874,
+    "lastUpdate": "2025-02-26T18:32:37.496Z",
     "status": "success"
   },
   {
-    "server": "https://b.thezen.ai",
+    "server": "http://23.106.53.175",
     "models": [
       "phi4:latest",
-      "qwen2.5-coder:3b-base-q8_0",
-      "nezahatkorkmaz/deepseek-v3:latest",
-      "qwen2.5-coder:14b",
-      "deepseek-r1:14b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:03.874Z",
-    "status": "success"
-  },
-  {
-    "server": "http://ooolllama.zilu.work",
-    "models": [
-      "bge-m3:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.359Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.121.211.134:11434",
-    "models": [
-      "modelscope.cn/unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.137Z",
-    "status": "success"
-  },
-  {
-    "server": "https://ollama.140.110.139.33.sslip.io",
-    "models": [
-      "chatfire/bge-m3:q8_0",
-      "llama3.1:8b-instruct-fp16",
-      "Llama3-TAIDE-LX-8B-Chat-Alpha1-4bit:latest",
-      "TAIDE-LX-7B-Chat-4bit:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.280Z",
-    "status": "success"
-  },
-  {
-    "server": "http://143.64.229.51:11434",
-    "models": [
-      "qwen2.5:3b",
-      "qwen2.5:14b"
-    ],
-    "tps": 1.1976047904191618,
-    "lastUpdate": "2025-02-26T17:21:04.156Z",
-    "status": "success"
-  },
-  {
-    "server": "https://ollama.203.145.215.194.sslip.io",
-    "models": [
-      "chatfire/bge-m3:q8_0",
-      "llama3.1:8b-instruct-fp16"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.599Z",
-    "status": "success"
-  },
-  {
-    "server": "http://14.19.138.215:11434/",
-    "models": [
-      "hf.co/Poro7/Tifa-Deepsex-14b-CoT-Chat-Q4_K_M-gguf:latest",
-      "hf.co/TriadParty/deepsex-34b-gguf:latest",
-      "hf.co/danqingximeng/Tifa-Deepsex-14b-CoT-Crazy-GGUF:Q4_K_M",
-      "hf.co/cgxjdzz/Qwen-2.5-7B-Instruct-novel-lora:F16",
-      "hf.co/cgxjdzz/Qwen-2.5-7B-Instruct-novel-lora:Q4_K_M",
-      "hf.co/mradermacher/Qwen2.5-Sex-i1-GGUF:Q4_K_M",
-      "hf.co/ben-wycliff/sexed-7b-v5_q4_0_gguf:latest",
-      "hf.co/ben-wycliff/sexed-7b-v1_q4_0_gguf:latest",
-      "hf.co/Novaciano/Qwen2.5_Uncensored_V2_Sexting-GGUF:latest",
-      "hf.co/ValueFX9507/Tifa-Deepsex-14b-CoT-GGUF-Q4:Q4_K_M",
-      "hf.co/ValueFX9507/Tifa-Deepsex-14b-CoT:F16",
-      "mistral-nemo:12B",
-      "gemma2:27B",
-      "gemma2:9B",
-      "deepseek-coder-v2:latest",
-      "qwen2.5-coder:14b",
-      "huihui_ai/deepseek-r1-abliterated:70b",
-      "huihui_ai/deepseek-r1-abliterated:32b",
-      "huihui_ai/deepseek-r1-abliterated:14b",
-      "huihui_ai/deepseek-r1-abliterated:8b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.854Z",
-    "status": "success"
-  },
-  {
-    "server": "http://161.35.13.82:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:latest"
-    ],
-    "tps": 0.513874614594039,
-    "lastUpdate": "2025-02-26T17:21:03.715Z",
-    "status": "success"
-  },
-  {
-    "server": "https://chat.blch.ru/",
-    "models": [
-      "mistral-large:123b-instruct-2411-q6_K",
-      "deepseek-r1:671b",
-      "deepseek-r1:8b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:05.445Z",
-    "status": "success"
-  },
-  {
-    "server": "http://1.94.146.81:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:1.5b",
       "nomic-embed-text:latest"
     ],
-    "tps": 0.5035246727089627,
-    "lastUpdate": "2025-02-26T17:21:04.003Z",
+    "tps": 0.14503263234227703,
+    "lastUpdate": "2025-02-26T18:32:40.504Z",
     "status": "success"
   },
   {
-    "server": "http://223.26.59.163:11434",
+    "server": "http://142.113.143.25:11434",
+    "models": [
+      "deepseek-coder-v2:latest"
+    ],
+    "tps": 0.0945000945000945,
+    "lastUpdate": "2025-02-26T18:32:37.018Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.74.182:11434",
     "models": [
       "smollm2:135m",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.3717472118959108,
-    "lastUpdate": "2025-02-26T17:21:04.050Z",
-    "status": "success"
-  },
-  {
-    "server": "http://120.78.192.18:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:1.5b",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.3892565200467108,
-    "lastUpdate": "2025-02-26T17:21:04.176Z",
-    "status": "success"
-  },
-  {
-    "server": "http://60.247.78.91:11434",
-    "models": [
-      "aiden_lu/minicpm-v2.6:Q4_K_M",
-      "chroma/all-minilm-l6-v2-f32:latest",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0.374251497005988,
-    "lastUpdate": "2025-02-26T17:21:04.157Z",
-    "status": "success"
-  },
-  {
-    "server": "http://136.143.157.5:11434",
-    "models": [
-      "deepseek-r1:14b",
-      "deepseek-r1:32b",
+      "llama2:latest",
       "deepseek-r1:1.5b"
     ],
-    "tps": 0.3125,
-    "lastUpdate": "2025-02-26T17:21:03.796Z",
+    "tps": 0.08611780916293489,
+    "lastUpdate": "2025-02-26T18:32:37.065Z",
     "status": "success"
   },
   {
-    "server": "http://183.173.95.28:11434",
-    "models": [
-      "qwen2.5:1.5b",
-      "qwen2.5:0.5b",
-      "glm4:latest",
-      "qwen2.5:latest",
-      "qwen2.5-coder:latest",
-      "llama3.1:latest"
-    ],
-    "tps": 0.31308703819661865,
-    "lastUpdate": "2025-02-26T17:21:04.237Z",
-    "status": "success"
-  },
-  {
-    "server": "http://180.200.10.114:11434",
+    "server": "http://154.19.75.184:11434",
     "models": [
       "smollm2:135m",
-      "deepseek-r1:latest",
-      "llama3.2:latest"
+      "llama2:latest",
+      "deepseek-r1:1.5b"
     ],
-    "tps": 0.28224668360146765,
-    "lastUpdate": "2025-02-26T17:21:03.967Z",
+    "tps": 0.07354022650389763,
+    "lastUpdate": "2025-02-26T18:32:37.064Z",
     "status": "success"
   },
   {
@@ -2041,48 +2900,125 @@
       "llama2:latest",
       "deepseek-r1:1.5b"
     ],
-    "tps": 0.2455795677799607,
-    "lastUpdate": "2025-02-26T17:21:03.766Z",
+    "tps": 0.06749915626054674,
+    "lastUpdate": "2025-02-26T18:32:37.065Z",
     "status": "success"
   },
   {
-    "server": "http://106.14.219.51:11434",
-    "models": [
-      "qwen2.5:7b"
-    ],
-    "tps": 0.2557544757033248,
-    "lastUpdate": "2025-02-26T17:21:04.011Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.164:11434",
+    "server": "http://154.19.74.134:11434",
     "models": [
       "smollm2:135m",
       "llama2:latest",
       "deepseek-r1:1.5b"
     ],
-    "tps": 0.23191094619666047,
-    "lastUpdate": "2025-02-26T17:21:03.767Z",
+    "tps": 0.06022645145748013,
+    "lastUpdate": "2025-02-26T18:32:37.066Z",
     "status": "success"
   },
   {
-    "server": "http://154.19.73.166:11434",
+    "server": "http://49.4.62.154:11434",
     "models": [
-      "smollm2:135m",
-      "llama2:latest",
+      "deepseek-r1:1.5b",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0.05825129609133803,
+    "lastUpdate": "2025-02-26T18:32:37.427Z",
+    "status": "success"
+  },
+  {
+    "server": "http://217.114.11.119:11434",
+    "models": [
+      "mistral:latest"
+    ],
+    "tps": 0.052023722817604826,
+    "lastUpdate": "2025-02-26T18:32:37.275Z",
+    "status": "success"
+  },
+  {
+    "server": "http://121.196.239.128:11434",
+    "models": [
       "deepseek-r1:1.5b"
     ],
-    "tps": 0.22578460149017834,
-    "lastUpdate": "2025-02-26T17:21:03.761Z",
+    "tps": 0.04128819157720892,
+    "lastUpdate": "2025-02-26T18:32:37.409Z",
     "status": "success"
   },
   {
-    "server": "https://uliza-agent.paysokoerp.com",
+    "server": "http://124.156.99.148:11434",
     "models": [
-      "unitythemaker/llama3.2-vision-tools:latest"
+      "deepseek-r1:1.5b"
     ],
-    "tps": 0.2298850574712644,
-    "lastUpdate": "2025-02-26T17:21:03.865Z",
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.386Z",
+    "status": "success"
+  },
+  {
+    "server": "http://183.157.83.145:11434",
+    "models": [
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.425Z",
+    "status": "success"
+  },
+  {
+    "server": "http://122.246.5.72:11434",
+    "models": [
+      "llama3.3:70b",
+      "deepseek-r1:70b",
+      "shaw/dmeta-embedding-zh:latest",
+      "qwen2.5:72b",
+      "qwen2.5:14b",
+      "llama3.1-8b-qx0916:latest",
+      "llama3.1:8b",
+      "qwen2-7b-qx0916:latest",
+      "qwen2-7b-qx:latest",
+      "llava-llama3:latest",
+      "llava:34b",
+      "llama3.1:70b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.426Z",
+    "status": "success"
+  },
+  {
+    "server": "http://113.89.101.49:11434",
+    "models": [
+      "huihui_ai/deepseek-r1-abliterated:7b",
+      "deepseek-r1:1.5b",
+      "deepseek-r1:8b",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.427Z",
+    "status": "success"
+  },
+  {
+    "server": "http://116.90.87.83:11434",
+    "models": [
+      "qwen2.5:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.430Z",
+    "status": "success"
+  },
+  {
+    "server": "http://58.213.120.217:11434",
+    "models": [
+      "deepseek-r1:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.432Z",
+    "status": "success"
+  },
+  {
+    "server": "http://120.133.37.231:8009",
+    "models": [
+      "deepseek-r1:70b",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:32:37.509Z",
     "status": "success"
   },
   {
@@ -2093,410 +3029,12 @@
       "qwen2.5:14b",
       "deepseek-r1:32b"
     ],
-    "tps": 0.21815008726003493,
-    "lastUpdate": "2025-02-26T17:21:03.683Z",
+    "tps": 4.975124378109452,
+    "lastUpdate": "2025-02-26T18:33:07.555Z",
     "status": "success"
   },
   {
-    "server": "https://api2.audacer.com",
-    "models": [
-      "mannix/llama3-groq-tool-8b:latest",
-      "deepseek-r1:latest",
-      "llama3.2:latest"
-    ],
-    "tps": 0.24148756339048538,
-    "lastUpdate": "2025-02-26T17:21:04.402Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.165:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.19157088122605365,
-    "lastUpdate": "2025-02-26T17:21:03.760Z",
-    "status": "success"
-  },
-  {
-    "server": "http://api2.audacer.com\t",
-    "models": [
-      "mannix/llama3-groq-tool-8b:latest",
-      "deepseek-r1:latest",
-      "llama3.2:latest"
-    ],
-    "tps": 0.2293577981651376,
-    "lastUpdate": "2025-02-26T17:21:04.663Z",
-    "status": "success"
-  },
-  {
-    "server": "http://123.117.39.66:11434",
-    "models": [
-      "hf.co/mradermacher/Qwen2-7B-Multilingual-RP-GGUF:Q8_0",
-      "hf.co/anthracite-org/magnum-v4-12b-gguf:q4_k_m",
-      "huihui_ai/deepseek-r1-abliterated:32b",
-      "deepseek-r1:14b",
-      "qwen2.5:7b",
-      "nomic-embed-text:latest",
-      "deepseek-r1:70b",
-      "deepseek-r1:32b",
-      "deepseek-v3:latest",
-      "mxbai-embed-large:latest"
-    ],
-    "tps": 0.16297262059973924,
-    "lastUpdate": "2025-02-26T17:21:04.046Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.138:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.15146925174189638,
-    "lastUpdate": "2025-02-26T17:21:03.767Z",
-    "status": "success"
-  },
-  {
-    "server": "http://69.30.199.13:11434\t",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0.18375597206909225,
-    "lastUpdate": "2025-02-26T17:21:05.823Z",
-    "status": "success"
-  },
-  {
-    "server": "http://103.38.82.102:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.11337868480725623,
-    "lastUpdate": "2025-02-26T17:21:04.080Z",
-    "status": "success"
-  },
-  {
-    "server": "http://23.106.53.175",
-    "models": [
-      "phi4:latest",
-      "nomic-embed-text:latest"
-    ],
-    "tps": 0.11084016847705608,
-    "lastUpdate": "2025-02-26T17:21:04.145Z",
-    "status": "success"
-  },
-  {
-    "server": "http://142.113.143.25:11434",
-    "models": [
-      "deepseek-coder-v2:latest"
-    ],
-    "tps": 0.08781944322472995,
-    "lastUpdate": "2025-02-26T17:21:03.718Z",
-    "status": "success"
-  },
-  {
-    "server": "http://112.86.129.67:11434",
-    "models": [
-      "deepseek-r1:32b"
-    ],
-    "tps": 0.08126117341134406,
-    "lastUpdate": "2025-02-26T17:21:04.073Z",
-    "status": "success"
-  },
-  {
-    "server": "http://52.247.231.32",
-    "models": [
-      "gemma2:27b",
-      "llama3.1:70b"
-    ],
-    "tps": 0.07053678493334274,
-    "lastUpdate": "2025-02-26T17:21:03.754Z",
-    "status": "success"
-  },
-  {
-    "server": "http://dev.deextra.com:81",
-    "models": [
-      "testmodel5:latest",
-      "nomic-embed-text:latest",
-      "testmodel3:latest",
-      "testmodel2:latest",
-      "testmodel1:latest",
-      "deepseek-r1:8b",
-      "deepseek-r1:32b",
-      "deepseek-r1:14b",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.07413997627520759,
-    "lastUpdate": "2025-02-26T17:21:04.837Z",
-    "status": "success"
-  },
-  {
-    "server": "http://120.46.95.23",
-    "models": [
-      "deepseek-qdpub:14b",
-      "deepseek-qdpub-32b:latest"
-    ],
-    "tps": 0.0522466039707419,
-    "lastUpdate": "2025-02-26T17:21:04.056Z",
-    "status": "success"
-  },
-  {
-    "server": "http://69.30.199.13:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:32b"
-    ],
-    "tps": 0.050978792822185974,
-    "lastUpdate": "2025-02-26T17:21:05.824Z",
-    "status": "success"
-  },
-  {
-    "server": "http://121.196.239.128:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.03623844899438304,
-    "lastUpdate": "2025-02-26T17:21:04.007Z",
-    "status": "success"
-  },
-  {
-    "server": "http://43.231.196.23:11434",
-    "models": [
-      "deepseek-r1:8b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.049Z",
-    "status": "success"
-  },
-  {
-    "server": "http://139.9.137.192:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.104Z",
-    "status": "success"
-  },
-  {
-    "server": "http://117.50.173.120:11434",
-    "models": [
-      "hengwen/DeepSeek-R1-Distill-Qwen-14B:f16",
-      "qwen2.5:14b",
-      "bge-m3:latest",
-      "quentinz/bge-large-zh-v1.5:latest",
-      "deepseek-r1:14b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.151Z",
-    "status": "success"
-  },
-  {
-    "server": "http://36.111.150.123:11434",
-    "models": [
-      "deepseek-r1:32b",
-      "deepseek-r1:14b",
-      "deepseek-r1:8b",
-      "deepseek-r1:7b",
-      "deepseek-r1:70b",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.153Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.238.251.43:7779",
-    "models": [
-      "deepseek-r1:32b",
-      "llama2:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.162Z",
-    "status": "success"
-  },
-  {
-    "server": "https://llm.ds-dev.neuro.net",
-    "models": [
-      "llama3.1:latest",
-      "paraphrase-multilingual:latest",
-      "llama3.2:latest",
-      "infidelis/GigaChat-20B-A3B-instruct:q8_0",
-      "jeffh/intfloat-multilingual-e5-large-instruct:f16",
-      "all-minilm:l6-v2",
-      "deepseek-coder-v2:16b",
-      "neuro-net-1.0:20b",
-      "neuro-net-1.0:7b",
-      "neuro-net-1.0:8b",
-      "hf.co/t-tech/T-lite-it-1.0-Q8_0-GGUF:latest",
-      "deepseek-r1:70b",
-      "ollama.com/fomenks/T-Pro-1.0-it-q4_k_m:latest",
-      "ollama.com/owl/t-lite:q4_0-instruct",
-      "ollama.com/library/qwen2.5:7b-instruct",
-      "infidelis/GigaChat-20B-A3B-instruct:q4_K_M",
-      "rscr/ruadapt_qwen2.5_32b:Q4_K_M",
-      "deepseek-r1:32b",
-      "llama3.3:70b-instruct-q8_0",
-      "llama3.3:70b",
-      "qwq:32b",
-      "codellama:34b",
-      "qwen2.5-coder:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.361Z",
-    "status": "success"
-  },
-  {
-    "server": "https://ai.frickalou.com",
-    "models": [
-      "qwen2.5-coder:14b",
-      "qwen2.5:14b",
-      "huihui_ai/deepseek-r1-abliterated:14b",
-      "llava:13b",
-      "hf.co/BeaverLegacy/Smegmma-9B-v1-GGUF:Q5_K_M",
-      "llava-llama3:latest",
-      "codeqwen:latest",
-      "llama3.1:latest",
-      "trollek/qwen2-diffusion-prompter:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:04.446Z",
-    "status": "success"
-  },
-  {
-    "server": "https://sore-caitlin-flyingpot-402fcea7.koyeb.app",
-    "models": [
-      "deepseek-r1:14b",
-      "deepseek-r1:32b",
-      "deepseek-r1:70b",
-      "deepseek-r1:671b"
-    ],
-    "tps": 7.352941176470588,
-    "lastUpdate": "2025-02-26T17:21:34.798Z",
-    "status": "success"
-  },
-  {
-    "server": "http://51.15.15.246:11434",
-    "models": [
-      "deepseek-r1:70b",
-      "llava:latest",
-      "llama3.3:latest",
-      "mistral:latest",
-      "phi4:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.674Z",
-    "status": "success"
-  },
-  {
-    "server": "http://uliza-agent.paysokoerp.com",
-    "models": [
-      "unitythemaker/llama3.2-vision-tools:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:35.057Z",
-    "status": "success"
-  },
-  {
-    "server": "http://36.35.236.75:9002",
-    "models": [
-      "mxbai-embed-large:latest",
-      "llama3.2:latest",
-      "nomic-embed-text:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.838Z",
-    "status": "success"
-  },
-  {
-    "server": "http://ollama.elwazir.org",
-    "models": [
-      "llama2:latest",
-      "Deepseek-r1:32b",
-      "adens/quran-guide:latest",
-      "gemma2:latest",
-      "llama3.3:latest",
-      "qwen2.5:latest",
-      "llama3.2:latest",
-      "qwq:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:35.171Z",
-    "status": "success"
-  },
-  {
-    "server": "http://20.243.131.115:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:32b",
-      "deepseek-r1:1.5b",
-      "phi4:latest",
-      "dolphin3:latest",
-      "smallthinker:latest",
-      "smollm:1.7b",
-      "llama3.2-vision:11b",
-      "starcoder2:latest",
-      "deepseek-r1:7b",
-      "deepseek-r1:14b",
-      "gemma:latest",
-      "minicpm-v:latest"
-    ],
-    "tps": 2.0242914979757085,
-    "lastUpdate": "2025-02-26T17:21:34.760Z",
-    "status": "success"
-  },
-  {
-    "server": "http://113.68.253.78:11434",
-    "models": [
-      "nomic-embed-text:latest",
-      "deepseek-r1:32b-qwen-distill-q4_K_M"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.927Z",
-    "status": "success"
-  },
-  {
-    "server": "http://43.136.54.186:11434",
-    "models": [
-      "deepseek-r1:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.911Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.112.112.163:11434\t",
-    "models": [
-      "deepseek-r1:32b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.974Z",
-    "status": "success"
-  },
-  {
-    "server": "http://140.83.80.248:10101",
-    "models": [
-      "bge-m3:latest",
-      "gemma2:27b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.978Z",
-    "status": "success"
-  },
-  {
-    "server": "http://185.243.240.56:11434",
-    "models": [
-      "deepseek-r1:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.939Z",
-    "status": "success"
-  },
-  {
-    "server": "https://a.thezen.ai",
+    "server": "http://b.thezen.ai",
     "models": [
       "phi4:latest",
       "qwen2.5-coder:3b-base-q8_0",
@@ -2505,28 +3043,103 @@
       "deepseek-r1:14b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:35.029Z",
+    "lastUpdate": "2025-02-26T18:33:07.747Z",
     "status": "success"
   },
   {
-    "server": "http://model.teadews.com",
+    "server": "https://ollama.mediascout.pro",
     "models": [
-      "hf.co/bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF:Q4_K_M",
-      "hf.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF:Q6_K_L"
+      "llama3.2:latest",
+      "phi3:latest",
+      "qwen2.5:3b",
+      "mistral:latest",
+      "nomic-embed-text:latest",
+      "llama3.1:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:35.198Z",
+    "lastUpdate": "2025-02-26T18:33:07.840Z",
     "status": "success"
   },
   {
-    "server": "http://180.200.10.114:11434\t",
+    "server": "http://ollama.tanmaykarande.com",
+    "models": [
+      "llama3.2:latest",
+      "deepseek-r1:1.5b",
+      "hf.co/Lucy-in-the-Sky/DeepScaleR-1.5B-Preview-Q8_0-GGUF:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:07.833Z",
+    "status": "success"
+  },
+  {
+    "server": "http://23.119.28.65",
     "models": [
       "smollm2:135m",
-      "deepseek-r1:latest",
-      "llama3.2:latest"
+      "llama3.3:latest"
     ],
-    "tps": 0.987166831194472,
-    "lastUpdate": "2025-02-26T17:21:34.778Z",
+    "tps": 1.7152658662092626,
+    "lastUpdate": "2025-02-26T18:33:07.617Z",
+    "status": "success"
+  },
+  {
+    "server": "http://ollama.mediascout.pro",
+    "models": [
+      "llama3.2:latest",
+      "phi3:latest",
+      "qwen2.5:3b",
+      "mistral:latest",
+      "nomic-embed-text:latest",
+      "llama3.1:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:07.995Z",
+    "status": "success"
+  },
+  {
+    "server": "http://120.195.113.82:11434",
+    "models": [
+      "bge-large:latest",
+      "bge-m3:latest"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:07.902Z",
+    "status": "success"
+  },
+  {
+    "server": "http://114.220.135.131:11434",
+    "models": [
+      "nomic-embed-text:latest",
+      "qwen2.5-coder:14b",
+      "deepseek-coder-v2:16b",
+      "qwen2.5:14b",
+      "deepseek-r1:14b",
+      "deepseek-r1:32b",
+      "deepseek-r1:8b",
+      "qwen2.5:latest",
+      "deepseek-r1:7b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:08.008Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.112.112.163:11434\t",
+    "models": [
+      "deepseek-r1:32b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:08.043Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.121.143.37:11434",
+    "models": [
+      "nomic-embed-text:latest",
+      "deepseek-r1:7b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:08.093Z",
     "status": "success"
   },
   {
@@ -2557,341 +3170,220 @@
       "qwen2.5-coder:32b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:35.923Z",
+    "lastUpdate": "2025-02-26T18:33:08.350Z",
     "status": "success"
   },
   {
-    "server": "http://www.jssot.cn:11434/",
+    "server": "http://ollama.bongchatchat.icu",
     "models": [
-      "deepseek-r1:7b"
+      "ishumilin/deepseek-r1-coder-tools:14b",
+      "MFDoom/deepseek-r1-tool-calling:32b",
+      "deepseek-r1:70b",
+      "deepseek-r1:32b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:36.353Z",
+    "lastUpdate": "2025-02-26T18:33:08.972Z",
     "status": "success"
   },
   {
-    "server": "http://54.64.255.193",
+    "server": "http://217.114.11.119:11434",
     "models": [
-      "phi4:latest",
-      "llama3.2:latest",
-      "deepseek-r1:latest",
-      "llama3.1:latest"
+      "mistral:latest"
     ],
-    "tps": 0.36429872495446264,
-    "lastUpdate": "2025-02-26T17:21:34.752Z",
+    "tps": 0.40666937779585194,
+    "lastUpdate": "2025-02-26T18:33:07.837Z",
     "status": "success"
   },
   {
-    "server": "http://154.194.130.126:11434",
+    "server": "http://60.190.249.69:11434\t",
+    "models": [
+      "deepseek-r1:70b",
+      "llama3:latest"
+    ],
+    "tps": 0.39339103068450043,
+    "lastUpdate": "2025-02-26T18:33:07.986Z",
+    "status": "success"
+  },
+  {
+    "server": "http://52.247.231.32",
+    "models": [
+      "gemma2:27b",
+      "llama3.1:70b"
+    ],
+    "tps": 0.24801587301587302,
+    "lastUpdate": "2025-02-26T18:33:07.619Z",
+    "status": "success"
+  },
+  {
+    "server": "http://221.234.231.226:11434",
+    "models": [
+      "zyw0605688/bge-reranker-v2-m3:latest",
+      "qwen2.5:14b",
+      "bge-m3:latest",
+      "deepseek-r1:14b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:08.008Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.102.114.146",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.21528525296017226,
+    "lastUpdate": "2025-02-26T18:33:07.973Z",
+    "status": "success"
+  },
+  {
+    "server": "http://47.92.250.111:11434",
+    "models": [
+      "qwen2.5:1.5b",
+      "qwen2.5:7b",
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0.1918281220026856,
+    "lastUpdate": "2025-02-26T18:33:08.024Z",
+    "status": "success"
+  },
+  {
+    "server": "http://108.181.202.137:11434",
+    "models": [
+      "deepseek-r1:7b",
+      "llama3.2:latest",
+      "llama3.2-vision:latest"
+    ],
+    "tps": 0.16388069485414616,
+    "lastUpdate": "2025-02-26T18:33:07.580Z",
+    "status": "success"
+  },
+  {
+    "server": "http://154.19.73.179:11434",
     "models": [
       "smollm2:135m",
-      "deepseek-r1:7b"
+      "llama2:latest",
+      "deepseek-r1:1.5b"
     ],
-    "tps": 0.4275331338178709,
-    "lastUpdate": "2025-02-26T17:21:35.189Z",
+    "tps": 0.160333493666827,
+    "lastUpdate": "2025-02-26T18:33:07.629Z",
     "status": "success"
   },
   {
-    "server": "http://58.213.120.217:11434",
+    "server": "http://120.46.95.23",
+    "models": [
+      "deepseek-qdpub:14b",
+      "deepseek-qdpub-32b:latest"
+    ],
+    "tps": 0.16388069485414616,
+    "lastUpdate": "2025-02-26T18:33:08.019Z",
+    "status": "success"
+  },
+  {
+    "server": "http://56.124.118.111",
+    "models": [
+      "deepseek-r1:8b"
+    ],
+    "tps": 0.06762239653773329,
+    "lastUpdate": "2025-02-26T18:33:07.795Z",
+    "status": "success"
+  },
+  {
+    "server": "http://140.122.185.188:11434",
+    "models": [
+      "hf.co/bartowski/Chronos-Gold-12B-1.0-GGUF:Q8_0"
+    ],
+    "tps": 0.05046172478175304,
+    "lastUpdate": "2025-02-26T18:33:07.877Z",
+    "status": "success"
+  },
+  {
+    "server": "http://81.177.221.132:8085",
+    "models": [
+      "qwen2.5:14b",
+      "qwen2.5:32b"
+    ],
+    "tps": 0.046917519001595194,
+    "lastUpdate": "2025-02-26T18:33:07.809Z",
+    "status": "success"
+  },
+  {
+    "server": "http://94.139.255.203",
+    "models": [
+      "mistral-large:123b-instruct-2411-q6_K",
+      "deepseek-r1:671b",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:07.827Z",
+    "status": "success"
+  },
+  {
+    "server": "http://54.241.67.128",
+    "models": [
+      "Llama-3-8B-Instruct:",
+      "Llama-3.2-3B-Instruct:",
+      "Llama-3.2-1B-Instruct:",
+      "Mistral-7B-Instruct-v0.2:",
+      "Gemma-2B-instruct:"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:07.858Z",
+    "status": "success"
+  },
+  {
+    "server": "https://chat.blch.ru",
+    "models": [
+      "mistral-large:123b-instruct-2411-q6_K",
+      "deepseek-r1:671b",
+      "deepseek-r1:8b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:08.116Z",
+    "status": "success"
+  },
+  {
+    "server": "http://110.42.100.24:11434",
+    "models": [
+      "deepseek-r1:1.5b"
+    ],
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:07.987Z",
+    "status": "success"
+  },
+  {
+    "server": "http://58.211.71.51:11434",
     "models": [
       "deepseek-r1:32b"
     ],
-    "tps": 0.3015681544028951,
-    "lastUpdate": "2025-02-26T17:21:34.941Z",
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:08.003Z",
     "status": "success"
   },
   {
-    "server": "http://150.230.59.83:11434",
+    "server": "http://60.205.229.229:11434",
     "models": [
-      "smollm2:135m",
-      "qwen2.5-coder:7b",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.2631578947368421,
-    "lastUpdate": "2025-02-26T17:21:34.877Z",
-    "status": "success"
-  },
-  {
-    "server": "http://210.73.53.32:6005",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.2559508574353724,
-    "lastUpdate": "2025-02-26T17:21:35.054Z",
-    "status": "success"
-  },
-  {
-    "server": "http://183.195.216.54:11434",
-    "models": [
-      "qwen2.5:14b",
-      "nomic-embed-text:latest"
-    ],
-    "tps": 0.23629489603024573,
-    "lastUpdate": "2025-02-26T17:21:34.832Z",
-    "status": "success"
-  },
-  {
-    "server": "http://101.126.144.8:11434",
-    "models": [
-      "qwen2.5:1.5b",
-      "nomic-embed-text:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.2284148012791229,
-    "lastUpdate": "2025-02-26T17:21:34.968Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.142:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.20308692120227456,
-    "lastUpdate": "2025-02-26T17:21:34.570Z",
-    "status": "success"
-  },
-  {
-    "server": "http://106.75.68.44:11434",
-    "models": [
-      "deepseek-coder-v2:latest",
-      "qwen2.5:7b",
-      "krith/qwen2.5-14b-instruct:IQ1_M",
+      "deepseek-r1:7b",
       "deepseek-r1:14b"
     ],
-    "tps": 0.2026342451874367,
-    "lastUpdate": "2025-02-26T17:21:34.973Z",
+    "tps": 0,
+    "lastUpdate": "2025-02-26T18:33:08.009Z",
     "status": "success"
   },
   {
-    "server": "http://184.105.6.66:11434",
+    "server": "http://61.171.113.32:3002",
     "models": [
-      "smollm2:135m",
-      "llava:34b",
-      "deepseek-v2.5:latest",
-      "llama2:latest",
-      "deepseek-r1:70b"
-    ],
-    "tps": 0.17670966601873123,
-    "lastUpdate": "2025-02-26T17:21:34.532Z",
-    "status": "success"
-  },
-  {
-    "server": "http://1.94.48.24:11434",
-    "models": [
-      "qwen2.5:0.5b",
-      "qwen2.5:1.5b",
-      "llama3.2:3b",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.18362100624311423,
-    "lastUpdate": "2025-02-26T17:21:34.809Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.73.189:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.15765410688948447,
-    "lastUpdate": "2025-02-26T17:21:34.568Z",
-    "status": "success"
-  },
-  {
-    "server": "http://152.136.173.137:11434",
-    "models": [
-      "qwen2:0.5b"
-    ],
-    "tps": 0.16561775422325273,
-    "lastUpdate": "2025-02-26T17:21:34.970Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.75.166:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.14369880729989942,
-    "lastUpdate": "2025-02-26T17:21:34.569Z",
-    "status": "success"
-  },
-  {
-    "server": "http://52.23.201.169:11434",
-    "models": [
-      "llama3.2:1b"
-    ],
-    "tps": 0.14154281670205238,
-    "lastUpdate": "2025-02-26T17:21:34.504Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.155:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.1295672454003628,
-    "lastUpdate": "2025-02-26T17:21:34.575Z",
-    "status": "success"
-  },
-  {
-    "server": "http://183.220.129.95:11434",
-    "models": [
-      "category:latest",
-      "table:latest",
+      "qwen2.5:32b",
       "deepseek-r1:32b",
-      "db:latest"
-    ],
-    "tps": 0.12671059300557527,
-    "lastUpdate": "2025-02-26T17:21:34.937Z",
-    "status": "success"
-  },
-  {
-    "server": "http://123.118.113.135:11434",
-    "models": [
-      "deepseek-r1:14b",
-      "qwen2.5:7b",
-      "deepseek-r1:8b",
-      "deepseek-r1:7b",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.09951238929246692,
-    "lastUpdate": "2025-02-26T17:21:34.924Z",
-    "status": "success"
-  },
-  {
-    "server": "http://12.221.142.228:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.07807620237351655,
-    "lastUpdate": "2025-02-26T17:21:34.519Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.109.77.232:11434",
-    "models": [
-      "deepseek-r1:latest",
-      "deepseek-r1:1.5b",
       "bge-m3:latest",
-      "all-minilm:latest",
-      "mxbai-embed-large:latest"
-    ],
-    "tps": 0.06746727836999056,
-    "lastUpdate": "2025-02-26T17:21:34.925Z",
-    "status": "success"
-  },
-  {
-    "server": "http://116.204.132.230:11434",
-    "models": [
-      "deepseek-r1:latest"
-    ],
-    "tps": 0.06007449237053947,
-    "lastUpdate": "2025-02-26T17:21:35.006Z",
-    "status": "success"
-  },
-  {
-    "server": "http://123.1.189.232:11434",
-    "models": [
-      "smollm2:135m",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.05775005775005775,
-    "lastUpdate": "2025-02-26T17:21:34.863Z",
-    "status": "success"
-  },
-  {
-    "server": "http://103.251.89.234:11434",
-    "models": [
-      "deepseek-r1:7b",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.05273427200337499,
-    "lastUpdate": "2025-02-26T17:21:34.887Z",
-    "status": "success"
-  },
-  {
-    "server": "http://112.86.129.66:11434",
-    "models": [
-      "deepseek-r1:70b"
-    ],
-    "tps": 0.0509061290979434,
-    "lastUpdate": "2025-02-26T17:21:34.824Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.101.67.217:11434\t",
-    "models": [
-      "deepseek-r1:32b",
-      "deepseek-r1:8b"
-    ],
-    "tps": 0.04803996925441968,
-    "lastUpdate": "2025-02-26T17:21:34.887Z",
-    "status": "success"
-  },
-  {
-    "server": "http://103.59.148.103:11434",
-    "models": [
-      "deepseek-r1:latest",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.04760317989241681,
-    "lastUpdate": "2025-02-26T17:21:34.959Z",
-    "status": "success"
-  },
-  {
-    "server": "http://117.134.14.142:11434",
-    "models": [
-      "deepseek-r1:70b",
-      "deepseek-r1:32b",
-      "deepseek-r1:14b",
-      "llama3:8b"
+      "modelscope.cn/unsloth/DeepSeek-R1-Distill-Qwen-14B-GGUF:latest",
+      "modelscope.cn/unsloth/DeepSeek-R1-Distill-Qwen-32B-GGUF:latest"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.893Z",
+    "lastUpdate": "2025-02-26T18:33:08.023Z",
     "status": "success"
   },
   {
-    "server": "http://121.201.125.79:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.923Z",
-    "status": "success"
-  },
-  {
-    "server": "http://113.89.101.49:11434",
-    "models": [
-      "huihui_ai/deepseek-r1-abliterated:7b",
-      "deepseek-r1:1.5b",
-      "deepseek-r1:8b",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.932Z",
-    "status": "success"
-  },
-  {
-    "server": "http://1.82.251.55:11434",
-    "models": [
-      "deepseek-r1:1.5b",
-      "deepseek-r1:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:34.961Z",
-    "status": "success"
-  },
-  {
-    "server": "https://llm.ds-dev.neuro.net\t",
+    "server": "https://llm.ds-dev.neuro.net",
     "models": [
       "llama3.1:latest",
       "paraphrase-multilingual:latest",
@@ -2918,192 +3410,19 @@
       "qwen2.5-coder:32b"
     ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:35.003Z",
+    "lastUpdate": "2025-02-26T18:33:08.073Z",
     "status": "success"
   },
   {
-    "server": "https://chat.blch.ru",
+    "server": "https://ollama.bongchatchat.icu",
     "models": [
-      "mistral-large:123b-instruct-2411-q6_K",
-      "deepseek-r1:671b",
-      "deepseek-r1:8b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:35.010Z",
-    "status": "success"
-  },
-  {
-    "server": "http://125.114.112.230:11434",
-    "models": [
-      "deepseek-r1:32b",
-      "deepseek-r1:7b",
-      "qwen2:7b-instruct-q8_0",
-      "glm4:latest",
-      "llama3.1:latest"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:35.108Z",
-    "status": "success"
-  },
-  {
-    "server": "http://ds-api.dlzdkt.com",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:21:35.582Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.76.231.44:11434",
-    "models": [
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0,
-    "lastUpdate": "2025-02-26T17:22:06.038Z",
-    "status": "success"
-  },
-  {
-    "server": "http://60.247.78.91:11434\t",
-    "models": [
-      "aiden_lu/minicpm-v2.6:Q4_K_M",
-      "chroma/all-minilm-l6-v2-f32:latest",
+      "ishumilin/deepseek-r1-coder-tools:14b",
+      "MFDoom/deepseek-r1-tool-calling:32b",
+      "deepseek-r1:70b",
       "deepseek-r1:32b"
     ],
-    "tps": 1.567398119122257,
-    "lastUpdate": "2025-02-26T17:22:06.077Z",
-    "status": "success"
-  },
-  {
-    "server": "http://122.246.5.72:11434",
-    "models": [
-      "llama3.3:70b",
-      "deepseek-r1:70b",
-      "shaw/dmeta-embedding-zh:latest",
-      "qwen2.5:72b",
-      "qwen2.5:14b",
-      "llama3.1-8b-qx0916:latest",
-      "llama3.1:8b",
-      "qwen2-7b-qx0916:latest",
-      "qwen2-7b-qx:latest",
-      "llava-llama3:latest",
-      "llava:34b",
-      "llama3.1:70b"
-    ],
-    "tps": 0.655307994757536,
-    "lastUpdate": "2025-02-26T17:22:06.058Z",
-    "status": "success"
-  },
-  {
-    "server": "http://121.227.174.166:11434\t",
-    "models": [
-      "erwan2/DeepSeek-Janus-Pro-7B:latest",
-      "huihui_ai/deepseek-r1-abliterated:7b",
-      "bge-large:latest",
-      "bge-m3:latest",
-      "deepseek-r1:latest",
-      "qwq:latest",
-      "llama3.2-vision:latest",
-      "internlm/internlm2.5:latest",
-      "qwen2.5-coder:latest",
-      "qwen2.5:latest",
-      "qwen2-math:latest",
-      "phi3.5:latest",
-      "ollam/unichat-llama3-chinese-8b:latest",
-      "nomic-embed-text:latest",
-      "minicpm-v:latest",
-      "llava:latest",
-      "llava-llama3:latest",
-      "llama3.1:latest",
-      "llama3-chatqa:latest",
-      "gemma2:latest",
-      "gemma2:27b",
-      "codestral:latest",
-      "codellama:latest",
-      "codegemma:latest"
-    ],
-    "tps": 0.5753739930955121,
-    "lastUpdate": "2025-02-26T17:22:06.074Z",
-    "status": "success"
-  },
-  {
-    "server": "http://74.133.211.244",
-    "models": [
-      "phi3.5:latest",
-      "qwen2.5-coder:latest",
-      "llama3.1:latest",
-      "phi3:latest",
-      "phi3:medium",
-      "zephyr:latest",
-      "sushruth/solar-uncensored:latest",
-      "dolphin-llama3:latest",
-      "dolphin-mixtral:latest",
-      "deepseek-coder-v2:latest",
-      "openhermes:latest",
-      "llama3:latest"
-    ],
-    "tps": 0.2454590083456063,
-    "lastUpdate": "2025-02-26T17:22:05.669Z",
-    "status": "success"
-  },
-  {
-    "server": "http://154.19.74.137:11434",
-    "models": [
-      "smollm2:135m",
-      "llama2:latest",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.2390628735357399,
-    "lastUpdate": "2025-02-26T17:22:05.696Z",
-    "status": "success"
-  },
-  {
-    "server": "http://136.143.157.5:11434\t",
-    "models": [
-      "deepseek-r1:14b",
-      "deepseek-r1:32b",
-      "deepseek-r1:1.5b"
-    ],
-    "tps": 0.16539861065167052,
-    "lastUpdate": "2025-02-26T17:22:05.749Z",
-    "status": "success"
-  },
-  {
-    "server": "http://122.242.243.166:11434",
-    "models": [
-      "huihui_ai/deepseek-r1-abliterated:8b",
-      "deepseek-r1:7b"
-    ],
-    "tps": 0.09603380389897244,
-    "lastUpdate": "2025-02-26T17:22:06.051Z",
-    "status": "success"
-  },
-  {
-    "server": "http://38.105.209.211:11434",
-    "models": [
-      "llama3.2:1b"
-    ],
-    "tps": 0.07121999857560003,
-    "lastUpdate": "2025-02-26T17:22:05.648Z",
-    "status": "success"
-  },
-  {
-    "server": "http://47.107.34.218:11434",
-    "models": [
-      "deepseek-r1:14b",
-      "quentinz/bge-large-zh-v1.5:latest"
-    ],
-    "tps": 0.0610798924993892,
-    "lastUpdate": "2025-02-26T17:22:06.079Z",
-    "status": "success"
-  },
-  {
-    "server": "http://175.43.240.134:11434",
-    "models": [
-      "deepseek-r1:7b"
-    ],
     "tps": 0,
-    "lastUpdate": "2025-02-26T17:22:05.976Z",
+    "lastUpdate": "2025-02-26T18:33:08.422Z",
     "status": "success"
   }
 ]
