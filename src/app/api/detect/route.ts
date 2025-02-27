@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { checkService, measureTPS } from '@/lib/detect';
 
-export const maxDuration = 50; // 设置最大执行时间为 300 秒
+export const maxDuration = 50; // 设置最大执行时间为 50 秒
 
 export async function POST(request: Request) {
   let url = '';

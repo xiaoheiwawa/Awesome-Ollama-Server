@@ -267,11 +267,22 @@ export async function main() {
     // 4. 更新 Redis 中的有效服务器列表
     if (validServers.size > 0) {
       console.log(`\n更新 Redis 中的有效服务器列表`);
-      await redis.del('ollama:servers');
-      validServers.forEach(async server => {
-        console.log(`\n正在更新 ${server}`);
-        await redis.sadd('ollama:servers', server);
-      });
+      try {
+        // 将 Set 转换为数组，并去重处理
+        const serversArray = Array.from(validServers) as [string, ...string[]];
+        
+        // 先清空后批量添加（完全替换）
+        await redis
+          .pipeline()
+          .del('ollama:servers')
+          .sadd('ollama:servers', ...serversArray)
+          .exec();
+    
+        console.log(`成功更新 ${serversArray.length} 个服务器`);
+      } catch (err) {
+        console.error('更新 Redis 失败:', err);
+        // 这里可以添加重试逻辑
+      }
     }
 
     console.log(`\n更新完成，共有 ${validServers.size} 个有效服务器`);

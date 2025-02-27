@@ -1,10 +1,15 @@
 # Ollama 服务监控系统
 
+[English Version](README.EN.md)
+
 这是一个用于监控和检测 Ollama 服务可用性和性能的系统。它提供了一个现代化的 Web 界面，支持多语言（中文/英文），并具有实时检测和数据展示功能。
+
+在线体验：https://ollama.vincentko.top
 
 ![](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefined20250224210925629.png?imageSlim)
 
-在线体验：https://awesome-ollama-server.vercel.app
+
+![](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefined20250226162718502.png?imageSlim)
 
 ## 功能特点
 
