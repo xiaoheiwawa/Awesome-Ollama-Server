@@ -4,12 +4,15 @@
 
 这是一个用于监控和检测 Ollama 服务可用性和性能的系统。它提供了一个现代化的 Web 界面，支持多语言（中文/英文），并具有实时检测和数据展示功能。
 
-在线体验：https://ollama.vincentko.top
+[在线体验](https://ollama.vincentko.top)
 
-![](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefined20250224210925629.png?imageSlim)
+支持在线测试模型
 
 
-![](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefined20250226162718502.png?imageSlim)
+<video controls width="100%">
+  <source src="https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefinedClipboard-20250227-115959-828.mp4" type="video/mp4">
+  您的浏览器不支持视频播放。
+</video>
 
 ## 功能特点
 

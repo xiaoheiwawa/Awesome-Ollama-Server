@@ -4,12 +4,13 @@
 
 This is a system for monitoring and detecting the availability and performance of Ollama services. It provides a modern web interface, supports multiple languages (Chinese/English), and features real-time detection and data visualization.
 
-Online Demo: https://ollama.vincentko.top
+[Online Demo](https://ollama.vincentko.top)
 
-![](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefined20250224210925629.png?imageSlim)
-
-
-![](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefined20250226162718502.png?imageSlim)
+Support online model testing
+<video controls width="100%">
+  <source src="https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefinedClipboard-20250227-115959-828.mp4" type="video/mp4">
+  您的浏览器不支持视频播放。
+</video>
 
 ## Features
 
