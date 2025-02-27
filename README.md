@@ -9,10 +9,8 @@
 支持在线测试模型
 
 
-<video controls width="100%">
-  <source src="https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/undefinedClipboard-20250227-115959-828.mp4" type="video/mp4">
-  您的浏览器不支持视频播放。
-</video>
+
+https://github.com/user-attachments/assets/646734aa-56ea-4cd4-9137-44c537ef1f3f
 
 ## 功能特点
 
