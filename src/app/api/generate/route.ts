@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export const maxDuration = 300; // 设置最大执行时间为 300 秒
+export const maxDuration = 50; // 设置最大执行时间为 50 秒
 
 export async function POST(request: Request) {
   const encoder = new TextEncoder();
@@ -56,6 +56,7 @@ export async function POST(request: Request) {
                   controller.enqueue(encoder.encode(match[1]));
                 }
               }
+              console.error('处理数据块错误:', e);
               continue;
             }
           }
