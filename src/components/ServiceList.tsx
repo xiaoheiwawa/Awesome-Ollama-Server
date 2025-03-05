@@ -80,100 +80,101 @@ export function ServiceList({
 
   return (
     <>
-      <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-700">
-          <thead className="bg-gray-800">
-            <tr>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
-                {t('service.server')}
-              </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
-                {t('service.models')}
-              </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
-                TPS
-              </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
-                {t('service.lastUpdate', { value: '' })}
-              </th>
-              <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-300 uppercase tracking-wider">
-                {t('service.actions')}
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-gray-900 divide-y divide-gray-800">
-            {services.map((service, index) => (
-              <tr key={service.server} className={`${index % 2 === 0 ? 'bg-gray-900' : 'bg-gray-850'} 
-                ${service.loading ? 'animate-pulse' : ''}`}>
-                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  <a
-                    href={service.server}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                  >
-                    {service.server}
-                  </a>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {service.loading ? (
-                    <div className="h-6 bg-gray-700 rounded animate-pulse w-24"></div>
-                  ) : (
-                    <div className="flex flex-wrap gap-2">
-                      {service.models.map((model, idx) => (
-                        <span
-                          key={idx}
-                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
-                            bg-gradient-to-r from-teal-500/20 to-blue-500/20 text-teal-400 border border-teal-500/30"
-                        >
-                          {model}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
-                  {service.loading ? (
-                    <div className="h-4 bg-gray-700 rounded animate-pulse w-16"></div>
-                  ) : (
-                    t('service.tps', { value: service.tps.toFixed(2) })
-                  )}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
-                  {service.loading ? (
-                    <div className="h-4 bg-gray-700 rounded animate-pulse w-32"></div>
-                  ) : (
-                    isClient && (
-                      <time dateTime={service.lastUpdate}>
-                        {t('service.lastUpdateValue', {
-                          value: formatDistanceToNow(new Date(service.lastUpdate), {
-                            addSuffix: true,
-                            locale: locale === 'zh' ? zhCN : enUS,
-                          })
-                        })}
-                      </time>
-                    )
-                  )}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-right">
-                  <button
-                    onClick={() => handleTest(service)}
-                    disabled={service.loading || service.models.length === 0}
-                    className={`inline-flex items-center px-3 py-1 rounded-md text-sm font-medium
-                      ${service.loading || service.models.length === 0
-                        ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
-                        : 'bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white'
-                      }`}
-                  >
-                    <BeakerIcon className="h-4 w-4 mr-1" />
-                    {t('service.test')}
-                  </button>
-                </td>
+      <div>
+        <div className="overflow-x-auto custom-scrollbar">
+          <table className="min-w-full divide-y divide-gray-700">
+            <thead className="bg-gray-800">
+              <tr>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  {t('service.server')}
+                </th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  {t('service.models')}
+                </th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  TPS
+                </th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  {t('service.lastUpdate', { value: '' })}
+                </th>
+                <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-300 uppercase tracking-wider" style={{ position: 'sticky', right: 0, backgroundColor: '#1f2937', zIndex: 10 }}>
+                  {t('service.actions')}
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-
+            </thead>
+            <tbody className="bg-gray-900 divide-y divide-gray-800">
+              {services.map((service, index) => (
+                <tr key={service.server} className={`${index % 2 === 0 ? 'bg-gray-900' : 'bg-gray-850'} 
+                  ${service.loading ? 'animate-pulse' : ''}`}>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm">
+                    <a
+                      href={service.server}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                    >
+                      {service.server}
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {service.loading ? (
+                      <div className="h-6 bg-gray-700 rounded animate-pulse w-24"></div>
+                    ) : (
+                      <div className="flex flex-wrap gap-2">
+                        {service.models.map((model, idx) => (
+                          <span
+                            key={idx}
+                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+                              bg-gradient-to-r from-teal-500/20 to-blue-500/20 text-teal-400 border border-teal-500/30"
+                          >
+                            {model}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                    {service.loading ? (
+                      <div className="h-4 bg-gray-700 rounded animate-pulse w-16"></div>
+                    ) : (
+                      t('service.tps', { value: service.tps.toFixed(2) })
+                    )}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
+                    {service.loading ? (
+                      <div className="h-4 bg-gray-700 rounded animate-pulse w-32"></div>
+                    ) : (
+                      isClient && (
+                        <time dateTime={service.lastUpdate}>
+                          {t('service.lastUpdateValue', {
+                            value: formatDistanceToNow(new Date(service.lastUpdate), {
+                              addSuffix: true,
+                              locale: locale === 'zh' ? zhCN : enUS,
+                            })
+                          })}
+                        </time>
+                      )
+                    )}
+                  </td>
+                  <td className="sticky right-0 px-6 py-4 whitespace-nowrap text-sm text-left bg-gray-900 z-10">
+                    <button
+                      onClick={() => handleTest(service)}
+                      disabled={service.loading || service.models.length === 0}
+                      className={`inline-flex items-center px-3 py-1 rounded-md text-sm font-medium
+                        ${service.loading || service.models.length === 0
+                          ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                          : 'bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white'
+                        }`}
+                    >
+                      <BeakerIcon className="h-4 w-4 mr-1" />
+                      {t('service.test')}
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         {/* 分页控制 */}
         <div className="p-4 border-b border-gray-700 flex justify-between items-center">
           <div className="flex items-center space-x-2">
