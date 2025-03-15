@@ -3,9 +3,7 @@ import { promises as fs } from 'fs'
 import { join } from 'path'
 import { OllamaService } from '../src/types'
 import { fofaScan } from './fofa-scan.mjs'
-import dotenv from 'dotenv'
 import {
-  TIMEOUT_MS,
   ModelInfo,
   fetchWithTimeout,
   checkService as checkServiceUtil,
@@ -14,8 +12,6 @@ import {
   calculateTPS,
   isValidTPS
 } from '../src/lib/ollama-utils'
-
-dotenv.config()
 
 const TEST_PROMPT = "Tell me a short joke"
 const CONCURRENT_LIMIT = 50 // 并发数限制

@@ -1,5 +1,4 @@
 import {
-  TIMEOUT_MS,
   TEST_PROMPTS,
   ModelInfo,
   fetchWithTimeout,
@@ -7,7 +6,6 @@ import {
   isFakeOllama,
   estimateTokens,
   generateRequestBody,
-  calculateTPS,
   isValidTPS
 } from './ollama-utils';
 
@@ -61,7 +59,6 @@ export async function measureTPS(url: string, model: ModelInfo): Promise<number 
           // 继续测试其他轮次，收集更多数据
         }
         
-        const roundTps = calculateTPS(data); // 这里 calculateTPS 已经会过滤异常值
         totalTokens += data.eval_count;
         totalTime += data.eval_duration / 1e9; // 转换为秒
       } else {

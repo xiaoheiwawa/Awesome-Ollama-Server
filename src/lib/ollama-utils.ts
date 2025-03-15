@@ -117,7 +117,7 @@ export function generateRequestBody(model: string, prompt: string, stream = fals
 }
 
 // 计算 TPS (Tokens Per Second)
-export function calculateTPS(data: any): number {
+export function calculateTPS(data: { eval_count: number, eval_duration: number }): number {
   // 使用 API 返回的 eval_count 和 eval_duration 计算 TPS
   if (data.eval_count && data.eval_duration) {
     // eval_duration 是纳秒单位，计算: eval_count / eval_duration * 10^9
