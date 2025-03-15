@@ -3,9 +3,20 @@ import { promises as fs } from 'fs'
 import { join } from 'path'
 import { OllamaService } from '../src/types'
 import { fofaScan } from './fofa-scan.mjs'
+import dotenv from 'dotenv'
+import {
+  TIMEOUT_MS,
+  ModelInfo,
+  fetchWithTimeout,
+  checkService as checkServiceUtil,
+  isFakeOllama,
+  generateRequestBody,
+  calculateTPS
+} from '../src/lib/ollama-utils'
+
+dotenv.config()
 
 const TEST_PROMPT = "Tell me a short joke"
-const TIMEOUT_MS = 30000 // 30秒超时
 const CONCURRENT_LIMIT = 50 // 并发数限制
 const RESULT_FILE = join(process.cwd(), 'public', 'data.json')
 const COUNTRYS = process.env.COUNTRYS ? process.env.COUNTRYS.split(',') : ['US', 'CN', 'RU']
@@ -18,81 +29,18 @@ const redis = process.env.UPSTASH_REDIS_URL && process.env.UPSTASH_REDIS_TOKEN
     })
   : null;
 
-// 创建带超时的 fetch 函数
-async function fetchWithTimeout(url: string, options: RequestInit = {}, timeout = TIMEOUT_MS) {
-  const controller = new AbortController()
-  const timeoutId = setTimeout(() => controller.abort(), timeout)
-
-  try {
-    const response = await fetch(url, {
-      ...options,
-      signal: controller.signal,
-    })
-    clearTimeout(timeoutId)
-    return response
-  } catch (error) {
-    clearTimeout(timeoutId)
-    throw error
-  }
-}
-
-// 定义模型信息的接口
-interface ModelInfo {
-  name: string;
-  model: string;
-  modified_at: string;
-  size: number;
-  digest: string;
-  details: {
-    parent_model: string;
-    format: string;
-    family: string;
-    families: string[];
-    parameter_size: string;
-    quantization_level: string;
-  };
-}
-
-interface ModelsResponse {
-  models: ModelInfo[];
-}
-
-// 检查服务是否可用
-async function checkService(url: string): Promise<ModelInfo[] | null> {
-  try {
-    const response = await fetchWithTimeout(`${url}/api/tags`, {
-      headers: {
-        'Accept': 'application/json',
-      },
-    })
-
-    if (!response.ok) {
-      console.log(`服务返回非 200 状态码: ${url}, 状态码: ${response.status}`);
-      return null;
-    }
-
-    const data = await response.json() as ModelsResponse;
-    return data.models || [];
-  } catch (error) {
-    console.error(`检查服务出错 ${url}:`, error);
-    return null;
-  }
-}
+// 检查服务是否可用 - 使用共享库
+const checkService = checkServiceUtil;
 
 // 测量TPS
-async function measureTPS(url: string, model: ModelInfo): Promise<number> {
+async function measureTPS(url: string, model: ModelInfo): Promise<number | { isFake: true }> {
   try {
-    const startTime = Date.now();
     const response = await fetchWithTimeout(`${url}/api/generate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        model: model.name,
-        prompt: TEST_PROMPT,
-        stream: false,
-      }),
+      body: JSON.stringify(generateRequestBody(model.name, TEST_PROMPT, false)),
     });
 
     if (!response.ok) {
@@ -100,8 +48,22 @@ async function measureTPS(url: string, model: ModelInfo): Promise<number> {
       return 0;
     }
 
-    await response.json();
+    const data = await response.json();
+    
+    // 检查是否为 fake-ollama
+    if (data.response && isFakeOllama(data.response)) {
+      console.log(`检测到 fake-ollama: ${url}`);
+      return { isFake: true };
+    }
+    
+    // 使用 API 返回的 eval_count 和 eval_duration 计算 TPS
+    if (data.eval_count && data.eval_duration) {
+      return calculateTPS(data);
+    }
+    
+    // 如果 API 没有返回这些字段，则使用旧方法计算
     const endTime = Date.now();
+    const startTime = new Date(data.created_at).getTime();
     const timeInSeconds = (endTime - startTime) / 1000;
     return timeInSeconds > 0 ? 1 / timeInSeconds : 0;
   } catch (error) {
@@ -154,10 +116,20 @@ async function checkSingleService(url: string): Promise<OllamaService | null> {
     
     if (models && models.length > 0) {
       try {
-        const tps = await measureTPS(url, models[0]);
-        result.models = models.map(model => model.name);
-        result.tps = tps;
-        result.status = 'success';
+        const tpsResult = await measureTPS(url, models[0]);
+        
+        // 检查是否为 fake-ollama
+        if (typeof tpsResult === 'object' && 'isFake' in tpsResult) {
+          result.status = 'fake';
+          result.isFake = true;
+          result.tps = 0;
+          console.log(`服务 ${url} 是伪装的 Ollama 服务，已标记`);
+          return null; // 返回 null 表示不保存这个服务
+        } else {
+          result.models = models.map(model => model.name);
+          result.tps = tpsResult as number;
+          result.status = 'success';
+        }
       } catch (error) {
         console.error(`测量 TPS 失败 ${url}:`, error);
         result.status = 'error';
@@ -185,7 +157,7 @@ async function runBatch(urls: string[]): Promise<OllamaService[]> {
   const promises = urls.map(async url => {
     try {
       const service = await checkSingleService(url);
-      if (service?.models && service.models.length > 0) {
+      if (service && service.models && service.models.length > 0) {
         results.push(service);
       }
     } catch (error) {
@@ -242,7 +214,7 @@ export async function main() {
       
       // 记录有效的服务器
       results.forEach(result => {
-        if (result.models && result.models.length > 0) {
+        if (result.models && result.models.length > 0 && result.status === 'success') {
           validServers.add(encodeURIComponent(result.server));
         }
       });

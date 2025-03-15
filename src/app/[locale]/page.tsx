@@ -176,9 +176,23 @@ export default function Home() {
     )
     .sort((a, b) => {
       const multiplier = sortOrder === 'asc' ? 1 : -1;
+      
+      // 只有在有选中的模型时，才特殊处理排序
+      if (selectedModels.length > 0) {
+        // 检查服务是否包含选中的模型
+        const aHasSelectedModel = a.models.some(model => selectedModels.includes(model));
+        const bHasSelectedModel = b.models.some(model => selectedModels.includes(model));
+        
+        // 如果 a 包含选中的模型但 b 不包含，则 a 排在前面
+        if (aHasSelectedModel && !bHasSelectedModel) return -1;
+        // 如果 b 包含选中的模型但 a 不包含，则 b 排在前面
+        if (!aHasSelectedModel && bHasSelectedModel) return 1;
+      }
+      
       // 将 loading 状态的服务排在最前面
       if (a.loading && !b.loading) return -1;
       if (!a.loading && b.loading) return 1;
+      
       if (sortField === 'tps') {
         return (a.tps - b.tps) * multiplier;
       } else {
