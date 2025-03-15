@@ -11,7 +11,8 @@ import {
   checkService as checkServiceUtil,
   isFakeOllama,
   generateRequestBody,
-  calculateTPS
+  calculateTPS,
+  isValidTPS
 } from '../src/lib/ollama-utils'
 
 dotenv.config()
@@ -58,6 +59,14 @@ async function measureTPS(url: string, model: ModelInfo): Promise<number | { isF
     
     // 使用 API 返回的 eval_count 和 eval_duration 计算 TPS
     if (data.eval_count && data.eval_duration) {
+      const rawTps = (data.eval_count / data.eval_duration) * 1e9;
+      
+      // 检查 TPS 是否异常
+      if (!isValidTPS(rawTps)) {
+        console.warn(`检测到异常 TPS 值: ${rawTps.toFixed(2)} 来自服务器: ${url}`);
+        return { isFake: true };
+      }
+      
       return calculateTPS(data);
     }
     
@@ -65,7 +74,15 @@ async function measureTPS(url: string, model: ModelInfo): Promise<number | { isF
     const endTime = Date.now();
     const startTime = new Date(data.created_at).getTime();
     const timeInSeconds = (endTime - startTime) / 1000;
-    return timeInSeconds > 0 ? 1 / timeInSeconds : 0;
+    const tps = timeInSeconds > 0 ? 1 / timeInSeconds : 0;
+    
+    // 检查计算出的 TPS 是否合理
+    if (!isValidTPS(tps)) {
+      console.warn(`计算出的 TPS 异常: ${tps.toFixed(2)} 来自服务器: ${url}`);
+      return { isFake: true };
+    }
+    
+    return tps;
   } catch (error) {
     console.error(`性能测试出错 ${url}:`, error);
     return 0;

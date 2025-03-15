@@ -71,6 +71,17 @@ export async function checkService(url: string): Promise<ModelInfo[] | null> {
   }
 }
 
+// 检测 TPS 是否在合理范围内
+export function isValidTPS(tps: number): boolean {
+  // 正常的 Ollama 服务 TPS 通常在 0.1 到 100 之间
+  // 高性能服务器可能达到 200-300 TPS
+  // 超过 1000 的 TPS 值通常是不合理的
+  const MIN_VALID_TPS = 0.01;  // 最小有效 TPS
+  const MAX_VALID_TPS = 1000;  // 最大有效 TPS
+  
+  return tps >= MIN_VALID_TPS && tps <= MAX_VALID_TPS;
+}
+
 // 检测是否为 fake-ollama
 export function isFakeOllama(response: string): boolean {
   return response.includes('fake-ollama') || 
@@ -110,7 +121,16 @@ export function calculateTPS(data: any): number {
   // 使用 API 返回的 eval_count 和 eval_duration 计算 TPS
   if (data.eval_count && data.eval_duration) {
     // eval_duration 是纳秒单位，计算: eval_count / eval_duration * 10^9
-    return (data.eval_count / data.eval_duration) * 1e9;
+    const tps = (data.eval_count / data.eval_duration) * 1e9;
+    
+    // 检查 TPS 是否在合理范围内
+    if (!isValidTPS(tps)) {
+      console.warn(`检测到异常 TPS 值: ${tps.toFixed(2)}`);
+      // 如果 TPS 不合理，返回一个合理的默认值
+      return 0;
+    }
+    
+    return tps;
   }
   
   // 如果没有这些字段，返回 0

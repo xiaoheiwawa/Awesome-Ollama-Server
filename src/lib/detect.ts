@@ -7,7 +7,8 @@ import {
   isFakeOllama,
   estimateTokens,
   generateRequestBody,
-  calculateTPS
+  calculateTPS,
+  isValidTPS
 } from './ollama-utils';
 
 const TEST_ROUNDS = 3; // 测试轮数
@@ -21,6 +22,7 @@ export async function measureTPS(url: string, model: ModelInfo): Promise<number 
     let totalTokens = 0;
     let totalTime = 0;
     let isFake = false;
+    let abnormalTpsDetected = false;
 
     // 多轮测试
     for (let i = 0; i < TEST_ROUNDS; i++) {
@@ -50,7 +52,16 @@ export async function measureTPS(url: string, model: ModelInfo): Promise<number 
 
       // 使用 API 返回的 eval_count 和 eval_duration 计算 TPS
       if (data.eval_count && data.eval_duration) {
-        const roundTps = calculateTPS(data);
+        const rawTps = (data.eval_count / data.eval_duration) * 1e9;
+        
+        // 检查 TPS 是否异常
+        if (!isValidTPS(rawTps)) {
+          console.warn(`检测到异常 TPS 值: ${rawTps.toFixed(2)} 来自服务器: ${url}`);
+          abnormalTpsDetected = true;
+          // 继续测试其他轮次，收集更多数据
+        }
+        
+        const roundTps = calculateTPS(data); // 这里 calculateTPS 已经会过滤异常值
         totalTokens += data.eval_count;
         totalTime += data.eval_duration / 1e9; // 转换为秒
       } else {
@@ -67,13 +78,21 @@ export async function measureTPS(url: string, model: ModelInfo): Promise<number 
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
-    // 如果是假的，返回特殊标记
-    if (isFake) {
+    // 如果是假的或者检测到异常 TPS，返回特殊标记
+    if (isFake || abnormalTpsDetected) {
       return { isFake: true };
     }
 
     // 计算平均 TPS
-    return totalTime > 0 ? totalTokens / totalTime : 0;
+    const averageTps = totalTime > 0 ? totalTokens / totalTime : 0;
+    
+    // 最后再检查一次平均 TPS 是否合理
+    if (!isValidTPS(averageTps)) {
+      console.warn(`最终计算的平均 TPS 异常: ${averageTps.toFixed(2)} 来自服务器: ${url}`);
+      return { isFake: true };
+    }
+    
+    return averageTps;
   } catch (error) {
     console.error('测量 TPS 失败:', error);
     return 0;
