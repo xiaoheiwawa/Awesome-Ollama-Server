@@ -115,6 +115,12 @@ export function ServiceList({
                     >
                       {service.server}
                     </a>
+                    {service.isFake && (
+                      <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium
+                        bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">
+                        {t('detect.fake')}
+                      </span>
+                    )}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {service.loading ? (
@@ -156,7 +162,7 @@ export function ServiceList({
                       )
                     )}
                   </td>
-                  <td className="sticky right-0 px-6 py-4 whitespace-nowrap text-sm text-left bg-gray-900 z-10">
+                  <td className="sticky right-0 px-6 py-4 whitespace-nowrap text-sm text-right bg-gray-900 z-10">
                     <button
                       onClick={() => handleTest(service)}
                       disabled={service.loading || service.models.length === 0}

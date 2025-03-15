@@ -4,7 +4,8 @@ export interface OllamaService {
   tps: number;
   lastUpdate: string;
   loading?: boolean;
-  status: 'success' | 'error' | 'loading';
+  status: 'success' | 'error' | 'loading' | 'fake';
+  isFake?: boolean;
 }
 
 export type SortField = 'tps' | 'lastUpdate';

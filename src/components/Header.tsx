@@ -71,7 +71,8 @@ export function Header({ countdown, detectingServices, detectedResults, onDetect
           if (latestResult.status === 'success' && 
               latestResult.models.length > 0 && 
               result.status !== 'success' &&
-              !updatedServersRef.current.has(latestResult.server)) {
+              !updatedServersRef.current.has(latestResult.server) &&
+              !latestResult.isFake) {
             // 标记该服务器已更新
             updatedServersRef.current.add(latestResult.server);
             
@@ -223,6 +224,11 @@ export function Header({ countdown, detectingServices, detectedResults, onDetect
                         {result.status === 'success' && (
                           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30">
                             {t('detect.success')}
+                          </span>
+                        )}
+                        {result.status === 'fake' && (
+                          <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">
+                            {t('detect.fake')}
                           </span>
                         )}
                       </div>

@@ -31,9 +31,19 @@ export async function POST(request: Request) {
 
     // 如果有可用模型，测试性能
     let tps = 0;
+    let isFake = false;
+    
     if (models.length > 0) {
       try {
-        tps = await measureTPS(url, models[0]);
+        const tpsResult = await measureTPS(url, models[0]);
+        
+        // 检查是否为 fake-ollama
+        if (typeof tpsResult === 'object' && 'isFake' in tpsResult) {
+          isFake = true;
+          tps = 0;
+        } else {
+          tps = tpsResult as number;
+        }
       } catch (error) {
         console.error('性能测试失败:', error);
       }
@@ -45,7 +55,8 @@ export async function POST(request: Request) {
       models: models.map(model => model.name),
       tps,
       lastUpdate: new Date().toISOString(),
-      status: 'success'
+      status: isFake ? 'fake' : 'success',
+      isFake
     });
 
   } catch (error) {

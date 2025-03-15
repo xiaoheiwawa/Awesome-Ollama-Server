@@ -73,11 +73,19 @@ function estimateTokens(text: string): number {
   return words.length + punctuation + numbers;
 }
 
+// 检测是否为 fake-ollama
+function isFakeOllama(response: string): boolean {
+  return response.includes('fake-ollama') || 
+         response.includes('这是一条来自') || 
+         response.includes('固定回复');
+}
+
 // 测量服务性能
-export async function measureTPS(url: string, model: ModelInfo): Promise<number> {
+export async function measureTPS(url: string, model: ModelInfo): Promise<number | { isFake: true }> {
   try {
     let totalTokens = 0;
     let totalTime = 0;
+    let isFake = false;
 
     // 多轮测试
     for (let i = 0; i < TEST_ROUNDS; i++) {
@@ -110,6 +118,13 @@ export async function measureTPS(url: string, model: ModelInfo): Promise<number>
       const endTime = Date.now();
       const timeInSeconds = (endTime - startTime) / 1000;
 
+      // 检查是否为 fake-ollama
+      if (isFakeOllama(data.response)) {
+        console.log(`检测到 fake-ollama: ${url}`);
+        isFake = true;
+        break;
+      }
+
       // 估算 tokens
       const inputTokens = estimateTokens(prompt);
       const outputTokens = estimateTokens(data.response);
@@ -119,6 +134,11 @@ export async function measureTPS(url: string, model: ModelInfo): Promise<number>
 
       // 等待一小段时间再进行下一轮测试
       await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+
+    // 如果是假的，返回特殊标记
+    if (isFake) {
+      return { isFake: true };
     }
 
     // 计算平均 TPS

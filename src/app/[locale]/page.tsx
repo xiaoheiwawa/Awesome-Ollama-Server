@@ -169,6 +169,8 @@ export default function Home() {
   // 过滤和排序服务列表
   const filteredAndSortedServices = services
     .filter(service => 
+      // 过滤掉伪装服务
+      (!service.isFake) && 
       (selectedModels.length === 0 || 
       service.models.some(model => selectedModels.includes(model)))
     )
