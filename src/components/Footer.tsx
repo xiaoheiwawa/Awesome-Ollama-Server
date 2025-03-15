@@ -48,7 +48,7 @@ export function Footer() {
             </p>
             <div className="flex items-center space-x-4">
               <a
-                href="https://github.com/forrany"
+                href="https://github.com/forrany/Awesome-Ollama-Server"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-300 transition-colors duration-200"
