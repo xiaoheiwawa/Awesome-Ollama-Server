@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  ollama-monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - UPSTASH_REDIS_URL=${UPSTASH_REDIS_URL}
+      - UPSTASH_REDIS_TOKEN=${UPSTASH_REDIS_TOKEN}
+    restart: unless-stopped
+
+  # 添加定期监控任务服务（可选）
+  monitor-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    command: npm run monitor-and-upload
+    environment:
+      - NODE_ENV=production
+      - UPSTASH_REDIS_URL=${UPSTASH_REDIS_URL}
+      - UPSTASH_REDIS_TOKEN=${UPSTASH_REDIS_TOKEN}
+    restart: unless-stopped
+    depends_on:
+      - ollama-monitor 

@@ -135,6 +135,57 @@ UPSTASH_REDIS_TOKEN=your-redis-token
 COUNTRYS=US,CN,RU
 ```
 
+## Docker Deployment
+
+This project supports Docker deployment for easy setup in various environments.
+
+### Using Docker Compose (Recommended)
+
+1. Make sure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed
+
+2. Clone the repository and navigate to the project directory
+   ```bash
+   git clone https://github.com/vincexiv/ollama-monitor-service.git
+   cd ollama-monitor-service
+   ```
+
+3. Create an environment variables file (if you need Upstash Redis for data storage)
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Then edit the `.env` file and fill in your Upstash Redis credentials:
+   ```
+   UPSTASH_REDIS_URL=your_redis_url
+   UPSTASH_REDIS_TOKEN=your_redis_token
+   ```
+
+4. Start the services
+   ```bash
+   docker-compose up -d
+   ```
+
+   This will start two services:
+   - `ollama-monitor`: Web application, accessible at http://localhost:3000
+   - `monitor-service`: Background monitoring service that automatically collects Ollama service data
+
+### Using Docker Only
+
+If you only need to deploy the web application without the background monitoring service:
+
+```bash
+# Build the image
+docker build -t ollama-monitor .
+
+# Run the container
+docker run -d -p 3000:3000 --name ollama-monitor \
+  -e UPSTASH_REDIS_URL=your_redis_url \
+  -e UPSTASH_REDIS_TOKEN=your_redis_token \
+  ollama-monitor
+```
+
+Access the application at http://localhost:3000.
+
 ## Contribution Guidelines
 
 1. Fork the project

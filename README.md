@@ -162,3 +162,54 @@ VincentKo (@forrany) - [GitHub](https://github.com/forrany)
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=forrany/Awesome-Ollama-Server&type=Date)](https://star-history.com/#forrany/Awesome-Ollama-Server&Date)
+
+## Docker 部署
+
+项目支持 Docker 部署，方便在各种环境中快速搭建。
+
+### 使用 Docker Compose 部署（推荐）
+
+1. 确保已安装 [Docker](https://docs.docker.com/get-docker/) 和 [Docker Compose](https://docs.docker.com/compose/install/)
+
+2. 克隆仓库并进入项目目录
+   ```bash
+   git clone https://github.com/vincexiv/ollama-monitor-service.git
+   cd ollama-monitor-service
+   ```
+
+3. 创建环境变量文件（如果需要 Upstash Redis 数据存储）
+   ```bash
+   cp .env.example .env
+   ```
+   
+   然后编辑 `.env` 文件，填入 Upstash Redis 的凭据：
+   ```
+   UPSTASH_REDIS_URL=your_redis_url
+   UPSTASH_REDIS_TOKEN=your_redis_token
+   ```
+
+4. 启动服务
+   ```bash
+   docker-compose up -d
+   ```
+
+   这将启动两个服务：
+   - `ollama-monitor`: Web 应用，访问 http://localhost:3000 查看
+   - `monitor-service`: 后台监控服务，自动收集 Ollama 服务数据
+
+### 仅使用 Docker 部署
+
+如果只需要部署 Web 应用而不需要后台监控服务：
+
+```bash
+# 构建镜像
+docker build -t ollama-monitor .
+
+# 运行容器
+docker run -d -p 3000:3000 --name ollama-monitor \
+  -e UPSTASH_REDIS_URL=your_redis_url \
+  -e UPSTASH_REDIS_TOKEN=your_redis_token \
+  ollama-monitor
+```
+
+访问 http://localhost:3000 查看应用。
