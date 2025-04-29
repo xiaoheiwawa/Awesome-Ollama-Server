@@ -238,7 +238,7 @@ export default function Home() {
           />
           <div className="flex items-center space-x-3">
             <a 
-              href="https://github.com/vincexiv/ollama-monitor-service" 
+              href="https://github.com/forrany/Awesome-Ollama-Server" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors duration-200"
