@@ -5,6 +5,7 @@ import { locales } from '@/config';
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import type { Metadata } from "next";
+import Script from 'next/script';
 import * as React from 'react'
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,6 +55,20 @@ export default async function RootLayout(props: RootLayoutProps) {
   return (
     <html lang={params.locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-JLNZB97S2P"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JLNZB97S2P');
+          `}
+        </Script>
+        
         <NextIntlClientProvider
           locale={params.locale}
           messages={messages}
